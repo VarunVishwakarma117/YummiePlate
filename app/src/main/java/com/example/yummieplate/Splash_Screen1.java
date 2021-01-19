@@ -34,8 +34,6 @@ public class Splash_Screen1 extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
-
-
                 if (user!=null) {
                     startActivity(new Intent(Splash_Screen1.this,MainActivity.class));
                     finish();

@@ -22,4 +22,10 @@
     <style name="Theme.YummiePlate.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.YummiePlate.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <color name="purple_700" />
+    <color name="white"/>
+    <color name="teal_200" />
+    <color name="teal_700" />
+    <color name="black" />
 </resources>
