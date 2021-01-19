@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/passwordreset"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/passwordreset"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/deleteaccount"
+        android:orderInCategory="100"
+        android:title="@string/deleteaccount"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="100"
+        android:title="@string/logout"
+        app:showAsAction="never" />
+    <item android:id="@+id/wishlist"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="Wishlist" />
 </menu>

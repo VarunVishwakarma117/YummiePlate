@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BillingDetailsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/billing_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/billing_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Address Found"
+                android:layout_margin="5dp"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/billing_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_margin="5dp"
+                android:layout_below="@id/billing_name"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:id="@+id/billing_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_below="@id/billing_number"
+                android:text=""
+                android:textColor="@android:color/black"/>
+            <ImageView
+                android:id="@+id/edit_billing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="10dp"
+                android:paddingStart="20dp"
+                android:paddingBottom="20dp"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_listofitems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List of Items"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_below="@id/billing_details"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="10dp"/>
+
+    <ListView
+        android:id="@+id/billing_lv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/relativeLayout"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/tv_listofitems"/>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/tv_billing_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Price"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:id="@+id/billing_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:text="₹0"
+            android:textSize="16sp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:id="@+id/billing_tv_totalamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/billing_delivery_charges"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:id="@+id/billing_amount_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="₹0"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/billing_delivery_charges"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium"/>
+        <TextView
+            android:id="@+id/billing_delivery_charges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:text="Free"
+            android:textSize="16sp"
+            android:layout_below="@id/tv_billing_price"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:text="Delivery Charges"
+            android:layout_below="@id/tv_billing_price"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_below="@id/billing_delivery_charges"
+            android:layout_marginTop="5dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+        <Button
+            android:id="@+id/confirmqqorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/billing_tv_totalamount"
+            android:layout_centerHorizontal="true"
+            android:text="Confirm Order"
+            android:textColor="@android:color/white"
+            android:background="@drawable/background_rounded"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+</RelativeLayout>

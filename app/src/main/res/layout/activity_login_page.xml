@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        tools:context=".LoginPage">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/bg_login_page_button1"
+            android:textColorHint="#ffffff">
+
+            <EditText
+                android:id="@+id/loginemailteacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:backgroundTint="@android:color/transparent"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:paddingStart="30dp"
+                android:paddingEnd="10dp"
+                android:hint="Enter Your Email" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#ffffff"
+            android:padding="5dp"
+            android:background="@drawable/bg_login_page_button1"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff">
+
+            <EditText
+                android:id="@+id/loginpasswordteacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:textColor="#ffffff"
+                android:hint="Enter Your Password"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:backgroundTint="@android:color/transparent"
+                android:paddingStart="30dp"
+                android:paddingEnd="20dp"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/login_as_admin"
+                android:focusable="false"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="Login as Admin"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/forgetpassword"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:textSize="18sp"
+                android:text="Forget Password?"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_login_page_button2"
+                android:onClick="loginbuttonteacher"
+                android:padding="15dp"
+                android:text="        login        "
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:background="@drawable/bg_login_page_button2"
+                android:onClick="registrationbutton"
+                android:text="registration" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_page_button2"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/sign_in_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="15dp"
+                android:text="Sign In"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:translationX="10dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/sign_in_text"
+                android:src="@drawable/g_plus_icon"
+                android:translationX="10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

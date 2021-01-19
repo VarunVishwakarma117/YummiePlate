@@ -1,13 +1,22 @@
 <resources>
     <string name="app_name">Yummie Plate</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Booking</string>
+    <string name="menu_myOrders">My Orders</string>
+    <string name="profile">Profile</string>
+    <string name="passwordreset">Password Reset</string>
+    <string name="deleteaccount">Delete Account</string>
+    <string name="logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="flat_house_no_building_apartment">Flat, House no., Building, Apartment</string>
+    <string name="area_colony_street_no_sector">Area, Colony, Street no., Sector</string>
+    <string name="landmark_e_g_near_apollo_hospital">Landmark e.g. near Apollo Hospital</string>
+    <string name="town_city_with_state">Town/City with State</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

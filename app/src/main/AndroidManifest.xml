@@ -1,18 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.yummieplate">
+	
+	<uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.YummiePlate">
+        android:theme="@style/AppTheme">
+        <activity android:name=".WishlistActivity"
+            android:label="WishList">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity android:name=".AP_orderHistory"
+            android:label="Admin Order History">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Admin_Panel"/>
+        </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".AP_ItemSettings"
+            android:label="Item Settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Admin_Panel" />
+        </activity>
+        <activity android:name=".Splash_Screen2" />
+        <activity
+            android:name=".Admin_Panel_Login"
+            android:label="Admin Pannel Login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginPage" />
+        </activity>
+        <activity
+            android:name=".AP_Current_Order"
+            android:label="Current Orders">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Admin_Panel" />
+        </activity>
+        <activity android:name=".Admin_Panel" />
+        <activity
+            android:name=".BillingDetailsActivity"
+            android:label="Billing">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CartActivity" />
+        </activity>
+        <activity
+            android:name=".CartActivity"
+            android:label="Cart">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity> <!-- <service -->
+        <!-- android:name=".service.ServiceDataWifi" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" /> -->
+        <activity
+            android:name=".ResetPassword"
+            android:label="Reset Password" />
+        <activity android:name=".ForgetPassword">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginPage" />
+        </activity>
+        <activity
+            android:name=".LoginPage"
+            android:label="Login Page" />
+        <activity
+            android:name=".RegistrationPage"
+            android:label="Registration Page">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginPage" />
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Splash_Screen1"
             android:label="@string/app_name"
-            android:theme="@style/Theme.YummiePlate.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
