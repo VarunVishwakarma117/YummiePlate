@@ -1,13 +1,11 @@
 package com.example.yummieplate;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Vibrator;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,8 +51,8 @@ public class AP_ItemSettingAdapter extends ArrayAdapter<item> {
         TextView nameTextView = listItemView.findViewById(R.id.local_name_item__textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
-        TextView numberTextView = listItemView.findViewById(R.id.default_textView);
-        numberTextView.setText(currentitem.getItem_name());
+        TextView numberTextView = listItemView.findViewById(R.id.version);
+        numberTextView.setText(currentitem.getDescription());
 
         final EditText priceTextView = listItemView.findViewById(R.id.item_price);
         priceTextView.setText(String.valueOf(currentitem.getItem_Price()));

@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,8 +60,8 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
         TextView nameTextView = listItemView.findViewById(R.id.local_name_item__textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
-        TextView numberTextView = listItemView.findViewById(R.id.default_textView);
-        numberTextView.setText(currentitem.getItem_name());
+        TextView numberTextView = listItemView.findViewById(R.id.version);
+        numberTextView.setText(currentitem.getDescription());
 
         ImageView imageResource = listItemView.findViewById(R.id.image_view);
         imageResource.setImageResource(currentitem.getItem_image());

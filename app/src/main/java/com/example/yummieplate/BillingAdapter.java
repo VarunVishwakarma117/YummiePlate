@@ -1,17 +1,12 @@
 package com.example.yummieplate;
 
 import android.app.Activity;
-import android.os.Vibrator;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -41,7 +36,7 @@ public class BillingAdapter extends ArrayAdapter<item> implements AdapterView.On
         nameTextView.setText(currentitem.getItem_local_name());
 
         TextView numberTextView = listItemView.findViewById(R.id.default_name);
-        numberTextView.setText(currentitem.getItem_name());
+        numberTextView.setText(currentitem.getDescription());
 
         price = listItemView.findViewById(R.id.item_price);
         price.setText("₹" + currentitem.getItem_Price());
