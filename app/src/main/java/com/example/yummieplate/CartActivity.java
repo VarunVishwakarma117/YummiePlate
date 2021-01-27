@@ -34,6 +34,8 @@ public class CartActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myCartRef = database.getReference("users").child(user.getUid()).child("user_cart");
 
+    //dsd
+
     int total = 0;
     Button place_order_tv;
     ArrayList<item> item_cart_copy;
