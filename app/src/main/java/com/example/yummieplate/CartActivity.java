@@ -96,22 +96,23 @@ public class CartActivity extends AppCompatActivity {
                 progressDialog.show();
                 progressDialog.setContentView(R.layout.progress_dialog_view);
                 progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-                if (item_cart_copy.isEmpty()){
-                    Toast.makeText(CartActivity.this, "Your Cart is Empty", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-                    NetworkInfo networkInfo = manager.getActiveNetworkInfo();
-                    if (networkInfo != null) {
-                        startActivity(new Intent(CartActivity.this, BillingDetailsActivity.class));
-                        progressDialog.dismiss();
+                if (user != null) {
+                    if (item_cart_copy.isEmpty()) {
+                        Toast.makeText(CartActivity.this, "Your Cart is Empty", Toast.LENGTH_SHORT).show();
+                    } else {
+                        ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+                        NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+                        if (networkInfo != null) {
+                            startActivity(new Intent(CartActivity.this, BillingDetailsActivity.class));
+                            progressDialog.dismiss();
+                        } else {
+                            Toast.makeText(CartActivity.this, "Check Your Network", Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+                        }
                     }
-                    else {
-                        Toast.makeText(CartActivity.this, "Check Your Network", Toast.LENGTH_SHORT).show();
-                        progressDialog.dismiss();
-                    }
+                } else {
+                    Toast.makeText(CartActivity.this, "You are not Login", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
     }

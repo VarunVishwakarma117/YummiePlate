@@ -55,9 +55,7 @@ public class LoginPage extends AppCompatActivity {
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private static final String EMAIL = "email";
     private TextView forgetText;
-    TextView login_as_admin;
-
-
+    TextView login_as_admin, skip_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +67,7 @@ public class LoginPage extends AppCompatActivity {
         temail = findViewById(R.id.loginemailteacher);
         tpassword = findViewById(R.id.loginpasswordteacher);
         forgetText = findViewById(R.id.forgetpassword);
+        skip_login = findViewById(R.id.skiplogin);
         login_as_admin = findViewById(R.id.login_as_admin);
         login_as_admin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +94,13 @@ public class LoginPage extends AppCompatActivity {
             }
         });
 
+        skip_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginPage.this, MainActivity.class));
+            }
+        });
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -105,8 +111,7 @@ public class LoginPage extends AppCompatActivity {
 
 
     public void registrationbutton(View view) {
-        Intent i = new Intent(LoginPage.this, RegistrationPage.class);
-        startActivity(i);
+        startActivity(new Intent(LoginPage.this, RegistrationPage.class));
     }
 
     public void loginbuttonteacher(View view) {

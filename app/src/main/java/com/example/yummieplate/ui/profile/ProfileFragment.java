@@ -102,14 +102,14 @@ public class ProfileFragment extends Fragment {
 
     private void roomdb() {
         MyDatabase myDatabase1 = Room.databaseBuilder(getActivity(), MyDatabase.class, "profiledata")
-            .allowMainThreadQueries().build();
+                .allowMainThreadQueries().build();
         List<ProfileModel> profileModels = myDatabase1.dao().getProfile();
         boolean ch = profileModels.isEmpty();
-        Log.e("errorres",""+profileModels.size());
-        Toast.makeText(getActivity(), ""+profileModels.size(), Toast.LENGTH_SHORT).show();
-        Log.e("errorres", "roomdb: "+ch );
-        if (ch==false) {
-            Toast.makeText(getActivity(), ""+ch, Toast.LENGTH_LONG).show();
+        Log.e("errorres", "" + profileModels.size());
+        Toast.makeText(getActivity(), "" + profileModels.size(), Toast.LENGTH_SHORT).show();
+        Log.e("errorres", "roomdb: " + ch);
+        if (ch == false) {
+            Toast.makeText(getActivity(), "" + ch, Toast.LENGTH_LONG).show();
             for (int i = 0; i < profileModels.size(); i++) {
                 uname.setText(String.valueOf(profileModels.get(i).getName()));
                 uhousenumber.setText(String.valueOf(profileModels.get(i).getHouse()));
@@ -152,7 +152,7 @@ public class ProfileFragment extends Fragment {
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-                    Log.e("errorres", "onCancelled: "+error.getMessage() );
+                    Log.e("errorres", "onCancelled: " + error.getMessage());
                 }
             });
         }
@@ -190,7 +190,7 @@ public class ProfileFragment extends Fragment {
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
                 thumbnail.compress(Bitmap.CompressFormat.JPEG, 50, bytes);
                 bb = bytes.toByteArray();
-                
+
                 progressDialog.setCancelable(false);
                 progressDialog.show();
                 progressDialog.setContentView(R.layout.progress_dialog_view);
@@ -257,7 +257,7 @@ public class ProfileFragment extends Fragment {
         if (ActivityCompat.checkSelfPermission(getActivity(), permissions[0]) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(), permissions, 2);
         } else {
-            
+
         }
     }
 
@@ -292,18 +292,22 @@ public class ProfileFragment extends Fragment {
         } else {
             ConnectivityManager manager = (ConnectivityManager) getActivity().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo networkInfo = manager.getActiveNetworkInfo();
-            if (networkInfo != null) {
-                MyDatabase myDatabase = Room.databaseBuilder(getActivity(), MyDatabase.class, "profiledata")
-                        .allowMainThreadQueries().build();
-                if (myDatabase==null){
-                    ProfileModel profileModel = new ProfileModel(email, name, house, street, area, pincode, land, number);
-                    myDatabase.dao().insertion(profileModel);
+            if (user != null) {
+                if (networkInfo != null) {
+                    MyDatabase myDatabase = Room.databaseBuilder(getActivity(), MyDatabase.class, "profiledata")
+                            .allowMainThreadQueries().build();
+                    if (myDatabase == null) {
+                        ProfileModel profileModel = new ProfileModel(email, name, house, street, area, pincode, land, number);
+                        myDatabase.dao().insertion(profileModel);
+                    } else {
+                        int pid = 1;
+                        myDatabase.dao().updateprofiledata(pincode, number, land, street, house, email, name, pid);
+                    }
                 } else {
-                    int pid = 1;
-                    myDatabase.dao().updateprofiledata(pincode,number,land,street,house,email,name,pid);
+                    Toast.makeText(getActivity(), "No Internet Connection\n Please turn on mobile data or wifi", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(getActivity(), "No Internet Connection\n Please turn on mobile data or wifi", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "You are not Login", Toast.LENGTH_SHORT).show();
             }
 
             hashMap.put("name", name);
@@ -318,12 +322,12 @@ public class ProfileFragment extends Fragment {
             String u_name = name;
             String u_address = name + "," + house + "," + street + "," + area + "," + land + "," + pincode;
             String u_mob = number;
-            
+
 
             myRef.setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
-        @Override
-        public void onSuccess(Void aVoid) {
-            Toast.makeText(getActivity(), "Successfully Updated", Toast.LENGTH_SHORT).show();
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Toast.makeText(getActivity(), "Successfully Updated", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
