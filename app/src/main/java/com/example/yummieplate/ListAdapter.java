@@ -83,6 +83,14 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         ImageView imageResource = listItemView.findViewById(R.id.image);
         imageResource.setImageResource(currentitem.getItem_image());
 
+        TextView item_view = listItemView.findViewById(R.id.item_view);
+        item_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getContext().startActivity(new Intent(getContext(), OpenItemActivity.class));
+            }
+        });
+
         TextView add = listItemView.findViewById(R.id.item_add); //will be use to add item in cart
         add.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -62,6 +62,10 @@ public class item {
         return shape;
     }
 
+    public String getFlavour() {
+        return flavour;
+    }
+
     public int getItem_image() {
         return item_image;
     }

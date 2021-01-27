@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.yummieplate">
-	
-	<uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -30,15 +30,20 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WishlistActivity"
+        <activity android:name=".OpenItemActivity"></activity>
+        <activity
+            android:name=".WishlistActivity"
             android:label="WishList">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".AP_orderHistory"
+        <activity
+            android:name=".AP_orderHistory"
             android:label="Admin Order History">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Admin_Panel"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Admin_Panel" />
         </activity>
         <activity
             android:name=".AP_ItemSettings"
