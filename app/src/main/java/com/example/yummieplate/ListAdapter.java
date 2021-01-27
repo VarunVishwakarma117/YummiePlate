@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.yummieplate.ui.home.HomeFragment;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,8 +32,6 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
@@ -47,6 +45,9 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
     List<Object> objectList = new ArrayList<>();
     Vibrator Vibrator;
     boolean callByWishlist;
+
+    String[] typeArray = {"YP Normal", "YP Healthy"};
+    String[] weightArray = {"Half Kg", "One Kg"};
 
     public ListAdapter(Activity activity){
         super(activity, 0);
@@ -75,8 +76,6 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         TextView nameTextView = listItemView.findViewById(R.id.local_name_item__textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
-        TextView numberTextView = listItemView.findViewById(R.id.default_textView);
-        numberTextView.setText(currentitem.getItem_name());
 
         TextView priceTextView = listItemView.findViewById(R.id.item_price);
         priceTextView.setText("₹" + String.valueOf(currentitem.getItem_Price()));
@@ -92,7 +91,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
             ConnectivityManager manager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo networkInfo = manager.getActiveNetworkInfo();
             if (networkInfo != null) {
-                item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),currentitem.getItem_name(), currentitem.getItem_image(), currentitem.getItem_Price(), 1);
+                item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),currentitem.getDescription(), currentitem.getItem_image(), currentitem.getItem_Price(), 1);
                 objectList.add(o);
                 myRef.push().setValue(o).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -114,10 +113,16 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
             }
         });
 
+        RelativeLayout open = listItemView.findViewById(R.id.open);
+        open.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         if(callByWishlist){
             if_wishlist.setVisibility(View.VISIBLE);
-            View divider = listItemView.findViewById(R.id.divider);
-            divider.setVisibility(View.GONE);
             final ArrayList<item> wishlistAlist_copy = new ArrayList<>();
 
             TextView move_to_cart = listItemView.findViewById(R.id.move_to_cart);
