@@ -44,6 +44,7 @@ public class AP_ItemSettings extends AppCompatActivity {
 
 
     private void refresh(){
+        //error
         //all_itemRef.getRef().removeValue();
         itemArrayList.add(new item(101, "Agarbatti", "Incense stick",R.drawable.h101, 100));
         itemArrayList.add(new item(102, "Ghee", "Ghee",R.drawable.h102, 100));
