@@ -55,7 +55,7 @@ public class LoginPage extends AppCompatActivity {
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private static final String EMAIL = "email";
     private TextView forgetText;
-    TextView login_as_admin, skip_login;
+    TextView skip_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,14 +68,7 @@ public class LoginPage extends AppCompatActivity {
         tpassword = findViewById(R.id.loginpasswordteacher);
         forgetText = findViewById(R.id.forgetpassword);
         skip_login = findViewById(R.id.skiplogin);
-        login_as_admin = findViewById(R.id.login_as_admin);
-        login_as_admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(LoginPage.this, Admin_Panel_Login.class);
-                startActivity(i);
-            }
-        });
+
 
         forgetText.setOnClickListener(new View.OnClickListener() {
             @Override

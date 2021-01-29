@@ -42,6 +42,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.sql.Time;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Vector;
@@ -54,6 +55,19 @@ public class HomeFragment extends Fragment {
     ProgressDialog progressDialog;
     ViewPager viewPager;
     DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("Admin").child("all_items");
+
+
+    String cake_discription = "Tastiest cake in city\n" +
+            "        \\nFor direct ordering or any query message on whatsapp 7995103192\n" +
+            "        \\nFree 5 roses (Subject to availablity)\n" +
+            "        \\nCustomisation in taste and size is available\n" +
+            "        \\nEggless cakes\n" +
+            "        \\nMid night delivery available\n" +
+            "        \\nSame day delivery available in Kukatpally(Hyderabad)and 10 km around it\n" +
+            "        \\nCashback of Flat 50 rs on order above 500 Rs in YP wallet\n" +
+            "        \\nFree delivery over 599 Rs";
+    String cake_version = "YP NORMAL & TASTY-YP HEALTHY & TASTY";
+    String cake_weigth = "Half Kg-One Kg";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -133,6 +147,27 @@ public class HomeFragment extends Fragment {
 
 
 
+        items.add(new item(101, "Multicolor star cake", cake_discription, cake_version , cake_weigth,
+                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.h101, new HashMap<Integer,Integer>(){
+            {put(000,599);
+             put(001,649);
+             put(002,649);
+             put(003,649);
+             put(010,1199);
+             put(011,1199);
+             put(012,1199);
+             put(013,1199);
+             put(100,699);
+             put(101,749);
+             put(102,799);
+             put(103,749);
+             put(110,1199);
+             put(111,1249);
+             put(112,1299);
+             put(113,1349);}}));
+
+
+
         viewPager = root.findViewById(R.id.viewPager);
         SliderDots = root.findViewById(R.id.SliderDots);
 
@@ -202,4 +237,5 @@ public class HomeFragment extends Fragment {
             }
         }
     }
+
 }
