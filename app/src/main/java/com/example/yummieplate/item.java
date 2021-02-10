@@ -14,7 +14,8 @@ public class item {
     private HashMap<Integer,Integer> item_Price;
     private int item_quant;
 
-    public item(){}
+    public item(int item_id, String item_local_name, String description, int item_image, HashMap<Integer, Integer> item_price, int i){}
+
     public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, HashMap<Integer,Integer> item_Price){
         this.item_id = item_id;
         this.item_local_name = item_local_name;
@@ -26,6 +27,7 @@ public class item {
         this.item_image = item_image;
         this.item_Price = item_Price;
     }
+
     public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, HashMap<Integer,Integer> item_Price, int item_quant){
         this.item_id = item_id;
         this.item_local_name = item_local_name;
@@ -38,7 +40,6 @@ public class item {
         this.item_Price = item_Price;
         this.item_quant = item_quant;
     }
-
 
     public int getItem_id() {
         return item_id;

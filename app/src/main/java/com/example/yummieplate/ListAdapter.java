@@ -99,7 +99,9 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
             ConnectivityManager manager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo networkInfo = manager.getActiveNetworkInfo();
             if (networkInfo != null) {
-                item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),currentitem.getDescription(), currentitem.getItem_image(), currentitem.getItem_Price(), 1);
+                item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),
+                        currentitem.getDescription(), currentitem.getItem_image(),
+                        currentitem.getItem_Price(), 1);
                 objectList.add(o);
                 myRef.push().setValue(o).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
