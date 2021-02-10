@@ -220,7 +220,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
                                         if(snapshot.exists()){
                                             for(DataSnapshot dss : snapshot.getChildren()){
                                                 item i = dss.getValue(item.class);
-                                                amount[0] = Integer.parseInt(quant[0]*i.getItem_Price().toString());
+                                                amount[0] = Integer.parseInt(quant[0]*i.getItem_Price().toString()); //Map q use hua h bhai???
                                                 dataSnapshot.getRef().child("item_Price").setValue(amount[0]);
                                                 dataSnapshot.getRef().child("item_quant").setValue(quant[0]);
                                                 price.setText(String.valueOf(amount[0]));
