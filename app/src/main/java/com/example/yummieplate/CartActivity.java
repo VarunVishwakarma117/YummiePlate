@@ -69,7 +69,7 @@ public class CartActivity extends AppCompatActivity {
                     for (DataSnapshot dss : snapshot.getChildren()) {
                         item i = dss.getValue(item.class);
                         item_cart_copy.add(i);
-                        total += dss.getValue(item.class).getItem_Price();
+                        total += dss.getValue(item.class).getSitem_Price();
                         CartAdapter cartAdapter = new CartAdapter(CartActivity.this, item_cart_copy);
                         ListView cart_item = findViewById(R.id.cart_item);
                         progressDialog.dismiss();

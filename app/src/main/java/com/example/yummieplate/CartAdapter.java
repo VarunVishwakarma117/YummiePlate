@@ -57,7 +57,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
         TextView removeItem;
         TextView move_to_wishList;
 
-        TextView nameTextView = listItemView.findViewById(R.id.local_name_item__textView);
+        TextView nameTextView = listItemView.findViewById(R.id.local_name_item_textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
         TextView numberTextView = listItemView.findViewById(R.id.version);
@@ -180,7 +180,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
                                             for(DataSnapshot dss : snapshot.getChildren()){
                                                 item i = dss.getValue(item.class);
                                                 Log.v("Tag", String.valueOf(i.getItem_Price()));
-                                                amount[0] = i.getItem_Price()*quant[0];
+                                                amount[0] = i.getSitem_Price()*quant[0];
                                                 dataSnapshot.getRef().child("item_Price").setValue(amount[0]);
                                                 dataSnapshot.getRef().child("item_quant").setValue(quant[0]);
                                                 price.setText(String.valueOf(amount[0]));
@@ -220,7 +220,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
                                         if(snapshot.exists()){
                                             for(DataSnapshot dss : snapshot.getChildren()){
                                                 item i = dss.getValue(item.class);
-                                                amount[0] = i.getItem_Price()*quant[0];
+                                                amount[0] = i.getSitem_Price()*quant[0];
                                                 dataSnapshot.getRef().child("item_Price").setValue(amount[0]);
                                                 dataSnapshot.getRef().child("item_quant").setValue(quant[0]);
                                                 price.setText(String.valueOf(amount[0]));

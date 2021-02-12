@@ -32,7 +32,7 @@ public class BookingFragment extends Fragment {
                 ViewModelProviders.of(this).get(BookingViewModel.class);
         View root = inflater.inflate(R.layout.fragment_booking, container, false);
 
-        TextView add_panditji = root.findViewById(R.id.add_panditji);
+        /*TextView add_panditji = root.findViewById(R.id.add_panditji);
         add_panditji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +58,7 @@ public class BookingFragment extends Fragment {
                 myCartRef.push().setValue(i);
                 Toast.makeText(getContext(), "Added to Cart", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         return root;
     }
 }

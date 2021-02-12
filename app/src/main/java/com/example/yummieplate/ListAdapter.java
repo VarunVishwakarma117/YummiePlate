@@ -46,8 +46,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
     Vibrator Vibrator;
     boolean callByWishlist;
 
-    String[] typeArray = {"YP Normal", "YP Healthy"};
-    String[] weightArray = {"Half Kg", "One Kg"};
+
 
     public ListAdapter(Activity activity){
         super(activity, 0);
@@ -73,12 +72,12 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         if_wishlist.setVisibility(View.GONE);
 
 
-        TextView nameTextView = listItemView.findViewById(R.id.local_name_item__textView);
+        TextView nameTextView = listItemView.findViewById(R.id.local_name_item_textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
 
         TextView priceTextView = listItemView.findViewById(R.id.item_price);
-        priceTextView.setText("₹" + String.valueOf(currentitem.getItem_Price()));
+        priceTextView.setText(currentitem.getItem_PriceRange());
 
         ImageView imageResource = listItemView.findViewById(R.id.image);
         imageResource.setImageResource(currentitem.getItem_image());
@@ -99,7 +98,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
             ConnectivityManager manager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo networkInfo = manager.getActiveNetworkInfo();
             if (networkInfo != null) {
-                item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),currentitem.getDescription(), currentitem.getItem_image(), currentitem.getItem_Price(), 1);
+                item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),null, currentitem.getVersion(), currentitem.getWeight_in_pounds_or_qunatity(), currentitem.getFlavour(), currentitem.getShape(), currentitem.getItem_image(), currentitem.getSitem_Price(), 1);
                 objectList.add(o);
                 myRef.push().setValue(o).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -125,7 +124,9 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent(getContext(), OpenItemActivity.class);
+                i.putExtra("itemId",currentitem.getItem_id());
+                getContext().startActivity(i);
             }
         });
 

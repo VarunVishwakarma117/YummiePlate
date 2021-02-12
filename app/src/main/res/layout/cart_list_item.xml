@@ -20,7 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/local_name_item__textView"
+                android:id="@+id/local_name_item_textView"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/version"
                 android:layout_marginTop="5dp"
-                android:layout_below="@id/local_name_item__textView"
+                android:layout_below="@id/local_name_item_textView"
                 android:textAppearance="?android:textAppearanceSmall"
                 tools:text="Incense stick"/>
 

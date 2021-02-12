@@ -19,6 +19,7 @@
             android:layout_height="200dp"
             tools:srcCompat="@tools:sample/avatars" />
         <TextView
+            android:id="@+id/name_openitem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Chocolate Cake"
@@ -28,7 +29,7 @@
             android:layout_marginTop="15dp"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/price_opneitem"
+            android:id="@+id/pricerange_openitem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="₹699.00 – ₹1,499.00"
@@ -69,6 +70,7 @@
                 android:gravity="center"
                 android:textSize="16sp"/>
             <Spinner
+                android:id="@+id/vspinner_openitem"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
@@ -89,6 +91,7 @@
                 android:gravity="center"
                 android:textSize="16sp"/>
             <Spinner
+                android:id="@+id/sispinner_openitem"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"/>
@@ -109,6 +112,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp"/>
             <Spinner
+                android:id="@+id/shspinner_openitem"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
@@ -129,6 +133,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp"/>
             <Spinner
+                android:id="@+id/fspinner_openitem"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>

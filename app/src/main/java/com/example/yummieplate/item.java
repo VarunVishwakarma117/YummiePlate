@@ -11,11 +11,13 @@ public class item {
     private String shape;
     private String flavour;
     int item_image;
-    private HashMap<Integer,Integer> item_Price;
+    private HashMap<String,Integer> item_Price;
+    private String price_range;
+    private int sitem_Price;
     private int item_quant;
 
     public item(){}
-    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, HashMap<Integer,Integer> item_Price){
+    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, String price_range, HashMap<String,Integer> item_Price){
         this.item_id = item_id;
         this.item_local_name = item_local_name;
         this.description = description;
@@ -25,8 +27,9 @@ public class item {
         this.shape = shape;
         this.item_image = item_image;
         this.item_Price = item_Price;
+        this.price_range = price_range;
     }
-    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, HashMap<Integer,Integer> item_Price, int item_quant){
+    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, int sitem_Price, int item_quant){
         this.item_id = item_id;
         this.item_local_name = item_local_name;
         this.description = description;
@@ -35,7 +38,7 @@ public class item {
         this.shape = shape;
         this.item_image = item_image;
         this.weight_in_pounds_or_qunatity = weight_in_pounds_or_qunatity;
-        this.item_Price = item_Price;
+        this.sitem_Price = sitem_Price;
         this.item_quant = item_quant;
     }
 
@@ -72,8 +75,16 @@ public class item {
         return item_image;
     }
 
-    public HashMap<Integer, Integer> getItem_Price() {
+    public HashMap<String, Integer> getItem_Price() {
         return item_Price;
+    }
+
+    public String getItem_PriceRange() {
+        return price_range;
+    }
+
+    public int getSitem_Price() {
+        return sitem_Price;
     }
 
     public int getItem_quant() {
