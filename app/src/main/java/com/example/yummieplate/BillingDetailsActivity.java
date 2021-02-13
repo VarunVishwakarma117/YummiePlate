@@ -65,7 +65,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
     DatabaseReference myCartRef = database.getReference("users").child(user.getUid()).child("user_cart");
     DatabaseReference myProfileRef = database.getReference("users").child(user.getUid()).child("user_profile");
     DatabaseReference myHistoryRef = database.getReference("users").child(user.getUid()).child("user_orderHistory");
-    DatabaseReference adminRef = database.getReference("Admin").child("current_orders");
+    DatabaseReference adminRef = database.getReference("admin").child("current_orders");
 
     ProgressDialog progressDialog;
 
@@ -135,7 +135,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
                     for(DataSnapshot dss : snapshot.getChildren()){
                         item i = dss.getValue(item.class);
                         item_cart_copy2.add(i);
-                        total += Integer.parseInt(String.valueOf(i.getItem_Price()));
+                        total += i.getSitem_Price();
                         billing_price.setText("₹" + String.valueOf(total));
                         billing_amount_final.setText("₹" + String.valueOf(total));
                         progressDialog.dismiss();

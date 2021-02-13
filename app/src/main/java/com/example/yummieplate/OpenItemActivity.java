@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -29,7 +30,7 @@ public class OpenItemActivity extends AppCompatActivity {
 
     item item;
 
-    DatabaseReference allItemsRef = FirebaseDatabase.getInstance().getReference().child("admin").child("allitems");
+    DatabaseReference allItemsRef = FirebaseDatabase.getInstance().getReference().child("admin").child("all_items");
 
 
     String[] typeArray = {"YP Normal", "YP Healthy"};
@@ -47,8 +48,9 @@ public class OpenItemActivity extends AppCompatActivity {
 
 
         String itemId = getIntent().getStringExtra("itemId");
+//        Log.v("itemID",itemId);
 
-        Query openItemRef = allItemsRef.orderByChild("item_id").equalTo(itemId);
+        Query openItemRef = allItemsRef.orderByChild("item_id").equalTo("100");
         openItemRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

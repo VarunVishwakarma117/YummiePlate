@@ -149,7 +149,7 @@ public class HomeFragment extends Fragment {
 
 
 
-        items.add(new item(100, "Multicolor star cake", cake_discription, cake_version , cake_weigth,
+        items.add(new item(100, "Multicolor star cake", cake_discription, cake_version, cake_weigth,
                 "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.h101, "₹599 - ₹1349", new HashMap<String,Integer>(){
             {put("000",599);
              put("001",649);
