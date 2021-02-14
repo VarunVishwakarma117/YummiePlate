@@ -16,5 +16,6 @@
     <string name="town_city_with_state">Town/City with State</string>
     <string name="phone_number">Phone Number</string>
     <string name="email">Email</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

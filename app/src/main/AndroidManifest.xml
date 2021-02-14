@@ -30,10 +30,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OpenItemActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
-        </activity>
+        <activity android:name=".OpenItemActivity"></activity>
         <activity
             android:name=".WishlistActivity"
             android:label="WishList">

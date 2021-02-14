@@ -31,6 +31,7 @@ public class CartActivity extends AppCompatActivity {
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser user = mAuth.getCurrentUser();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference userLocation = database.getReference("userlocation").child(user.getUid());
     DatabaseReference myCartRef = database.getReference("users").child(user.getUid()).child("user_cart");
 
     int total = 0;
@@ -102,6 +103,7 @@ public class CartActivity extends AppCompatActivity {
                         ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
                         if (networkInfo != null) {
+
                             startActivity(new Intent(CartActivity.this, BillingDetailsActivity.class));
                             progressDialog.dismiss();
                         } else {

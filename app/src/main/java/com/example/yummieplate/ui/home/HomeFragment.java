@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
     private ImageView[] dots;
     ProgressDialog progressDialog;
     ViewPager viewPager;
-    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items");
+    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("Admin").child("all_items");
 
 
     String cake_discription = "Tastiest cake in city\n" +
@@ -81,7 +81,6 @@ public class HomeFragment extends Fragment {
         progressDialog.setContentView(R.layout.progress_dialog_view);
         progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
-
         ConnectivityManager manager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
         if (networkInfo != null) {
@@ -93,10 +92,10 @@ public class HomeFragment extends Fragment {
                             item i = dss.getValue(item.class);
                             items.add(i);
                             progressDialog.dismiss();
+                            ListAdapter itemsAdapter = new ListAdapter(getActivity(), items, false);
+                            ListView listView = root.findViewById(R.id.list);
+                            listView.setAdapter(itemsAdapter);
                         }
-                        ListAdapter itemsAdapter = new ListAdapter(getActivity(), items, false);
-                        ListView listView = root.findViewById(R.id.list);
-                        listView.setAdapter(itemsAdapter);
                     }
                     else {
                         progressDialog.dismiss();
@@ -148,28 +147,26 @@ public class HomeFragment extends Fragment {
 
 
 
+        items.add(new item(101, "Multicolor star cake", cake_discription, cake_version , cake_weigth,
+                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.h101, new HashMap<Integer,Integer>(){
+            {put(000,599);
+             put(001,649);
+             put(002,649);
+             put(003,649);
+             put(010,1199);
+             put(011,1199);
+             put(012,1199);
+             put(013,1199);
+             put(100,699);
+             put(101,749);
+             put(102,799);
+             put(103,749);
+             put(110,1199);
+             put(111,1249);
+             put(112,1299);
+             put(113,1349);}}));
 
-        items.add(new item(100, "Multicolor star cake", cake_discription, cake_version, cake_weigth,
-                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.h101, "₹599 - ₹1349", new HashMap<String,Integer>(){
-            {put("000",599);
-             put("001",649);
-             put("002",649);
-             put("003",649);
-             put("010",1199);
-             put("011",1199);
-             put("012",1199);
-             put("013",1199);
-             put("100",699);
-             put("101",749);
-             put("102",799);
-             put("103",749);
-             put("110",1199);
-             put("111",1249);
-             put("112",1299);
-             put("113",1349);}}));
 
-
-        //all_itemRef.setValue(items);
 
         viewPager = root.findViewById(R.id.viewPager);
         SliderDots = root.findViewById(R.id.SliderDots);
