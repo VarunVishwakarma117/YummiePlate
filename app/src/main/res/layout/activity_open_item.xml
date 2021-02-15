@@ -73,6 +73,7 @@
                 android:id="@+id/vspinner_openitem"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:layout_weight="4"/>
         </LinearLayout>
         <LinearLayout
@@ -95,6 +96,7 @@
                 android:id="@+id/sispinner_openitem"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:layout_weight="4"/>
         </LinearLayout>
         <LinearLayout
@@ -117,6 +119,7 @@
                 android:id="@+id/fspinner_openitem"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:layout_weight="4"/>
         </LinearLayout>
         <LinearLayout
@@ -139,6 +142,7 @@
                 android:id="@+id/shspinner_openitem"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:layout_weight="4"/>
         </LinearLayout>
 
