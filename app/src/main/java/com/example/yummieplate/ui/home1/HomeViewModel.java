@@ -1,4 +1,4 @@
-package com.example.yummieplate.ui.home;
+package com.example.yummieplate.ui.home1;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="5dp"
-    app:cardCornerRadius="5dp"
+    app:cardCornerRadius="7dp"
     android:layout_margin="15dp">
     <LinearLayout
         android:orientation="vertical"
@@ -21,6 +21,7 @@
                 android:id="@+id/image"
                 android:scaleType="centerCrop"
                 android:layout_width="match_parent"
+                tools:src="@drawable/c1002"
                 android:layout_height="200dp"/>
             <RelativeLayout
                 android:id="@+id/open"
@@ -39,13 +40,13 @@
                         android:gravity="center"
                         android:layout_marginTop="10dp"
                         android:textColor="#000000"
-                        tools:text="Agarbatti"/>
+                        tools:text="Multicolor star cake"/>
                     <TextView
                         android:id="@+id/item_price"
                         android:layout_width="match_parent"
                         android:gravity="center"
                         android:layout_height="wrap_content"
-                        tools:text="₹100"
+                        tools:text="₹699.00 – ₹1,499.00"
                         android:layout_marginBottom="5dp"
                         android:textColor="@android:color/holo_green_dark"
                         android:layout_below="@id/local_name_item_textView"

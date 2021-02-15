@@ -1,37 +1,25 @@
-package com.example.yummieplate.ui.home;
+package com.example.yummieplate.ui.home1;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.yummieplate.CartActivity;
-import com.example.yummieplate.CartAdapter;
-import com.example.yummieplate.LoginPage;
-import com.example.yummieplate.MainActivity;
 import com.example.yummieplate.R;
 import com.example.yummieplate.ListAdapter;
-import com.example.yummieplate.Splash_Screen2;
 import com.example.yummieplate.ViewPagerAdapter;
 import com.example.yummieplate.item;
 import com.google.firebase.database.DataSnapshot;
@@ -40,12 +28,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.Vector;
 
 public class HomeFragment extends Fragment {
 
@@ -54,18 +40,18 @@ public class HomeFragment extends Fragment {
     private ImageView[] dots;
     ProgressDialog progressDialog;
     ViewPager viewPager;
-    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("Admin").child("all_items");
+    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items");
 
 
     String cake_discription = "Tastiest cake in city\n" +
-            "        \\nFor direct ordering or any query message on whatsapp 7995103192\n" +
-            "        \\nFree 5 roses (Subject to availablity)\n" +
-            "        \\nCustomisation in taste and size is available\n" +
-            "        \\nEggless cakes\n" +
-            "        \\nMid night delivery available\n" +
-            "        \\nSame day delivery available in Kukatpally(Hyderabad)and 10 km around it\n" +
-            "        \\nCashback of Flat 50 rs on order above 500 Rs in YP wallet\n" +
-            "        \\nFree delivery over 599 Rs";
+            "For direct ordering or any query message on whatsapp 7995103192\n" +
+            "Free 5 roses (Subject to availablity)\n" +
+            "Customisation in taste and size is available\n" +
+            "Eggless cakes\n" +
+            "Mid night delivery available\n" +
+            "Same day delivery available in Kukatpally(Hyderabad)and 10 km around it\n" +
+            "Cashback of Flat 50 rs on order above 500 Rs in YP wallet\n" +
+            "Free delivery over 599 Rs";
     String cake_version = "YP NORMAL & TASTY-YP HEALTHY & TASTY";
     String cake_weigth = "Half Kg-One Kg";
 
@@ -148,25 +134,25 @@ public class HomeFragment extends Fragment {
 
 
         items.add(new item(101, "Multicolor star cake", cake_discription, cake_version , cake_weigth,
-                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.h101, new HashMap<Integer,Integer>(){
-            {put(000,599);
-             put(001,649);
-             put(002,649);
-             put(003,649);
-             put(010,1199);
-             put(011,1199);
-             put(012,1199);
-             put(013,1199);
-             put(100,699);
-             put(101,749);
-             put(102,799);
-             put(103,749);
-             put(110,1199);
-             put(111,1249);
-             put(112,1299);
-             put(113,1349);}}));
+                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.c1001, "₹599 - ₹1349", new HashMap<String,Integer>(){
+            {put("000",599);
+             put("001",649);
+             put("002",649);
+             put("003",649);
+             put("010",1199);
+             put("011",1199);
+             put("012",1199);
+             put("013",1199);
+             put("100",699);
+             put("101",749);
+             put("102",799);
+             put("103",749);
+             put("110",1199);
+             put("111",1249);
+             put("112",1299);
+             put("113",1349);}}));
 
-
+        //all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
         viewPager = root.findViewById(R.id.viewPager);
         SliderDots = root.findViewById(R.id.SliderDots);
@@ -197,7 +183,6 @@ public class HomeFragment extends Fragment {
                 }
                 dots[position].setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.active_dot));
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
 
