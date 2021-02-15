@@ -37,7 +37,7 @@ public class OpenItemActivity extends AppCompatActivity {
 
     DatabaseReference allItemsRef = FirebaseDatabase.getInstance().getReference().child("admin").child("all_items");
 
-    StringBuffer cprice = new StringBuffer("0000");
+    StringBuffer cprice = new StringBuffer();
 
     String[] versionArray;
     String[] weightArray;
@@ -86,6 +86,7 @@ public class OpenItemActivity extends AppCompatActivity {
                 vspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        cprice.deleteCharAt(0).insert(0, adapterView.getSelectedItemPosition());
                         Toast.makeText(OpenItemActivity.this, "version selected", Toast.LENGTH_SHORT).show();
                     }
 
@@ -100,6 +101,7 @@ public class OpenItemActivity extends AppCompatActivity {
                 vspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        cprice.deleteCharAt(1).insert(1, adapterView.getSelectedItemPosition());
                         Toast.makeText(OpenItemActivity.this, "size selected", Toast.LENGTH_SHORT).show();
                     }
 
@@ -114,6 +116,7 @@ public class OpenItemActivity extends AppCompatActivity {
                 vspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        cprice.deleteCharAt(2).insert(2, adapterView.getSelectedItemPosition());
                         Toast.makeText(OpenItemActivity.this, "flv selected", Toast.LENGTH_SHORT).show();
                     }
 
@@ -128,6 +131,7 @@ public class OpenItemActivity extends AppCompatActivity {
                 vspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        cprice.deleteCharAt(3).insert(3, adapterView.getSelectedItemPosition());
                         Toast.makeText(OpenItemActivity.this, "shape selected", Toast.LENGTH_SHORT).show();
                     }
 
@@ -141,6 +145,8 @@ public class OpenItemActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
+
+        Log.v("final string", String.valueOf(cprice));
 
     }
 }
