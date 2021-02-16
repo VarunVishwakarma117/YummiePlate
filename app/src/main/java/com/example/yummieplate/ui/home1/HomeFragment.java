@@ -154,7 +154,7 @@ public class HomeFragment extends Fragment {
 
         items.add(new item(101, "Carrot cream Delicious cake", cake_discription, null , cake_weigth,
                 null, null, R.drawable.c1004, "₹549.00 – ₹949.00", new HashMap<String,Integer>(){
-            {put("000",599);
+            {   put("000",599);
                 put("0",549);
                 put("1",949);}}));
 
@@ -185,10 +185,59 @@ public class HomeFragment extends Fragment {
             put("1111",1299);
             put("1112",1299);}}));
 
+        items.add(new item(103, "Pink rosette cake – All Flavour : Order Tastiest cake online", cake_discription,cake_version, cake_weigth,"Butter Scotch-Red Velvet-Vanilla-Chocolate mix",null, R.drawable.c1005, "₹499.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+          put("000",549);
+            put("010",599);
+            put("020",499);
+            put("030",549);
+            put("001",999);
+            put("011",1099);
+            put("021",899);
+            put("031",999);
+            put("100",799);
+            put("110",799);
+            put("120",699);
+            put("130",799);
+            put("101",1299);
+            put("111",1299);
+            put("121",1199);
+            put("131",1499);}}));
+
+        items.add(new item(104, "Strawberry butterscoth cake", cake_discription,cake_version, cake_weigth,null,"Round-Heart Shaped", R.drawable.c1005, "₹549.00 – ₹1,299.00", new HashMap<String,Integer>(){{
+            put("000",549);
+            put("001",599);
+            put("010",999);
+            put("011",1099);
+            put("100",799);
+            put("101",849);
+            put("110",1199);
+            put("111",1299);}}));
+
+        items.add(new item(104, "Strawberry kiwi cake", cake_discription,cake_version, cake_weigth,null,null, R.drawable.c1005, "₹499.00 – ₹1,199.00", new HashMap<String,Integer>(){{
+            put("00",499);
+            put("01",999);
+            put("10",599);
+            put("11",1199);}}));
+
+
+
+
+
+
+
+
+
+
+
+
         /*items.add(new item(102,"Beige butter cream Decorative cake", cake_discription, null, cake_weigth,
                 null,null, R.drawable.c1003,"₹749.00 – ₹1,249.00", new HashMap<String,Integer>() {
-            {put("0",749);
-            put("1",1249);}}));*/
+            { put("0",749);
+              put("1",1249);}}));*/
+
+
+
+
 
         all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
