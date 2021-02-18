@@ -3,30 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/navigation_cake">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.yummieplate.ui.home1.HomeFragment"
-        android:label="@string/menu_home"
+        android:id="@+id/navigation_cake"
+        android:name="com.example.yummieplate.ui.home.HomeFragment"
+        android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_booking"
-        android:name="com.example.yummieplate.ui.booking.BookingFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_booking" />
+        android:id="@+id/navigation_pizza"
+        android:name="com.example.yummieplate.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/nav_myOrders"
-        android:name="com.example.yummieplate.ui.OrderHistory.OrderHistoryFragment"
-        android:label="@string/menu_myOrders"
-        tools:layout="@layout/fragment_order_history" />
-
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.yummieplate.ui.profile.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
-
+        android:id="@+id/navigation_sweets"
+        android:name="com.example.yummieplate.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
 </navigation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.yummieplate.ui.home1.HomeFragment1"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home1" />
+
+    <fragment
+        android:id="@+id/nav_booking"
+        android:name="com.example.yummieplate.ui.booking.BookingFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_booking" />
+
+    <fragment
+        android:id="@+id/nav_myOrders"
+        android:name="com.example.yummieplate.ui.OrderHistory.OrderHistoryFragment"
+        android:label="@string/menu_myOrders"
+        tools:layout="@layout/fragment_order_history" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.yummieplate.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

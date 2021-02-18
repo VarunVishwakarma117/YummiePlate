@@ -16,6 +16,9 @@
     <string name="town_city_with_state">Town/City with State</string>
     <string name="phone_number">Phone Number</string>
     <string name="email">Email</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Cakes &amp; Bakery</string>
+    <string name="title_dashboard">Party Order</string>
+    <string name="title_notifications">Sweets &amp; Deserts </string>
 
 </resources>

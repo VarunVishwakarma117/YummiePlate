@@ -94,29 +94,32 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-            ConnectivityManager manager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo networkInfo = manager.getActiveNetworkInfo();
-            if (networkInfo != null) {
-                item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),null, currentitem.getVersion(), currentitem.getWeight_in_pounds_or_qunatity(), currentitem.getFlavour(), currentitem.getShape(), currentitem.getItem_image(), currentitem.getSitem_Price(), 1);
-                objectList.add(o);
-                myRef.push().setValue(o).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.e(TAG, "onSuccess: done" );
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.e(TAG, "onFailure: "+e.getMessage());
-                    }
-                });
-                Toast.makeText(getContext(),"Item added!",Toast.LENGTH_SHORT).show();
-                Vibrator.vibrate(50);
-            }
-            else {
-                Toast.makeText(getContext(), "Check Your Internet Connection", Toast.LENGTH_SHORT).show();
-            }
+                ConnectivityManager manager = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+                if (networkInfo != null) {
+                    String[] shapeArray =  currentitem.getShape()!=null?currentitem.getShape().split("-"):null;
+                    String[] sItemPrice = currentitem.getItem_PriceRange()!=null?currentitem.getItem_PriceRange().split("-"):null;
+                    item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),null, currentitem.getVersion()!=null?"YP Normal & Tasty":null,
+                            "Half Kg", currentitem.getFlavour(), currentitem.getShape()!=null?shapeArray[0]:null, currentitem.getItem_image(),
+                            Integer.valueOf(sItemPrice[0].trim()), 1);
+                    objectList.add(o);
+                    myRef.push().setValue(o).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.e(TAG, "onSuccess: done" );
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.e(TAG, "onFailure: "+e.getMessage());
+                        }
+                    });
+                    Toast.makeText(getContext(),"Item added!",Toast.LENGTH_SHORT).show();
+                    Vibrator.vibrate(50);
+                }
+                else {
+                    Toast.makeText(getContext(), "Check Your Internet Connection", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
