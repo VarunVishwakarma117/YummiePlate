@@ -30,158 +30,238 @@
                 android:background="@drawable/dots_layout"
                 android:gravity="center_vertical|center_horizontal"/>
         </RelativeLayout>
-        <GridLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:rowCount="3"
-            android:padding="15dp"
-            android:useDefaultMargins="true"
-            android:columnCount="2">
+            android:layout_marginTop="10dp"
+            android:padding="1dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
                 <androidx.cardview.widget.CardView
                     android:id="@+id/category1"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    app:cardCornerRadius="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="7dp"
                     android:elevation="10dp">
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/category1"
-                        android:scaleType="fitStart"
-                        android:layout_marginTop="25dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:maxLines="1"
-                        android:text="CAKES &amp; BAKERY"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center"/>
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/category1"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:text="CAKES &amp; BAKERY"
+                            android:padding="8dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:layout_gravity="bottom"
+                            android:gravity="center"/>
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:id="@+id/category2"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    app:cardCornerRadius="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="7dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
                     android:elevation="10dp">
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/category2"
-                        android:scaleType="fitStart"
-                        android:layout_marginTop="25dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:maxLines="1"
-                        android:text="PARTY ORDER COMBOS"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center"/>
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/category2"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:text="PARTY ORDER COMBOS"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:layout_gravity="bottom"
+                            android:gravity="center"/>
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
                 <androidx.cardview.widget.CardView
                     android:id="@+id/category3"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    app:cardCornerRadius="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="7dp"
                     android:elevation="10dp">
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/category3"
-                        android:scaleType="fitStart"
-                        android:layout_marginTop="25dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:maxLines="1"
-                        android:text="SWEETS &amp; DESERTS"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center"/>
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/category3"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:text="SWEETS &amp; DESERTS"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:layout_gravity="bottom"
+                            android:gravity="center"/>
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:id="@+id/category4"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    app:cardCornerRadius="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="7dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
                     android:elevation="10dp">
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/category4"
-                        android:scaleType="fitStart"
-                        android:layout_marginTop="25dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:maxLines="1"
-                        android:text="PLANTS FOR GIFTING"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
-                        android:layout_gravity="bottom"
-                        android:layout_marginBottom="10dp"
-                        android:gravity="center"/>
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/category4"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:text="PLANTS FOR GIFTING"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:layout_gravity="bottom"
+                            android:gravity="center"/>
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/category5"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                app:cardCornerRadius="5dp"
-                android:elevation="10dp">
-                <ImageView
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/category5"
-                    android:scaleType="fitStart"
-                    android:layout_marginTop="25dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:maxLines="1"
-                    android:text="FLOWER &amp; BOQUET"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/category6"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                app:cardCornerRadius="5dp"
-                android:elevation="10dp">
-                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="7dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/category5"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:text="FLOWER &amp; BOQUET"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:layout_gravity="bottom"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/category6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/category6"
-                    android:scaleType="fitStart"
-                    android:layout_marginTop="25dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:maxLines="1"
-                    android:text="PACKED SNACKS"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"
-                    android:layout_gravity="bottom"
-                    android:layout_margin="3dp"
-                    android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-        </GridLayout>
+                    android:layout_weight="1"
+                    app:cardCornerRadius="7dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/category2"
+                            android:scaleType="fitStart"
+                            android:adjustViewBounds="true" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="16sp"
+                            android:maxLines="1"
+                            android:text="PACKED SNACKS"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:padding="8dp"
+                            android:layout_gravity="bottom"
+                            android:gravity="center"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
