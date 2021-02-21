@@ -22,4 +22,16 @@
         android:name="com.example.yummieplate.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_flowers_for_gifting"
+        android:name="com.example.yummieplate.PlantForGiftingFragment"
+        android:label="Plant For Gifting"
+        tools:layout="@layout/fragment_plant_for_gifting" />
+
+    <fragment
+        android:id="@+id/navigation_flowers_n_boquet"
+        android:name="com.example.yummieplate.FlowerNBoquetFragment"
+        android:label="Flower &amp; Boquet"
+        tools:layout="@layout/fragment_flower_n_boquet" />
+
 </navigation>

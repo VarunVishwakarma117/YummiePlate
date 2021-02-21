@@ -20,11 +20,12 @@ public class MainActivity2 extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_cake, R.id.navigation_pizza, R.id.navigation_sweets)
+                R.id.navigation_cake, R.id.navigation_pizza, R.id.navigation_sweets, R.id.navigation_flowers_for_gifting, R.id.navigation_flowers_n_boquet)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        navView.setItemIconTintList(null);
     }
 
 }

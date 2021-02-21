@@ -1,26 +1,21 @@
 package com.example.yummieplate.ui.booking;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.yummieplate.BookDharamshala;
 import com.example.yummieplate.R;
-import com.example.yummieplate.item;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class BookingFragment extends Fragment {
+public class PackedItemFragment extends Fragment {
 
     private BookingViewModel bookingViewModel;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -30,7 +25,7 @@ public class BookingFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         bookingViewModel =
                 ViewModelProviders.of(this).get(BookingViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_booking, container, false);
+        View root = inflater.inflate(R.layout.fragment_packed_item, container, false);
 
         /*TextView add_panditji = root.findViewById(R.id.add_panditji);
         add_panditji.setOnClickListener(new View.OnClickListener() {
