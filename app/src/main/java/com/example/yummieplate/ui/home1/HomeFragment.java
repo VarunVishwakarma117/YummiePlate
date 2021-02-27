@@ -230,6 +230,7 @@ public class HomeFragment extends Fragment {
 
 
 
+
         /*items.add(new item(102,"Beige butter cream Decorative cake", cake_discription, null, cake_weigth,
                 null,null, R.drawable.c1003,"₹749.00 – ₹1,249.00", new HashMap<String,Integer>() {
             { put("0",749);
