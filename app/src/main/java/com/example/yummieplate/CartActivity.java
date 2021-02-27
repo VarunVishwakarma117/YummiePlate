@@ -71,13 +71,13 @@ public class CartActivity extends AppCompatActivity {
                         item i = dss.getValue(item.class);
                         item_cart_copy.add(i);
                         total += dss.getValue(item.class).getSitem_Price();
-                        CartAdapter cartAdapter = new CartAdapter(CartActivity.this, item_cart_copy);
-                        ListView cart_item = findViewById(R.id.cart_item);
-                        progressDialog.dismiss();
-                        cart_item.setAdapter(cartAdapter);
                         //TextView cart_total = findViewById(R.id.cart_total);      //unstable
                         //cart_total.setText("₹" + String.valueOf(total));
                     }
+                    CartAdapter cartAdapter = new CartAdapter(CartActivity.this, item_cart_copy);
+                    ListView cart_item = findViewById(R.id.cart_item);
+                    progressDialog.dismiss();
+                    cart_item.setAdapter(cartAdapter);
                 }
                 else {
                     emptyCart.setVisibility(View.VISIBLE);

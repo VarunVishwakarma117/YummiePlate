@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_cake"
+        android:icon="@drawable/ic__cake2"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_pizza"
+        android:icon="@drawable/ic_pizza"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_sweets"
+        android:icon="@drawable/ic_sweets"
+        android:title="@string/title_notifications" />
+    <item
+        android:id="@+id/navigation_flowers_for_gifting"
+        android:icon="@drawable/ic_flower_for_gifting"
+        android:title="@string/flower_for_gifting" />
+
+    <item
+        android:id="@+id/navigation_flowers_n_boquet"
+        android:icon="@drawable/ic_flower_n_boquet"
+        android:title="@string/title_dashboard" />
+
+</menu>

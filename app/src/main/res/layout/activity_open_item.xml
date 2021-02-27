@@ -8,193 +8,210 @@
     tools:context=".OpenItemActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="15dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".OpenItemActivity">
-        <ImageView
-            android:id="@+id/iv_openitem"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            tools:srcCompat="@drawable/c1002" />
-        <TextView
-            android:id="@+id/name_openitem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Multicolor star cake"
-            android:textColor="@android:color/black"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/pricerange_openitem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="₹699.00 – ₹1,499.00"
-            android:gravity="center"
-            android:textColor="@android:color/holo_green_dark"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_marginTop="15dp"/>
-        <TextView
-            android:id="@+id/description_openitem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            tools:text="Tastiest cake in city
-        \nFor direct ordering or any query message on whatsapp 7995103192
-        \nFree 5 roses (Subject to availablity)
-        \nCustomisation in taste and size is available
-        \nEggless cakes
-        \nMid night delivery available
-        \nSame day delivery available in Kukatpally(Hyderabad)and 10 km around it
-        \nCashback of Flat 50 rs on order above 500 Rs in YP wallet
-        \nFree delivery over 599 Rs"
-            android:textColor="@android:color/black"
-            android:lineSpacingExtra="5dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/back_button_openActivity"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_round_arrow_white_24"
+                android:layout_margin="15dp"/>
+            <ImageView
+                android:id="@+id/iv_openitem"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/c1002"/>
+        </RelativeLayout>
         <LinearLayout
-            android:id="@+id/ll_vr"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:padding="8dp">
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp">
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Version"
+                android:id="@+id/name_openitem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Multicolor star cake"
                 android:textColor="@android:color/black"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="3"
+                android:textAppearance="?android:textAppearanceLarge"
                 android:gravity="center"
-                android:textSize="16sp"/>
-            <Spinner
-                android:id="@+id/vspinner_openitem"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="4"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll_si"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp">
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Size"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="3"
-                android:textColor="@android:color/black"
+                android:id="@+id/pricerange_openitem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="₹699.00 – ₹1,499.00"
                 android:gravity="center"
-                android:textSize="16sp"/>
-            <Spinner
-                android:id="@+id/sispinner_openitem"
-                android:layout_width="0dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:id="@+id/description_openitem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                tools:text="Tastiest cake in city
+    \nFor direct ordering or any query message on whatsapp 7995103192
+    \nFree 5 roses (Subject to availablity)
+    \nCustomisation in taste and size is available
+    \nEggless cakes
+    \nMid night delivery available
+    \nSame day delivery available in Kukatpally(Hyderabad)and 10 km around it
+    \nCashback of Flat 50 rs on order above 500 Rs in YP wallet
+    \nFree delivery over 599 Rs"
+                android:textColor="@android:color/black"
+                android:lineSpacingExtra="5dp" />
+            <LinearLayout
+                android:id="@+id/ll_vr"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Version"
+                    android:textColor="@android:color/black"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/vspinner_openitem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_si"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:layout_weight="4"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll_fv"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Flavour"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="3"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Size"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="3"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/sispinner_openitem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_fv"
+                android:orientation="horizontal"
                 android:gravity="center"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"/>
-            <Spinner
-                android:id="@+id/fspinner_openitem"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="4"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll_sh"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="Shape"
-                android:layout_marginEnd="5dp"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"/>
-            <Spinner
-                android:id="@+id/shspinner_openitem"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_weight="4"/>
-        </LinearLayout>
-
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:background="?android:attr/listDivider" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Current Price"
-                android:textSize="16sp"
-                android:gravity="center"
-                android:textColor="@android:color/holo_green_dark"/>
-            <TextView
-                android:id="@+id/current_price"
-                android:layout_width="0dp"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Flavour"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/fspinner_openitem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_sh"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:text="₹699.00"
                 android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@android:color/holo_green_dark"/>
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Shape"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/shspinner_openitem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="4"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Current Price"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_green_dark"/>
+                <TextView
+                    android:id="@+id/current_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="₹699.00"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/holo_green_dark"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="?android:attr/listDivider" />
+            <Button
+                android:id="@+id/add_to_cart_openItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add To Cart"
+                android:background="@drawable/background"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="15dp"/>
         </LinearLayout>
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:background="?android:attr/listDivider" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add To Cart"
-            android:background="@drawable/background"
-            android:textColor="@android:color/white"
-            android:layout_marginTop="15dp"/>
-
     </LinearLayout>
 </ScrollView>
