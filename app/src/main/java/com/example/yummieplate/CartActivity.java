@@ -2,37 +2,20 @@ package com.example.yummieplate;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.Looper;
-import android.provider.Settings;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -42,23 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class CartActivity extends AppCompatActivity {
-
-    FusedLocationProviderClient fusedLocationProviderClient;
-    String lati_tv, long_tv;
-    int PERMISSION_ID = 44;
-    //YUmmie Plate Location
-    double lat1 = 28.535889;
-    double long1 = 77.391029;
-
-    double lat2;
-    double long2;
-
-    double distance = 0.0;
-
-    HashMap<String, String> hm;
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser user = mAuth.getCurrentUser();
@@ -82,21 +50,17 @@ public class CartActivity extends AppCompatActivity {
         emptyCart = findViewById(R.id.iv_emptyCart);
         progressDialog = new ProgressDialog(CartActivity.this);
 
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(CartActivity.this);
-        getLastLocation();
-
         item_cart_copy = new ArrayList<>();
         //item_cart_copy.add(new item(101, "Agarbatti", "Incense stick", R.drawable.h101, 100));
         //item_cart_copy.add(new item(102, "Ghee", "Ghee", R.drawable.h102, 100));
         //item_cart_copy.add(new item(103, "Kumkuma", "Kumkuma", R.drawable.h103, 100));
         //item_cart_copy.add(new item(104, "phool", "Flowers", R.drawable.h104, 100));
 
-        dis();
-
         progressDialog.setCancelable(false);
         progressDialog.show();
         progressDialog.setContentView(R.layout.progress_dialog_view);
         progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+
 
         myCartRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -114,12 +78,12 @@ public class CartActivity extends AppCompatActivity {
                         //TextView cart_total = findViewById(R.id.cart_total);      //unstable
                         //cart_total.setText("₹" + String.valueOf(total));
                     }
-                } else {
+                }
+                else {
                     emptyCart.setVisibility(View.VISIBLE);
                     progressDialog.dismiss();
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
@@ -132,163 +96,25 @@ public class CartActivity extends AppCompatActivity {
                 progressDialog.show();
                 progressDialog.setContentView(R.layout.progress_dialog_view);
                 progressDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-                if (item_cart_copy.isEmpty()) {
-                    Toast.makeText(CartActivity.this, "Your Cart is Empty", Toast.LENGTH_SHORT).show();
-                } else {
-                    ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-                    NetworkInfo networkInfo = manager.getActiveNetworkInfo();
-                    if (networkInfo != null) {
-                        if (distance < 9.00) {
+                if (user != null) {
+                    if (item_cart_copy.isEmpty()) {
+                        Toast.makeText(CartActivity.this, "Your Cart is Empty", Toast.LENGTH_SHORT).show();
+                    } else {
+                        ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+                        NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+                        if (networkInfo != null) {
+
                             startActivity(new Intent(CartActivity.this, BillingDetailsActivity.class));
                             progressDialog.dismiss();
                         } else {
+                            Toast.makeText(CartActivity.this, "Check Your Network", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
-                            Toast.makeText(CartActivity.this, "Distance is more than 8KM", Toast.LENGTH_SHORT).show();
                         }
-                    } else {
-                        Toast.makeText(CartActivity.this, "Check Your Network", Toast.LENGTH_SHORT).show();
-                        progressDialog.dismiss();
                     }
+                } else {
+                    Toast.makeText(CartActivity.this, "You are not Login", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-    }
-
-    private void dis() {
-        double longoff = long1 - long2;
-
-        double distances = Math.sin(deg2rad(lat1))
-                * Math.sin(deg2rad(lat2))
-                + Math.cos(deg2rad(lat1))
-                * Math.cos(deg2rad(lat2))
-                * Math.cos(deg2rad(longoff));
-        distances = Math.acos(distances);
-        distances = rad2deg(distances);
-        distances = distances * 60 * 1.1515;
-        distances = distances * 1.609344;
-        distance = distances;
-    }
-
-    private double rad2deg(double distances) {
-        return (distances * 180.0 / Math.PI);
-    }
-
-    private double deg2rad(double lat1) {
-        return (lat1 * Math.PI / 180.0);
-    }
-
-    private void getLastLocation() {
-        if (checkPermission()) {
-            if (isLocationEnabled()) {
-                fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Location> task) {
-                        Location location = task.getResult();
-                        if (location == null) {
-                            requestNewLocation();
-                        } else {
-                            hm = new HashMap();
-                            lati_tv = location.getLatitude() + "";
-                            long_tv = location.getLongitude() + "";
-                            lat2 = location.getLatitude();
-                            long2 = location.getLongitude();
-                            Log.e(TAG, "onComplete: " + lat2 + " " + long2);
-                            hm.put("longitude : ", location.getLongitude() + "");
-                            hm.put("Latitude : ", location.getLatitude() + "");
-                            userLocation.setValue(hm).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Toast.makeText(CartActivity.this, "Location", Toast.LENGTH_SHORT).show();
-                                    Log.e("location long", String.valueOf(location.getLongitude()));
-                                    Log.e("location lat", String.valueOf(location.getLatitude()));
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Log.e("location", e.toString());
-                                }
-                            });
-                        }
-                    }
-                });
-            } else {
-                Toast.makeText(getApplicationContext(), "Please Turn On the Location", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-            }
-        } else {
-            requestPermission();
-        }
-    }
-
-    @SuppressLint("MissingPermission")
-    private void requestNewLocation() {
-        LocationRequest locationRequest = new LocationRequest();
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setInterval(5000);
-
-        LocationCallback locationCallBack = new LocationCallback() {
-            @Override
-            public void onLocationResult(LocationResult locationResult) {
-                Location location = locationResult.getLastLocation();
-                lati_tv = location.getLatitude() + "";
-                long_tv = location.getLongitude() + "";
-                lat2 = location.getLatitude();
-                long2 = location.getLongitude();
-                Log.e(TAG, "onLocationResult: " + lat1);
-                hm.put("longitude : ", location.getLongitude() + "");
-                hm.put("Latitude : ", location.getLatitude() + "");
-                userLocation.setValue(hm).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(CartActivity.this, "Location", Toast.LENGTH_SHORT).show();
-                        Log.e("location long", String.valueOf(location.getLongitude()));
-                        Log.e("location lat", String.valueOf(location.getLatitude()));
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.e("location", e.toString());
-                    }
-                });
-            }
-        };
-
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(CartActivity.this);
-        fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallBack, Looper.myLooper());
-    }
-
-    private void requestPermission() {
-        ActivityCompat.requestPermissions(CartActivity.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_ID);
-    }
-
-    private boolean isLocationEnabled() {
-        getApplicationContext();
-        LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-    }
-
-    private boolean checkPermission() {
-        return ActivityCompat.checkSelfPermission(CartActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(CartActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
-    }
-
-    @Override
-    public void
-    onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (requestCode == PERMISSION_ID) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                getLastLocation();
-            }
-        }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (checkPermission()) {
-            getLastLocation();
-        }
     }
 }
