@@ -49,7 +49,7 @@ public class CartActivity extends AppCompatActivity {
     FusedLocationProviderClient fusedLocationProviderClient;
     String lati_tv, long_tv;
     int PERMISSION_ID = 44;
-
+    //YUmmie Plate Location
     double lat1 = 28.535889;
     double long1 = 77.391029;
 
