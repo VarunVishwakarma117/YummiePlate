@@ -55,7 +55,7 @@ public class LoginPage extends AppCompatActivity {
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private static final String EMAIL = "email";
     private TextView forgetText;
-    TextView skip_login;
+    //TextView skip_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,7 @@ public class LoginPage extends AppCompatActivity {
         temail = findViewById(R.id.loginemailteacher);
         tpassword = findViewById(R.id.loginpasswordteacher);
         forgetText = findViewById(R.id.forgetpassword);
-        skip_login = findViewById(R.id.skiplogin);
+        //skip_login = findViewById(R.id.skiplogin);
 
 
         forgetText.setOnClickListener(new View.OnClickListener() {
@@ -87,12 +87,12 @@ public class LoginPage extends AppCompatActivity {
             }
         });
 
-        skip_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginPage.this, MainActivity.class));
-            }
-        });
+//        skip_login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                gotonext();
+//            }
+//        });
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))

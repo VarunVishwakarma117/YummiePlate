@@ -65,16 +65,16 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/skiplogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_margin="10dp"
-            android:text="Skip Login"
-            android:layout_gravity="center"
-            android:textColor="#ffffff"/>
+<!--        <TextView-->
+<!--            android:id="@+id/skiplogin"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="18sp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:text="Skip Login"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textColor="#ffffff"/>-->
         <TextView
             android:id="@+id/forgetpassword"
             android:focusable="false"
