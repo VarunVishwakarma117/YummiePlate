@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -73,6 +74,7 @@ public class HomeFragment extends Fragment {
                     if(snapshot.exists()){
                         for(DataSnapshot dss : snapshot.getChildren()){
                             item i = dss.getValue(item.class);
+                            Log.e("TAG", "onDataChange: "+i );
                             items.add(i);
                         }
                         progressDialog.dismiss();
