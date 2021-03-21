@@ -137,11 +137,11 @@ public class CartActivity extends AppCompatActivity {
                     } else {
                         ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
-                           if (networkInfo != null) {
-                               //distance code
+                        if (networkInfo != null) {
+                            //distance code
 //                            if(distance < 8) {
-                                startActivity(new Intent(CartActivity.this, BillingDetailsActivity.class));
-                                progressDialog.dismiss();
+                            startActivity(new Intent(CartActivity.this, BillingDetailsActivity.class));
+                            progressDialog.dismiss();
 //                            } else {
 //                                progressDialog.dismiss();
 //                                Toast.makeText(CartActivity.this, "Sorry We can't deliver\nDistance is more than 8KM ", Toast.LENGTH_SHORT).show();
