@@ -75,6 +75,7 @@ public class HomeFragment extends Fragment {
                     if(snapshot.exists()){
                         for(DataSnapshot dss : snapshot.getChildren()){
                             item i = dss.getValue(item.class);
+                            Log.e("TAG", "onDataChange: "+i );
                             items.add(i);
                             Log.v("range",i.getItem_PriceRange());
                         }
