@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,11 +29,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items");
+    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items").child("cakes");
     ProgressDialog progressDialog;
 
 
@@ -74,6 +76,7 @@ public class HomeFragment extends Fragment {
                         for(DataSnapshot dss : snapshot.getChildren()){
                             item i = dss.getValue(item.class);
                             items.add(i);
+                            Log.v("range",i.getItem_PriceRange());
                         }
                         progressDialog.dismiss();
                         ListAdapter itemsAdapter = new ListAdapter(getActivity(), items, false);
@@ -94,94 +97,58 @@ public class HomeFragment extends Fragment {
             Toast.makeText(getContext(), "Check Your Internet Connection", Toast.LENGTH_SHORT).show();
         }
 
-        /*items.add(new item(101, "Agarbatti", "Incense stick",R.drawable.h101, 100));
-        items.add(new item(102, "Ghee", "Ghee",R.drawable.h102, 100));
-        items.add(new item(103, "Kumkuma", "Kumkuma",R.drawable.h103, 100));
-        items.add(new item(104, "Phool", "Flowers",R.drawable.h104, 100));
-        items.add(new item(105, "Rudraksha", "Rudraksha",R.drawable.h105, 100));
-        items.add(new item(106, "Chandan", "Sandalwood",R.drawable.h106, 100));
-        items.add(new item(107, "Sindoor", "Vermilion red",R.drawable.h107, 100));
-        items.add(new item(108, "Tulasi", "Tulasi",R.drawable.h108, 100));
-        items.add(new item(109, "Haldee", "Turmeric",R.drawable.h109, 100));
-        items.add(new item(110, "Vibhuti", "Vibhuti",R.drawable.h110, 100));
-        items.add(new item(111, "Panchagavya", "Panchagavya ",R.drawable.h111, 100));
-        items.add(new item(112, "Dhaga", "Red Thread",R.drawable.h112, 100));
-        items.add(new item(113, "Cheenee", "Sugar",R.drawable.h113, 100));
-        items.add(new item(114, "Prasad", "Prasad",R.drawable.h114, 100));
-        items.add(new item(115, "Havan Samagri", "Havan content",R.drawable.h115, 100));
-        items.add(new item(116, "Diya Stand", "Light lamps",R.drawable.h116, 100));
-        items.add(new item(117, "Lakadee", "Firewood",R.drawable.h117, 100));
-        items.add(new item(118, "Doodh", "Milk",R.drawable.h118, 100));
-        items.add(new item(119, "Shahad", "Honey",R.drawable.h119, 100));
-        items.add(new item(120, "Kesar", "Saffron",R.drawable.h120, 100));
-        items.add(new item(121, "Kheer", "Kheer",R.drawable.h121, 100));
-        items.add(new item(122, "Panjiri", "Panjiri",R.drawable.h122, 100));
-        items.add(new item(123, "Naariyal", "Coconut",R.drawable.h123, 100));
-        items.add(new item(124, "Saphed Dhaaga", "White thread",R.drawable.h124, 100));
-        items.add(new item(125, "Phal", "Fruits",R.drawable.h125, 100));
-        items.add(new item(126, "Chawal", "Rice",R.drawable.h126, 100));
-        items.add(new item(127, "Elaichi", "Cardamom ",R.drawable.h127, 100));
-        items.add(new item(128, "Chandan", "Sandalwood",R.drawable.h128, 100));
-        items.add(new item(129, "Halva", "Halva",R.drawable.h129, 100));
-        items.add(new item(130, "Pila Chawal", "Yellow rice",R.drawable.h130, 100));
-        items.add(new item(131, "Peele Vastr", "Yellow clothes",R.drawable.h131, 100));
-        items.add(new item(132, "Agarwood", "Agarwood",R.drawable.h132, 100));
-        items.add(new item(133, "Laung", "Cloves",R.drawable.h133, 100));*/
 
-
-
-        /*items.add(new item(105, "Multicolor star cake", cake_discription, cake_version , cake_weigth,
-                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.c1001, "₹599 - ₹1349", new HashMap<String,Integer>(){
-            {put("000",599);
-             put("001",649);
-             put("002",649);
-             put("003",649);
-             put("010",1199);
-             put("011",1199);
-             put("012",1199);
-             put("013",1199);
-             put("100",699);
-             put("101",749);
-             put("102",799);
-             put("103",749);
-             put("110",1199);
-             put("111",1249);
-             put("112",1299);
-             put("113",1349);}}));*/
-
-        /*items.add(new item(101, "Carrot cream Delicious cake", cake_discription, null , cake_weigth,
-                null, null, R.drawable.c1004, "₹549.00 – ₹949.00", new HashMap<String,Integer>(){
-            {   put("000",599);
-                put("0",549);
-                put("1",949);}}));
-
-        items.add(new item(102,"Chocolate butterscotch cake", cake_discription, cake_version, cake_weigth,
-                "Chocolate-Dark chocolate","Round-HeartShaped-Square", R.drawable.c1002, "₹599.00 – ₹1,299.00", new HashMap<String,Integer>(){{
-            put("0000",599);
-            put("0001",649);
-            put("0002",599);
-            put("0010",599);
-            put("0011",649);
-            put("0012",599);
-            put("0100",1099);
-            put("0101",1099);
-            put("0102",1099);
-            put("0110",1099);
-            put("0111",1149);
-            put("0112",1099);
-            put("1000",699);
-            put("1001",749);
-            put("1002",749);
-            put("1100",1249);
-            put("1101",1299);
-            put("1102",1299);
-            put("1010",699);
-            put("1011",749);
-            put("1012",749);
-            put("1110",1249);
-            put("1111",1299);
-            put("1112",1299);}}));*/
-
+//        items.add(new item(105, "Multicolor star cake", cake_discription, cake_version , cake_weigth,
+//                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.c1001, "₹599 - ₹1349", new HashMap<String,Integer>(){
+//            {put("000",599);
+//             put("001",649);
+//             put("002",649);
+//             put("003",649);
+//             put("010",1199);
+//             put("011",1199);
+//             put("012",1199);
+//             put("013",1199);
+//             put("100",699);
+//             put("101",749);
+//             put("102",799);
+//             put("103",749);
+//             put("110",1199);
+//             put("111",1249);
+//             put("112",1299);
+//             put("113",1349);}}));
+//
+//        items.add(new item(101, "Carrot cream Delicious cake", cake_discription, null , cake_weigth,
+//                null, null, R.drawable.c1005, "₹549.00 – ₹949.00", new HashMap<String,Integer>(){
+//            {   put("000",599);
+//                put("0",549);
+//                put("1",949);}}));
+//
+//        items.add(new item(102,"Chocolate butterscotch cake", cake_discription, cake_version, cake_weigth,
+//                "Chocolate-Dark chocolate","Round-HeartShaped-Square", R.drawable.c1002, "₹599.00 – ₹1,299.00", new HashMap<String,Integer>(){{
+//            put("0000",599);
+//            put("0001",649);
+//            put("0002",599);
+//            put("0010",599);
+//            put("0011",649);
+//            put("0012",599);
+//            put("0100",1099);
+//            put("0101",1099);
+//            put("0102",1099);
+//            put("0110",1099);
+//            put("0111",1149);
+//            put("0112",1099);
+//            put("1000",699);
+//            put("1001",749);
+//            put("1002",749);
+//            put("1100",1249);
+//            put("1101",1299);
+//            put("1102",1299);
+//            put("1010",699);
+//            put("1011",749);
+//            put("1012",749);
+//            put("1110",1249);
+//            put("1111",1299);
+//            put("1112",1299);}}));
         /*items.add(new item(103, "Pink rosette cake – All Flavour : Order Tastiest cake online", cake_discription,cake_version, cake_weigth,"Butter Scotch-Red Velvet-Vanilla-Chocolate mix",null, R.drawable.c1005, "₹499.00 – ₹1,499.00", new HashMap<String,Integer>(){{
           put("000",549);
             put("010",599);

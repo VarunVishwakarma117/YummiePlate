@@ -12,12 +12,12 @@ public class item {
     private String flavour;
     int item_image;
     private HashMap<String,Integer> item_Price;
-    private String price_range;
+    private String item_PriceRange;
     private int sitem_Price;
     private int item_quant;
 
     public item(){}
-    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, String price_range, HashMap<String,Integer> item_Price){
+    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, String item_PriceRange, HashMap<String,Integer> item_Price){
         this.item_id = item_id;
         this.item_local_name = item_local_name;
         this.description = description;
@@ -27,7 +27,7 @@ public class item {
         this.shape = shape;
         this.item_image = item_image;
         this.item_Price = item_Price;
-        this.price_range = price_range;
+        this.item_PriceRange = item_PriceRange;
     }
     public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, int sitem_Price, int item_quant){
         this.item_id = item_id;
@@ -80,7 +80,7 @@ public class item {
     }
 
     public String getItem_PriceRange() {
-        return price_range;
+        return item_PriceRange;
     }
 
     public int getSitem_Price() {

@@ -103,7 +103,6 @@ public class CartActivity extends AppCompatActivity {
                         ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
                         if (networkInfo != null) {
-
                             startActivity(new Intent(CartActivity.this, BillingDetailsActivity.class));
                             progressDialog.dismiss();
                         } else {

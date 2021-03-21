@@ -75,7 +75,6 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         TextView nameTextView = listItemView.findViewById(R.id.local_name_item_textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
-
         TextView priceTextView = listItemView.findViewById(R.id.item_price);
         priceTextView.setText(currentitem.getItem_PriceRange());
 
@@ -98,10 +97,12 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
                 NetworkInfo networkInfo = manager.getActiveNetworkInfo();
                 if (networkInfo != null) {
                     String[] shapeArray =  currentitem.getShape()!=null?currentitem.getShape().split("-"):null;
-                    String[] sItemPrice = currentitem.getItem_PriceRange()!=null?currentitem.getItem_PriceRange().split("-"):null;
+                    String[] sItemPrice = currentitem.getItem_PriceRange().split("-");
+                    Log.v("a", sItemPrice[0]);
+                    int x = Integer.parseInt(sItemPrice[0].trim().substring(1, sItemPrice[0].trim().length()));
                     item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),null, currentitem.getVersion()!=null?"YP Normal & Tasty":null,
                             "Half Kg", currentitem.getFlavour(), currentitem.getShape()!=null?shapeArray[0]:null, currentitem.getItem_image(),
-                            Integer.valueOf(sItemPrice[0].trim()), 1);
+                           x ,1);
                     objectList.add(o);
                     myRef.push().setValue(o).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override

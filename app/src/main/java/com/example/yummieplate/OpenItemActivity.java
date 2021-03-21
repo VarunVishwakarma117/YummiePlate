@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -51,7 +52,7 @@ public class OpenItemActivity extends AppCompatActivity {
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private FirebaseUser user = mAuth.getCurrentUser();
     DatabaseReference myCartRef = FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("user_cart");
-    DatabaseReference allItemsRef = FirebaseDatabase.getInstance().getReference().child("admin").child("all_items");
+    DatabaseReference allItemsRef = FirebaseDatabase.getInstance().getReference().child("admin").child("all_items").child("cakes");
 
     StringBuffer mapKey = new StringBuffer(4);
 
@@ -85,6 +86,7 @@ public class OpenItemActivity extends AppCompatActivity {
         ll_si = findViewById(R.id.ll_si);
         ll_fv = findViewById(R.id.ll_fv);
         ll_sh = findViewById(R.id.ll_sh);
+        Log.v("version list","this ran");
 
         back_button_openActivity = findViewById(R.id.back_button_openActivity);
         back_button_openActivity.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +100,7 @@ public class OpenItemActivity extends AppCompatActivity {
 //        String itemId = getIntent().getStringExtra("itemId");
 //        Log.v("itemID",itemId);
 
-        final int id = 105;
+        final int id = 102;
 
         Query openItemRef = allItemsRef.orderByChild("item_id").equalTo(id);
         openItemRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -111,6 +113,7 @@ public class OpenItemActivity extends AppCompatActivity {
                     pricerange_openitem.setText(item.getItem_PriceRange());
                     description_openitem.setText(item.getDescription());
                     hmPrice = item.getItem_Price();
+                    Log.v("version list",item.getVersion());
                 }
                 progressDialog.dismiss();
                 if(item.getVersion()!=null){
@@ -214,7 +217,8 @@ public class OpenItemActivity extends AppCompatActivity {
                 item o = new item(item.getItem_id(),item.getItem_local_name(),null, item.getVersion()!=null?versionArray[Integer.parseInt(mapKey.substring(0,1))]:null,
                         item.getWeight_in_pounds_or_qunatity()!=null?weightArray[Integer.parseInt(mapKey.substring(1,2))]:null, item.getFlavour()!=null?flavorArray[Integer.parseInt(mapKey.substring(2,3))]:null, item.getShape()!=null?shapeArray[Integer.parseInt(mapKey.substring(3,4))]:null, item.getItem_image(),
                         price, 1);
-                myCartRef.setValue(o);
+                myCartRef.push().setValue(o);
+                Toast.makeText(OpenItemActivity.this, "Item Sucessfully Added", Toast.LENGTH_SHORT).show();
             }
         });
     }
