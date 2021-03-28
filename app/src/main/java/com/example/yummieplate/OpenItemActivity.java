@@ -66,6 +66,8 @@ public class OpenItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_item);
 
+        mapKey.append("0000");
+
         progressDialog = new ProgressDialog(OpenItemActivity.this);
         progressDialog.setCancelable(false);
         progressDialog.show();

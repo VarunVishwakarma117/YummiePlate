@@ -7,30 +7,30 @@
 
     <fragment
         android:id="@+id/navigation_cake"
-        android:name="com.example.yummieplate.ui.home.HomeFragment"
+        android:name="com.example.yummieplate.ui.cakes.CakesFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_cakes" />
 
     <fragment
         android:id="@+id/navigation_pizza"
-        android:name="com.example.yummieplate.ui.dashboard.DashboardFragment"
+        android:name="com.example.yummieplate.ui.pizza.PizzaFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_pizzas" />
 
     <fragment
         android:id="@+id/navigation_sweets"
-        android:name="com.example.yummieplate.ui.notifications.NotificationsFragment"
+        android:name="com.example.yummieplate.ui.sweets.SweetsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_sweets" />
     <fragment
         android:id="@+id/navigation_flowers_for_gifting"
-        android:name="com.example.yummieplate.PlantForGiftingFragment"
+        android:name="com.example.yummieplate.fragment_plant_for_gifting.PlantForGiftingFragment"
         android:label="Plant For Gifting"
         tools:layout="@layout/fragment_plant_for_gifting" />
 
     <fragment
         android:id="@+id/navigation_flowers_n_boquet"
-        android:name="com.example.yummieplate.FlowerNBoquetFragment"
+        android:name="com.example.yummieplate.fragment_flower_n_boquet.FlowerNBoquetFragment"
         android:label="Flower &amp; Boquet"
         tools:layout="@layout/fragment_flower_n_boquet" />
 
