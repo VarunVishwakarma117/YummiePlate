@@ -21,7 +21,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/local_name_item_textView"
-                android:textSize="22sp"
+                android:layout_toStartOf="@id/cardview"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginTop="20dp"
                 android:textColor="#000000"
@@ -58,7 +59,7 @@
                 android:layout_marginEnd="10dp"
                 android:translationY="-15dp"
                 android:padding="2dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="8dp"
                 android:layout_below="@id/version">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -93,17 +94,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="₹"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:translationY="-15dp"
+                android:textSize="16dp"
+                android:padding="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/version"
                 android:textColor="@android:color/black"
-                android:layout_centerVertical="true"
-                android:textSize="20sp"
-                android:layout_toStartOf="@id/item_price"/>
+                android:layout_toEndOf="@id/qunat" />
             <TextView
                 android:id="@+id/item_price"
                 android:layout_width="wrap_content"
+                android:textSize="16dp"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/cardview"
                 android:layout_centerVertical="true"
+                android:layout_marginStart="36dp"
                 tools:text="100"
+                android:translationY="-15dp"
+                android:padding="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/version"
+                android:layout_toEndOf="@id/qunat"
                 android:layout_marginEnd="10dp"
                 android:textColor="#000000" />
         </RelativeLayout>

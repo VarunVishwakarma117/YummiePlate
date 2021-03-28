@@ -16,9 +16,10 @@
         android:layout_marginBottom="5dp"/>
     <TextView
         android:id="@+id/default_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="name"
+        tools:text="flasjfojaskojgk;lajsdklfjaosdljf;lkasjfajnsdkjfnkjasffaoisdjfo"
+        android:layout_marginEnd="75dp"
         android:layout_marginBottom="15dp"
         android:textColor="@android:color/black"
         android:layout_below="@id/tv_localname"

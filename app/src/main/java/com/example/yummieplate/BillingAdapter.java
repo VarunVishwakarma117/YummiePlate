@@ -36,10 +36,24 @@ public class BillingAdapter extends ArrayAdapter<item> implements AdapterView.On
         nameTextView.setText(currentitem.getItem_local_name());
 
         TextView numberTextView = listItemView.findViewById(R.id.default_name);
-        numberTextView.setText(currentitem.getDescription());
+        String s = "";
+        if(currentitem.getWeight_in_pounds_or_qunatity()!=null){
+            s+=currentitem.getWeight_in_pounds_or_qunatity()+ " - ";
+        }
+        if(currentitem.getVersion()!=null){
+            s+=currentitem.getVersion() + " - ";
+        }
+        if(currentitem.getShape()!=null){
+            s+=currentitem.getShape()+ " - ";
+        }
+        if(currentitem.getFlavour()!=null){
+            s+=currentitem.getFlavour();
+        }
+
+        numberTextView.setText(s);
 
         price = listItemView.findViewById(R.id.item_price);
-        price.setText("₹" + currentitem.getItem_Price());
+        price.setText("₹" + currentitem.getSitem_Price());
 
         return listItemView;
     }
