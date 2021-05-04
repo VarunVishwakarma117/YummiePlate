@@ -60,7 +60,7 @@ public class CartActivity extends AppCompatActivity {
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser user = mAuth.getCurrentUser();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference userLocation = database.getReference("userlocation").child(user.getUid());
+    DatabaseReference userLocation = database.getReference("users").child(user.getUid()).child("userlocation");
     DatabaseReference myCartRef = database.getReference("users").child(user.getUid()).child("user_cart");
 
     int total = 0;
@@ -86,10 +86,6 @@ public class CartActivity extends AppCompatActivity {
         dis();
 
         item_cart_copy = new ArrayList<>();
-        //item_cart_copy.add(new item(101, "Agarbatti", "Incense stick", R.drawable.h101, 100));
-        //item_cart_copy.add(new item(102, "Ghee", "Ghee", R.drawable.h102, 100));
-        //item_cart_copy.add(new item(103, "Kumkuma", "Kumkuma", R.drawable.h103, 100));
-        //item_cart_copy.add(new item(104, "phool", "Flowers", R.drawable.h104, 100));
 
         progressDialog.setCancelable(false);
         progressDialog.show();
@@ -196,8 +192,8 @@ public class CartActivity extends AppCompatActivity {
                         else{
                             lat2 = location.getLatitude();
                             long2 = location.getLongitude();
-                            hm.put("longitude : ", location.getLongitude() + "");
-                            hm.put("Latitude : ", location.getLatitude() + "");
+                            hm.put("Longitude", location.getLongitude() + "");
+                            hm.put("Latitude", location.getLatitude() + "");
                             userLocation.setValue(hm);
                         }
                     }
@@ -225,8 +221,8 @@ public class CartActivity extends AppCompatActivity {
                 Location location = locationResult.getLastLocation();
                 lat2 = location.getLatitude();
                 long2 = location.getLongitude();
-                hm.put("longitude : ", location.getLongitude() + "");
-                hm.put("Latitude : ", location.getLatitude() + "");
+                hm.put("Longitude", location.getLongitude() + "");
+                hm.put("Latitude", location.getLatitude() + "");
                 userLocation.setValue(hm);
             }
         };

@@ -7,28 +7,27 @@ import android.content.Intent;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 public class Splash_Screen2 extends AppCompatActivity {
 
     AnimatedVectorDrawableCompat avd;
     AnimatedVectorDrawable avd2;
+    TextView continue_shopping, track_order;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash__screen2);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        int SPLASH_DISPLAY_LENGTH = 1000;
-
-        Toast.makeText(Splash_Screen2.this, "Order Successfully Placed", Toast.LENGTH_SHORT).show();
 
         ImageView done = (ImageView)findViewById(R.id.done);
+        continue_shopping = findViewById(R.id.continue_shopping);
+        track_order = findViewById(R.id.track_order);
 
         Drawable drawable = done.getDrawable();
 
@@ -41,13 +40,19 @@ public class Splash_Screen2 extends AppCompatActivity {
             avd2.start();
         }
 
-        new Handler().postDelayed(new Runnable(){
+        continue_shopping.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                Intent i = new Intent(Splash_Screen2.this, MainActivity.class);
-                startActivity(i);
+            public void onClick(View view) {
+                startActivity(new Intent(Splash_Screen2.this, MainActivity.class));
                 finish();
             }
-        }, SPLASH_DISPLAY_LENGTH);
+        });
+        track_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Splash_Screen2.this, LiveTrackingFeatueActivity.class));
+            }
+        });
+
     }
 }

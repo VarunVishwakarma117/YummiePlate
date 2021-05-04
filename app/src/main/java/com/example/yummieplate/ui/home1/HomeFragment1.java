@@ -20,9 +20,11 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.yummieplate.LiveTrackingFeatueActivity;
 import com.example.yummieplate.MainActivity2;
 import com.example.yummieplate.R;
 import com.example.yummieplate.ListAdapter;
+import com.example.yummieplate.Splash_Screen2;
 import com.example.yummieplate.ViewPagerAdapter;
 import com.example.yummieplate.item;
 import com.google.firebase.database.DataSnapshot;
@@ -98,7 +100,8 @@ public class HomeFragment1 extends Fragment {
         category1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), MainActivity2.class));
+                startActivity(new Intent(getContext(), LiveTrackingFeatueActivity.class));
+                //startActivity(new Intent(getContext(), MainActivity2.class));
             }
         });
 
