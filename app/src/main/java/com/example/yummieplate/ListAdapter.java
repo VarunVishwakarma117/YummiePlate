@@ -46,8 +46,6 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
     Vibrator Vibrator;
     boolean callByWishlist;
 
-
-
     public ListAdapter(Activity activity){
         super(activity, 0);
     }
@@ -85,7 +83,9 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         item_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getContext().startActivity(new Intent(getContext(), OpenItemActivity.class));
+                Intent intent = new Intent(getContext(), OpenItemActivity.class);
+                intent.putExtra("list_id", currentitem.getItem_id());
+                getContext().startActivity(intent);
             }
         });
 

@@ -95,9 +95,28 @@ public class HomeFragment1 extends Fragment {
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new myTimeTask(), 2000,4000);
 
+        category2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), MainActivity2.class));
+            }
+        });
 
+        category3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), MainActivity2.class));
+            }
+        });
 
-        category1.setOnClickListener(new View.OnClickListener() {
+        category4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), MainActivity2.class));
+            }
+        });
+
+        category5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(), LiveTrackingFeatueActivity.class));
