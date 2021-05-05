@@ -9,7 +9,20 @@
         android:id="@+id/navigation_cake"
         android:name="com.example.yummieplate.ui.cakes.CakesFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_cakes" />
+        tools:layout="@layout/fragment_cakes" >
+        <action
+            android:id="@+id/action_navigation_cake_to_navigation_pizza"
+            app:destination="@id/navigation_pizza" />
+        <action
+            android:id="@+id/action_navigation_cake_to_navigation_sweets"
+            app:destination="@id/navigation_sweets" />
+        <action
+            android:id="@+id/action_navigation_cake_to_navigation_flowers_for_gifting"
+            app:destination="@id/navigation_flowers_for_gifting" />
+        <action
+            android:id="@+id/action_navigation_cake_to_navigation_flowers_n_boquet"
+            app:destination="@id/navigation_flowers_n_boquet" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_pizza"

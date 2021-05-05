@@ -20,8 +20,11 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.yummieplate.BillingDetailsActivity;
 import com.example.yummieplate.LiveTrackingFeatueActivity;
+import com.example.yummieplate.MainActivity;
 import com.example.yummieplate.MainActivity2;
+import com.example.yummieplate.PackedItemsActivity;
 import com.example.yummieplate.R;
 import com.example.yummieplate.ListAdapter;
 import com.example.yummieplate.Splash_Screen2;
@@ -95,32 +98,45 @@ public class HomeFragment1 extends Fragment {
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new myTimeTask(), 2000,4000);
 
+        category1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), MainActivity2.class).putExtra("category", 1));
+            }
+        });
+
         category2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), MainActivity2.class));
+                startActivity(new Intent(getContext(), MainActivity2.class).putExtra("category", 2));
             }
         });
 
         category3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), MainActivity2.class));
+                startActivity(new Intent(getContext(), MainActivity2.class).putExtra("category", 3));
             }
         });
 
         category4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), MainActivity2.class));
+                startActivity(new Intent(getContext(), MainActivity2.class).putExtra("category", 4));
             }
         });
 
         category5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), LiveTrackingFeatueActivity.class));
-                //startActivity(new Intent(getContext(), MainActivity2.class));
+                //startActivity(new Intent(getContext(), LiveTrackingFeatueActivity.class));
+                startActivity(new Intent(getContext(), MainActivity2.class).putExtra("category", 5));
+            }
+        });
+        category6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), PackedItemsActivity.class));
             }
         });
 

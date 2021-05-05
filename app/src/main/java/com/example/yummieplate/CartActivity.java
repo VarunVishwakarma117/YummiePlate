@@ -130,6 +130,7 @@ public class CartActivity extends AppCompatActivity {
                 if (user != null) {
                     if (item_cart_copy.isEmpty()) {
                         Toast.makeText(CartActivity.this, "Your Cart is Empty", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
                     } else {
                         ConnectivityManager manager = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                         NetworkInfo networkInfo = manager.getActiveNetworkInfo();
@@ -149,6 +150,7 @@ public class CartActivity extends AppCompatActivity {
                     }
                 } else {
                     Toast.makeText(CartActivity.this, "You are not Login", Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
                 }
             }
         });

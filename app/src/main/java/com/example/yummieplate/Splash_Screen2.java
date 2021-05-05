@@ -23,9 +23,10 @@ public class Splash_Screen2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash__screen2);
+        //getActionBar().hide();  throwing error
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        ImageView done = (ImageView)findViewById(R.id.done);
+        ImageView done = findViewById(R.id.done);
         continue_shopping = findViewById(R.id.continue_shopping);
         track_order = findViewById(R.id.track_order);
 
@@ -39,6 +40,7 @@ public class Splash_Screen2 extends AppCompatActivity {
             avd2 = (AnimatedVectorDrawable)drawable;
             avd2.start();
         }
+
 
         continue_shopping.setOnClickListener(new View.OnClickListener() {
             @Override

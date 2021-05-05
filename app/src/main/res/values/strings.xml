@@ -3,7 +3,7 @@
     <string name="nav_header_desc">Navigation header</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Packed Items</string>
+    <string name="menu_about">About</string>
     <string name="menu_myOrders">My Orders</string>
     <string name="profile">Profile</string>
     <string name="passwordreset">Password Reset</string>

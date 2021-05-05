@@ -4,21 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".Splash_Screen2">
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:src="@drawable/bg_"
+      android:scaleX="2.7"
+      android:scaleY="3"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
 
   <RelativeLayout
       android:id="@+id/relativeLayout2"
-      android:layout_width="150dp"
-      android:layout_height="150dp"
+      android:layout_width="175dp"
+      android:layout_height="175dp"
       android:background="@drawable/bg_circle"
       android:elevation="5dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.32000002">
+      app:layout_constraintVertical_bias="0.31">
 
     <ImageView
         android:id="@+id/done"
@@ -30,13 +39,17 @@
 
   <TextView
       android:id="@+id/placed"
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="Order Successfully Placed"
-      android:textColor="@android:color/white"
-      android:textSize="22sp"
-      android:layout_marginTop="50dp"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      android:padding="15dp"
+      android:gravity="center"
+      android:elevation="5dp"
+      android:layout_marginTop="80dp"
       android:textStyle="bold"
+      android:background="@android:color/white"
       app:layout_constraintEnd_toEndOf="@+id/relativeLayout2"
       app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
       app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
@@ -45,8 +58,8 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginBottom="100dp"
-      android:layout_marginStart="15dp"
-      android:layout_marginEnd="15dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="10dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent">
@@ -55,12 +68,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_weight="1"
-        android:background="@drawable/bg_login_page_button1"
+        android:background="@drawable/bg_login_page_button2"
         android:gravity="center"
         android:padding="10dp"
+        android:elevation="5dp"
         android:text="Track Order"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -70,11 +86,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_weight="1"
-        android:background="@drawable/bg_login_page_button1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        android:background="@drawable/bg_login_page_button2"
         android:gravity="center"
         android:padding="10dp"
         android:text="Continue Shopping"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold" />
   </LinearLayout>

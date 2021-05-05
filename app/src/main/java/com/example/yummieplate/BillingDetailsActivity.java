@@ -94,7 +94,8 @@ public class BillingDetailsActivity extends AppCompatActivity {
         edit_billing = findViewById(R.id.edit_billing);
         edit_billing.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {                                  //////////still remains
+            public void onClick(View view) {
+                startActivity(new Intent(BillingDetailsActivity.this, MainActivity.class).putExtra("change", 2));
             }
         });
 

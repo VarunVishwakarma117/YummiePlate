@@ -1,10 +1,16 @@
 package com.example.yummieplate;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 
+import com.example.yummieplate.ui.pizza.PizzaFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -26,6 +32,21 @@ public class MainActivity2 extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
         navView.setItemIconTintList(null);
+
+        int category = getIntent().getIntExtra("category", 1);
+        Log.v("category", String.valueOf(category));
+        if(category == 2){
+            navController.navigate(R.id.action_navigation_cake_to_navigation_pizza);
+        }
+        else if(category == 3){
+            navController.navigate(R.id.action_navigation_cake_to_navigation_sweets);
+        }
+        else if(category == 4){
+            navController.navigate(R.id.action_navigation_cake_to_navigation_flowers_for_gifting);
+        }
+        else if(category == 5){
+            navController.navigate(R.id.action_navigation_cake_to_navigation_flowers_n_boquet);
+        }
     }
 
 }

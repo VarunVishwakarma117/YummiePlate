@@ -9,13 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.yummieplate.ui.home1.HomeFragment1"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home1" />
-
-    <fragment
-        android:id="@+id/nav_booking"
-        android:name="com.example.yummieplate.ui.booking.PackedItemFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_packed_item" />
+        tools:layout="@layout/fragment_home1" >
+        <action
+            android:id="@+id/action_nav_home_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_myOrders"
@@ -28,5 +26,11 @@
         android:name="com.example.yummieplate.ui.profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_About"
+        android:name="com.example.yummieplate.ui.about.About"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
 
 </navigation>
