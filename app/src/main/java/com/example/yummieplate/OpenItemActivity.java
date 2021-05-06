@@ -3,6 +3,7 @@ package com.example.yummieplate;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -106,6 +107,7 @@ public class OpenItemActivity extends AppCompatActivity {
 
         Query openItemRef = allItemsRef.orderByChild("item_id").equalTo(id);
         openItemRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @SuppressLint("LongLogTag")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dss : snapshot.getChildren()){
@@ -118,6 +120,7 @@ public class OpenItemActivity extends AppCompatActivity {
                     Log.v("version list",item.getVersion());
                 }
                 progressDialog.dismiss();
+                Log.e("**********************************", item.getVersion());
                 if(item.getVersion()!=null){
                     versionArray = item.getVersion().split("-");
                     ArrayAdapter<String> vad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, versionArray);
@@ -218,7 +221,7 @@ public class OpenItemActivity extends AppCompatActivity {
             public void onClick(View view) {
                 item o = new item(item.getItem_id(),item.getItem_local_name(),null, item.getVersion()!=null?versionArray[Integer.parseInt(mapKey.substring(0,1))]:null,
                         item.getWeight_in_pounds_or_qunatity()!=null?weightArray[Integer.parseInt(mapKey.substring(1,2))]:null, item.getFlavour()!=null?flavorArray[Integer.parseInt(mapKey.substring(2,3))]:null, item.getShape()!=null?shapeArray[Integer.parseInt(mapKey.substring(3,4))]:null, item.getItem_image(),
-                        price, 1);
+                        price, 1, item.getItem_PriceRange());
                 myCartRef.push().setValue(o);
                 Toast.makeText(OpenItemActivity.this, "Item Sucessfully Added", Toast.LENGTH_SHORT).show();
             }

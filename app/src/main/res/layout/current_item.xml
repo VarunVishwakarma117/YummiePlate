@@ -180,7 +180,7 @@
                 android:padding="5dp"
                 android:background="@drawable/bg_strokes">
                 <TextView
-                    android:id="@+id/tv_track_order"
+                    android:id="@+id/tv_price_range"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"

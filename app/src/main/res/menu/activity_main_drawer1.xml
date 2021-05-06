@@ -9,10 +9,6 @@
             android:icon="@drawable/ic_round_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_About"
-            android:icon="@drawable/ic_round_book_24"
-            android:title="@string/menu_about" />
-        <item
             android:id="@+id/nav_myOrders"
             android:icon="@drawable/ic_baseline_content_paste_24"
             android:title="@string/menu_myOrders" />
@@ -20,5 +16,9 @@
             android:id="@+id/profileFragment"
             android:icon="@drawable/ic_round_account_circle_24"
             android:title="@string/profile"/>
+        <item
+            android:id="@+id/nav_About"
+            android:icon="@drawable/ic_round_book_24"
+            android:title="@string/menu_about" />
     </group>
 </menu>

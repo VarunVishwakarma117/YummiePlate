@@ -29,7 +29,7 @@ public class item {
         this.item_Price = item_Price;
         this.item_PriceRange = item_PriceRange;
     }
-    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, int sitem_Price, int item_quant){
+    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, int sitem_Price, int item_quant, String item_PriceRange){
         this.item_id = item_id;
         this.item_local_name = item_local_name;
         this.description = description;
@@ -40,6 +40,7 @@ public class item {
         this.weight_in_pounds_or_qunatity = weight_in_pounds_or_qunatity;
         this.sitem_Price = sitem_Price;
         this.item_quant = item_quant;
+        this.item_PriceRange = item_PriceRange;
     }
 
 

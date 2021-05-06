@@ -49,7 +49,6 @@ public class HomeFragment1 extends Fragment {
 
     CardView category1, category2, category3, category4, category5, category6;
 
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_home1, container, false);

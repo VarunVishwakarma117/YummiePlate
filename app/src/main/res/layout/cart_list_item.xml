@@ -103,7 +103,7 @@
                 android:textColor="@android:color/black"
                 android:layout_toEndOf="@id/qunat" />
             <TextView
-                android:id="@+id/tv_track_order"
+                android:id="@+id/tv_price_range"
                 android:layout_width="wrap_content"
                 android:textSize="16dp"
                 android:layout_height="wrap_content"

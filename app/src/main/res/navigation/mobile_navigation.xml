@@ -37,13 +37,13 @@
         tools:layout="@layout/fragment_sweets" />
     <fragment
         android:id="@+id/navigation_flowers_for_gifting"
-        android:name="com.example.yummieplate.fragment_plant_for_gifting.PlantForGiftingFragment"
+        android:name="com.example.yummieplate.ui.fragment_plant_for_gifting.PlantForGiftingFragment"
         android:label="Plant For Gifting"
         tools:layout="@layout/fragment_plant_for_gifting" />
 
     <fragment
         android:id="@+id/navigation_flowers_n_boquet"
-        android:name="com.example.yummieplate.fragment_flower_n_boquet.FlowerNBoquetFragment"
+        android:name="com.example.yummieplate.ui.fragment_flower_n_boquet.FlowerNBoquetFragment"
         android:label="Flower &amp; Boquet"
         tools:layout="@layout/fragment_flower_n_boquet" />
 
