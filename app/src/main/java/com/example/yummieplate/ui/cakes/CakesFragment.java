@@ -45,9 +45,10 @@ public class CakesFragment extends Fragment {
             "Cashback of Flat 50 rs on order above 500 Rs in YP wallet\n" +
             "Free delivery over 599 Rs";
     String cake_version = "YP Normal & Tasty-YP Healty & Tasty";
-    String cake_weigth = "250gm-Half Kg-One Kg";
-
-
+    String cake_weigth= "Half Kg-One Kg";
+    String cake_quantity="2-6";
+    String cake_quantity1="3-5";
+    String cake_quantity2="6-12";
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         cakesViewModel =
@@ -146,6 +147,7 @@ public class CakesFragment extends Fragment {
 //            put("1110",1249);
 //            put("1111",1299);
 //            put("1112",1299);}}));
+
 //        items.add(new item(103, "Pink rosette cake – All Flavour : Order Tastiest cake online", cake_discription,cake_version, cake_weigth,"Butter Scotch-Red Velvet-Vanilla-Chocolate mix",null, R.drawable.c1003, "₹499.00 – ₹1,499.00", new HashMap<String,Integer>(){{
 //          put("0000",549);
 //            put("0100",599);
@@ -231,7 +233,7 @@ public class CakesFragment extends Fragment {
 //                put("0000",899);
 //                put("0100",1499);}}));
 //
-//             items.add(new item(113, "Fruit and nut cake", cake_discription,cake_version,cake_weigth,
+//           items.add(new item(113, "Fruit and nut cake", cake_discription,cake_version,cake_weigth,
 //                null, null, R.drawable.c1113, "₹699.00 – ₹1,499.00", new HashMap<String,Integer>(){{
 //                    put("0000",699);
 //                    put("0100",1199);
@@ -245,8 +247,32 @@ public class CakesFragment extends Fragment {
 //                put("1000",599);
 //                put("1100",999);}}));
 
-//        all_itemRef.setValue(items);           // can be use to store new value or to debug Image overwrite bug
+//              items.add(new item(115, "Tuty fruity cupcakes", cake_discription,null,cake_quantity,
+//               null, null, R.drawable.c1115, "₹120.00 – ₹250.00", new HashMap<String,Integer>(){{
+//                   put("0000",120);
+//                   put("0100",250);}}));
 
+//               items.add(new item(116, "Choco chips cupcake", cake_discription,null,cake_quantity1,
+//                   null, null, R.drawable.c1116, "₹180.00 – ₹249.00", new HashMap<String,Integer>(){{
+//                    put("0000",180);
+//                    put("0100",249);}}));
+
+//                items.add(new item(117, "Almond cream cupcake", cake_discription,null,cake_quantity1,
+//                     null, null, R.drawable.c1117, "₹180.00 – ₹250.00", new HashMap<String,Integer>(){{
+//                       put("0000",180);
+//                       put("0100",250);}}));
+
+
+//                 items.add(new item(118, "YP Coconut cupcake", cake_discription,null,cake_quantity1,
+//                           null, null, R.drawable.c1118, "₹180.00 – ₹249.00", new HashMap<String,Integer>(){{
+//                             put("0000",180);
+//                             put("0100",249);}}));
+
+//                    items.add(new item(119, "YP Fresh Rainbow cupcake", cake_discription,null,cake_quantity2,
+//                              null, null, R.drawable.c1119, "₹300.00 – ₹549.00", new HashMap<String,Integer>(){{
+//                           put("0000",300);
+//                           put("0100",549);}}));
+//        all_itemRef.setValue(items);           // can be use to store new value or to debug Image overwrite bug
 
         return root;
     }
