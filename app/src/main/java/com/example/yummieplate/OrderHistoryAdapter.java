@@ -51,7 +51,7 @@ public class OrderHistoryAdapter extends ArrayAdapter<order_details> {
         track.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getContext().startActivity(new Intent(getContext(), TrackOrder.class));
+                getContext().startActivity(new Intent(getContext(), TrackOrder.class).putExtra("order", currentOrder.getOrder_date_time()));
             }
         });
 

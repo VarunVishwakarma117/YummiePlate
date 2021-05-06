@@ -76,7 +76,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         TextView nameTextView = listItemView.findViewById(R.id.local_name_item_textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
-        TextView priceTextView = listItemView.findViewById(R.id.tv_track_order);
+        TextView priceTextView = listItemView.findViewById(R.id.tv_price_range);
         priceTextView.setText(currentitem.getItem_PriceRange());
 
         ImageView imageResource = listItemView.findViewById(R.id.image);
@@ -105,7 +105,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
                     int x = Integer.parseInt(sItemPrice[0].trim().substring(1, sItemPrice[0].trim().length()));
                     item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),null, currentitem.getVersion()!=null?"YP Normal & Tasty":null,
                             "Half Kg", currentitem.getFlavour(), currentitem.getShape()!=null?shapeArray[0]:null, currentitem.getItem_image(),
-                           x ,1);
+                           x ,1, currentitem.getItem_PriceRange());
                     objectList.add(o);
                     myRef.push().setValue(o).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override

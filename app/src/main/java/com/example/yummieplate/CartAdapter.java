@@ -66,7 +66,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
         ImageView imageResource = listItemView.findViewById(R.id.image_view);
         imageResource.setImageResource(currentitem.getItem_image());
 
-        price = listItemView.findViewById(R.id.tv_track_order);
+        price = listItemView.findViewById(R.id.tv_price_range);
         Log.v("price",String.valueOf(currentitem.getSitem_Price()));
         price.setText(String.valueOf(currentitem.getSitem_Price()));
 

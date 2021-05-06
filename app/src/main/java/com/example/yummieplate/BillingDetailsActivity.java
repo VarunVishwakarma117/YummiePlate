@@ -174,7 +174,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
                         String currentDateAndTime = dateFormat.format(new Date());
 
                         String address = h_no+", "+land+", "+street+", "+area+", "+pincode;
-                        order_details o = new order_details(name, email, String.valueOf(s), address, mob, total, "cash On Delivery", currentDateAndTime, "NA");
+                        order_details o = new order_details(name, email, String.valueOf(s), "NA", address, mob, total, "cash On Delivery", currentDateAndTime, "NA", "Order haven't dispatched yet ");
 
                         Log.v("Tags", o.getName() + "-" + o.getEmail() + "-" + o.getItemIds() + "-" + o.getDelivery_address() + "-" + o.getMobile() + "-" + total + "-" + o.getMode_of_payment() + "-" + o.getDelivered_date_time() + "-" + o.getDelivered_date_time());
 

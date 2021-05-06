@@ -21,6 +21,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -68,6 +69,19 @@ public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMa
                 //Log.v("userLong", String.valueOf(userLong));
                 LatLng userLocation = new LatLng(userLati, userLong);
                 mMap.addMarker(new MarkerOptions().position(userLocation).title("User Location").icon(BitmapDescriptorFactory.defaultMarker()));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        String accepted_by = getIntent().getExtras().getString("accepted_by");
+        Log.v("accepted_by_Live", accepted_by);
+        dBoyLocation.child(accepted_by).child("dBoyLocation").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //snapshot.getValue()
             }
 
             @Override
