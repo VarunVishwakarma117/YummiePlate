@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CakesFragment extends Fragment {
 
@@ -185,12 +186,12 @@ public class CakesFragment extends Fragment {
 //                null,null, R.drawable.c1008,"₹749.00 – ₹1,249.00", new HashMap<String,Integer>() {
 //            { put("0000",749);
 //              put("0010",1249);}}));
-
-
-
-
-
-        //all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
+//
+//
+//
+//
+//
+//        all_itemRef.setValue(items);           // can be use to store new value or to debug Image overwrite bug
 
 
         return root;
