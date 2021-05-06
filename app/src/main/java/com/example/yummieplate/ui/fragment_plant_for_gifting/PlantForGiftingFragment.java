@@ -1,4 +1,4 @@
-package com.example.yummieplate.fragment_plant_for_gifting;
+package com.example.yummieplate.ui.fragment_plant_for_gifting;
 
 import android.os.Bundle;
 

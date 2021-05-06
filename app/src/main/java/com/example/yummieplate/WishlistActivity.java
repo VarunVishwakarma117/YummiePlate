@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
@@ -24,8 +22,8 @@ import java.util.ArrayList;
 public class WishlistActivity extends AppCompatActivity {
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    DatabaseReference wishlistRef = FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("user_wishlist");
-
+    DatabaseReference wishlistRef = FirebaseDatabase.getInstance()
+            .getReference("users").child(user.getUid()).child("user_wishlist");
     ListView lv_wishlist;
     ArrayList<item> wishlistAlist;
     RelativeLayout emptyWishlist;
@@ -55,9 +53,11 @@ public class WishlistActivity extends AppCompatActivity {
                         wishlistAlist.add(dss.getValue(item.class));
                     }
                     progressDialog.dismiss();
-                    ListAdapter wishlistAdapter = new ListAdapter(WishlistActivity.this, wishlistAlist, true);
+                    ListAdapter wishlistAdapter = new ListAdapter(WishlistActivity.this,
+                            wishlistAlist, true);
                     lv_wishlist.setAdapter(wishlistAdapter);
                 }
+
                 else {
                     emptyWishlist.setVisibility(View.VISIBLE);
                     progressDialog.dismiss();
@@ -68,7 +68,6 @@ public class WishlistActivity extends AppCompatActivity {
 
             }
         });
-
 
     }
 }

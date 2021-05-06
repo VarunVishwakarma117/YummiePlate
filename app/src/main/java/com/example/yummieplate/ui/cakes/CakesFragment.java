@@ -31,7 +31,8 @@ import java.util.HashMap;
 public class CakesFragment extends Fragment {
 
     private CakesViewModel cakesViewModel;
-    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items").child("cakes");
+    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin")
+            .child("all_items").child("cakes");
     ProgressDialog progressDialog;
 
 

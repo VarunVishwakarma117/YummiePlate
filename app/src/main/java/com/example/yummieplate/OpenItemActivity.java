@@ -3,6 +3,7 @@ package com.example.yummieplate;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -106,6 +107,7 @@ public class OpenItemActivity extends AppCompatActivity {
 
         Query openItemRef = allItemsRef.orderByChild("item_id").equalTo(id);
         openItemRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @SuppressLint("LongLogTag")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dss : snapshot.getChildren()){
@@ -118,6 +120,7 @@ public class OpenItemActivity extends AppCompatActivity {
                     Log.v("version list",item.getVersion());
                 }
                 progressDialog.dismiss();
+                Log.e("**********************************", item.getVersion());
                 if(item.getVersion()!=null){
                     versionArray = item.getVersion().split("-");
                     ArrayAdapter<String> vad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, versionArray);

@@ -1,4 +1,4 @@
-package com.example.yummieplate.fragment_flower_n_boquet;
+package com.example.yummieplate.ui.fragment_flower_n_boquet;
 
 import android.os.Bundle;
 

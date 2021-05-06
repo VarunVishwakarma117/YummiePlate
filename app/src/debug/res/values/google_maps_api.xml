@@ -31,7 +31,7 @@
     You can also add your credentials to an existing key, using these values:
 
     Package name:
-    com.example.yummieplate.fragment_flower_n_boquet
+    com.example.yummieplate.ui.fragment_flower_n_boquet
 
     SHA-1 certificate fingerprint:
     95:C0:5F:36:BD:F2:9E:0B:8E:D2:DE:25:45:1B:2B:5B:8B:24:13:18

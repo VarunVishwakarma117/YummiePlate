@@ -5,4 +5,210 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <TextView
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Yummie Plate"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="cs@yummieplate.com"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="799-510-3192"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="V-1.0.0"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:textSize="35sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="App Developer Team"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="25sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="UI/Frontend Developer"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Ankur"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Email: ankurthakur7754@gmail.com"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Contact: +91 63948 12186"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="25sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Backend Developer"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Abhishek Gupta"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Email: abhishek.gupta.890113"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Contact: +91 99584 84437"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Varun Vishwakarma"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Email: varun.vishwakarma117@gmail.com"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#C9000000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:text="Contact: +91 90602 66578"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
 </ScrollView>

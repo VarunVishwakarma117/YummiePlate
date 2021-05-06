@@ -72,12 +72,12 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
 
         not_in_wishlist = listItemView.findViewById(R.id.not_in_wishlist);
 
-
         TextView nameTextView = listItemView.findViewById(R.id.local_name_item_textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
         TextView priceTextView = listItemView.findViewById(R.id.tv_price_range);
         priceTextView.setText(currentitem.getItem_PriceRange());
+        Log.e("priceTextView", ""+currentitem.getItem_PriceRange());
 
         ImageView imageResource = listItemView.findViewById(R.id.image);
         imageResource.setImageResource(currentitem.getItem_image());

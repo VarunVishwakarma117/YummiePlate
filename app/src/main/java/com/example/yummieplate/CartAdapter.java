@@ -180,7 +180,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
                                             for(DataSnapshot dss : snapshot.getChildren()){
                                                 item i = dss.getValue(item.class);
                                                 Log.v("Tag", String.valueOf(i.getItem_Price()));
-                                                amount[0] = i.getSitem_Price()*quant[0];
+                                                amount[0] = i.getSitem_Price()*quant[1];
                                                 dataSnapshot.getRef().child("item_Price").setValue(amount[0]);
                                                 dataSnapshot.getRef().child("item_quant").setValue(quant[0]);
                                                 price.setText(String.valueOf(amount[0]));
