@@ -31,6 +31,7 @@ public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMa
     FirebaseUser user = mAuth.getCurrentUser();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference userLocation = database.getReference("users").child(user.getUid()).child("userlocation");
+    DatabaseReference dBoyLocation = database.getReference("admin").child("delivery_boys");
 
 
     double userLong, userLati;
@@ -59,12 +60,12 @@ public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMa
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
-                    Log.v("III","just_ran");
+                    //Log.v("III","just_ran");
                     userLati = Double.parseDouble(snapshot.child("Latitude").getValue(String.class));
                     userLong = Double.parseDouble(snapshot.child("Longitude").getValue(String.class));
                 }
-                Log.v("userLat", String.valueOf(userLati));
-                Log.v("userLong", String.valueOf(userLong));
+                //Log.v("userLat", String.valueOf(userLati));
+                //Log.v("userLong", String.valueOf(userLong));
                 LatLng userLocation = new LatLng(userLati, userLong);
                 mMap.addMarker(new MarkerOptions().position(userLocation).title("User Location").icon(BitmapDescriptorFactory.defaultMarker()));
             }
@@ -74,5 +75,6 @@ public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMa
 
             }
         });
+
     }
 }

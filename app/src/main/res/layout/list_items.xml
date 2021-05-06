@@ -48,7 +48,7 @@
                             android:textColor="#000000"
                             tools:text="Multicolor star cake"/>
                         <TextView
-                            android:id="@+id/item_price"
+                            android:id="@+id/tv_track_order"
                             android:layout_width="match_parent"
                             android:gravity="center"
                             android:layout_height="wrap_content"
@@ -59,11 +59,12 @@
                             android:layout_marginTop="10dp"
                             android:textSize="18sp"/>
                         <LinearLayout
+                            android:id="@+id/not_in_wishlist"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:layout_marginTop="10dp"
-                            android:layout_below="@id/item_price">
+                            android:layout_below="@id/tv_track_order">
                             <TextView
                                 android:id="@+id/item_view"
                                 android:layout_width="0dp"

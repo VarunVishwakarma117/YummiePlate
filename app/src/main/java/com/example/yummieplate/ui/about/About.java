@@ -1,4 +1,4 @@
-package com.example.yummieplate.ui.booking;
+package com.example.yummieplate.ui.about;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,17 +15,17 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class PackedItemFragment extends Fragment {
+public class About extends Fragment {
 
-    private BookingViewModel bookingViewModel;
+    private AboutViewModel aboutViewModel;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     DatabaseReference myCartRef = FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("user_cart");
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        bookingViewModel =
-                ViewModelProviders.of(this).get(BookingViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_packed_item, container, false);
+        aboutViewModel =
+                ViewModelProviders.of(this).get(AboutViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_about, container, false);
 
         /*TextView add_panditji = root.findViewById(R.id.add_panditji);
         add_panditji.setOnClickListener(new View.OnClickListener() {

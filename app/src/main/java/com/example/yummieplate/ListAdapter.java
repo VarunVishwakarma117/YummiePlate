@@ -45,8 +45,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
     List<Object> objectList = new ArrayList<>();
     Vibrator Vibrator;
     boolean callByWishlist;
-
-
+    LinearLayout not_in_wishlist;
 
     public ListAdapter(Activity activity){
         super(activity, 0);
@@ -71,11 +70,13 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         LinearLayout if_wishlist = listItemView.findViewById(R.id.if_wishlist);
         if_wishlist.setVisibility(View.GONE);
 
+        not_in_wishlist = listItemView.findViewById(R.id.not_in_wishlist);
+
 
         TextView nameTextView = listItemView.findViewById(R.id.local_name_item_textView);
         nameTextView.setText(currentitem.getItem_local_name());
 
-        TextView priceTextView = listItemView.findViewById(R.id.item_price);
+        TextView priceTextView = listItemView.findViewById(R.id.tv_track_order);
         priceTextView.setText(currentitem.getItem_PriceRange());
 
         ImageView imageResource = listItemView.findViewById(R.id.image);
@@ -85,7 +86,9 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         item_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getContext().startActivity(new Intent(getContext(), OpenItemActivity.class));
+                Intent intent = new Intent(getContext(), OpenItemActivity.class);
+                intent.putExtra("list_id", currentitem.getItem_id());
+                getContext().startActivity(intent);
             }
         });
 
@@ -136,7 +139,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
 
         if(callByWishlist){
             if_wishlist.setVisibility(View.VISIBLE);
-            final ArrayList<item> wishlistAlist_copy = new ArrayList<>();
+            not_in_wishlist.setVisibility(View.GONE);
 
             TextView move_to_cart = listItemView.findViewById(R.id.move_to_cart);
             move_to_cart.setOnClickListener(new View.OnClickListener() {
@@ -146,8 +149,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
                     myWishlistQuery.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            wishlistAlist_copy.add(currentitem);
-                            myRef.push().setValue(wishlistAlist_copy);
+                            myRef.push().setValue(currentitem);
                             for (DataSnapshot dataSnapshot: snapshot.getChildren()) {
                                 dataSnapshot.getRef().removeValue();
                                 Toast.makeText(getContext(), "Moved to Cart", Toast.LENGTH_SHORT).show();

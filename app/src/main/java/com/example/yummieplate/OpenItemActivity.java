@@ -102,7 +102,7 @@ public class OpenItemActivity extends AppCompatActivity {
 //        String itemId = getIntent().getStringExtra("itemId");
 //        Log.v("itemID",itemId);
 
-        final int id = 102;
+        final int id = getIntent().getIntExtra("list_id", 1);
 
         Query openItemRef = allItemsRef.orderByChild("item_id").equalTo(id);
         openItemRef.addListenerForSingleValueEvent(new ValueEventListener() {

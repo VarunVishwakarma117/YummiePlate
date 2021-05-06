@@ -1,6 +1,7 @@
 package com.example.yummieplate;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.yummieplate.ui.OrderHistory.OrderHistoryFragment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,7 +21,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -48,8 +47,13 @@ public class OrderHistoryAdapter extends ArrayAdapter<order_details> {
         }
         final com.example.yummieplate.order_details currentOrder = getItem(position);
 
-        RelativeLayout if_delivered = listItemView.findViewById(R.id.if_delivered);
-        if_delivered.setVisibility(View.GONE);
+        RelativeLayout track = listItemView.findViewById(R.id.track);
+        track.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getContext().startActivity(new Intent(getContext(), TrackOrder.class));
+            }
+        });
 
         TextView bName = listItemView.findViewById(R.id.tv_bName);
         bName.setText(currentOrder.getName());

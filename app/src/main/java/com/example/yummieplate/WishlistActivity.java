@@ -53,10 +53,10 @@ public class WishlistActivity extends AppCompatActivity {
                     emptyWishlist.setVisibility(View.GONE);
                     for(DataSnapshot dss : snapshot.getChildren()){
                         wishlistAlist.add(dss.getValue(item.class));
-                        progressDialog.dismiss();
-                        ListAdapter wishlistAdapter = new ListAdapter(WishlistActivity.this, wishlistAlist, true);
-                        lv_wishlist.setAdapter(wishlistAdapter);
                     }
+                    progressDialog.dismiss();
+                    ListAdapter wishlistAdapter = new ListAdapter(WishlistActivity.this, wishlistAlist, true);
+                    lv_wishlist.setAdapter(wishlistAdapter);
                 }
                 else {
                     emptyWishlist.setVisibility(View.VISIBLE);

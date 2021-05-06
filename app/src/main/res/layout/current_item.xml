@@ -169,33 +169,23 @@
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="150dp"
-            android:padding="10dp"
             android:layout_below="@id/delivey_date"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:layout_alignParentEnd="true">
-
             <RelativeLayout
-                android:id="@+id/if_delivered"
-                android:layout_width="wrap_content"
+                android:id="@+id/track"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_strokes"
-                android:layout_marginTop="10dp"
-                android:paddingStart="3dp">
-                <ImageView
-                    android:id="@+id/add"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_toEndOf="@id/item_price"
-                    android:src="@drawable/ic_baseline_check_circle_24" />
+                android:padding="5dp"
+                android:background="@drawable/bg_strokes">
                 <TextView
-                    android:id="@+id/item_price"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_track_order"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="  Delivered?"
+                    android:gravity="center"
+                    android:text="Track Order"
                     android:textColor="@android:color/black"
                     android:textAppearance="?android:textAppearanceMedium"/>
             </RelativeLayout>

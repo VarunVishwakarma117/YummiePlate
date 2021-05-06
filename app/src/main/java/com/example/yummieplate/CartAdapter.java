@@ -66,7 +66,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
         ImageView imageResource = listItemView.findViewById(R.id.image_view);
         imageResource.setImageResource(currentitem.getItem_image());
 
-        price = listItemView.findViewById(R.id.item_price);
+        price = listItemView.findViewById(R.id.tv_track_order);
         Log.v("price",String.valueOf(currentitem.getSitem_Price()));
         price.setText(String.valueOf(currentitem.getSitem_Price()));
 
@@ -80,7 +80,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
                 myCartRefquery.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        for (DataSnapshot dataSnapshot: snapshot.getChildren()) {
+                        for(DataSnapshot dataSnapshot: snapshot.getChildren()) {
                             dataSnapshot.getRef().removeValue();
                             Toast.makeText(getContext(), "Item Removed", Toast.LENGTH_SHORT).show();
                             Intent intent = ((Activity)view.getContext()).getIntent();

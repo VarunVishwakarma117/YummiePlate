@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
@@ -10,9 +9,9 @@
             android:icon="@drawable/ic_round_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_booking"
+            android:id="@+id/nav_About"
             android:icon="@drawable/ic_round_book_24"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_about" />
         <item
             android:id="@+id/nav_myOrders"
             android:icon="@drawable/ic_baseline_content_paste_24"
