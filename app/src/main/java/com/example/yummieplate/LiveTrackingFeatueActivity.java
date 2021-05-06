@@ -107,6 +107,7 @@ public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMa
                     CameraPosition dBoyCamp = new CameraPosition.Builder().target(dBoyLatLng).zoom(14).bearing(0).tilt(45).build();
                     mMap.animateCamera(CameraUpdateFactory.newCameraPosition(dBoyCamp));
 
+
                     Polyline line = mMap.addPolyline(new PolylineOptions().add(userLatLng, dBoyLatLng).width(5).color(Color.BLUE));
                 }
             }
