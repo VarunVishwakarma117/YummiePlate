@@ -30,6 +30,8 @@ public class Splash_Screen2 extends AppCompatActivity {
         continue_shopping = findViewById(R.id.continue_shopping);
         track_order = findViewById(R.id.track_order);
 
+        String my_order = getIntent().getExtras().getString("order");
+
         Drawable drawable = done.getDrawable();
 
         if (drawable instanceof AnimatedVectorDrawableCompat){
@@ -52,7 +54,7 @@ public class Splash_Screen2 extends AppCompatActivity {
         track_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Splash_Screen2.this, LiveTrackingFeatueActivity.class));
+                startActivity(new Intent(Splash_Screen2.this, TrackOrder.class).putExtra("order", my_order));
             }
         });
 

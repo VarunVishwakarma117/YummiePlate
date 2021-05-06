@@ -31,8 +31,6 @@ public class TrackOrder extends AppCompatActivity {
         track_now = findViewById(R.id.track_now);
         track_now.setVisibility(View.GONE);
 
-        accepted_by = "hey";
-
         String my_order = getIntent().getExtras().getString("order");
         Log.v("my_order", my_order);
         Log.v("III", "Run");

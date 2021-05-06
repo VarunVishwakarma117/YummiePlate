@@ -32,7 +32,7 @@ import java.util.HashMap;
 public class FlowerNBoquetFragment extends Fragment {
 
     ProgressDialog progressDialog;
-    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items").child("pizzas");
+    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items").child("bouquet");
 
     String cake_discription = "Freshly made on order\n" +
             "Delivery within two hours\n" +

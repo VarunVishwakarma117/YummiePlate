@@ -60,6 +60,8 @@ public class BillingDetailsActivity extends AppCompatActivity {
     Vibrator vibrator;
     boolean address_filled;
 
+    String currentDateAndTime;
+
     String h_no,area,pincode,street,land;
 
     DatabaseReference myCartRef = database.getReference("users").child(user.getUid()).child("user_cart");
@@ -171,7 +173,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
                         }
 
                         DateFormat dateFormat = new SimpleDateFormat("KK:mm:ss a, dd/MM/yyyy", Locale.getDefault());
-                        String currentDateAndTime = dateFormat.format(new Date());
+                        currentDateAndTime = dateFormat.format(new Date());
 
                         String address = h_no+", "+land+", "+street+", "+area+", "+pincode;
                         order_details o = new order_details(name, email, String.valueOf(s), "NA", address, mob, total, "cash On Delivery", currentDateAndTime, "NA", "Order haven't dispatched yet ");
@@ -209,7 +211,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
 
                     Task<Void> myHistoryRef = database.getReference("users").child(user.getUid()).child("user_cart").removeValue();
                     progressDialog.dismiss();
-                    startActivity(new Intent(BillingDetailsActivity.this,Splash_Screen2.class));
+                    startActivity(new Intent(BillingDetailsActivity.this,Splash_Screen2.class).putExtra("order", currentDateAndTime));
                     finish();
                 }
                 else {

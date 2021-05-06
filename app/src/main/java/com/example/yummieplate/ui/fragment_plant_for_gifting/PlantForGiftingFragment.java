@@ -31,7 +31,7 @@ public class PlantForGiftingFragment extends Fragment {
 
     ProgressDialog progressDialog;
     DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin")
-            .child("all_items").child("pizzas");
+            .child("all_items").child("plant");
 
     String cake_discription = "Freshly made on order\n" +
             "Delivery within two hours\n" +
