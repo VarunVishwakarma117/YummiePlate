@@ -45,7 +45,7 @@ public class CakesFragment extends Fragment {
             "Cashback of Flat 50 rs on order above 500 Rs in YP wallet\n" +
             "Free delivery over 599 Rs";
     String cake_version = "YP Normal & Tasty-YP Healty & Tasty";
-    String cake_weigth = "Half Kg-One Kg";
+    String cake_weigth = "250gm-Half Kg-One Kg";
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -185,12 +185,66 @@ public class CakesFragment extends Fragment {
 //        items.add(new item(108,"Beige butter cream Decorative cake", cake_discription, null, cake_weigth,
 //                null,null, R.drawable.c1008,"₹749.00 – ₹1,249.00", new HashMap<String,Integer>() {
 //            { put("0000",749);
-//              put("0010",1249);}}));
+//              put("0100",1249);}}));
+
+//          items.add(new item(111, "Chocolate glaze cake – Three flavours", cake_discription,cake_version,cake_weigth,
+//            "Truffle–Dark Chocolate–Mild Chocolate","Heart Shape–Round–Square", R.drawable.c1111, "₹549.00 – ₹1,399.00", new HashMap<String,Integer>(){{
+//                put("0000",799);
+//                put("0010",799);
+//                put("0020",799);
+//                put("0001",849);
+//                put("0002",849);
+//                put("0100",1399);
+//                put("0101",1299);
+//                put("0102",1299);
+//                put("0110",1299);
+//                put("0111",1299);
+//                put("0112",1299);
+//                put("0120",1299);
+//                put("0121",1299);
+//                put("0122",1299);
+//                put("0011",799);
+//                put("0012",799);
+//                put("0021",799);
+//                put("0022",799);
+//                put("1000",549);
+//                put("1001",549);
+//                put("1002",549);
+//                put("1010",549);
+//                put("1011",549);
+//                put("1012",549);
+//                put("1020",549);
+//                put("1021",549);
+//                put("1022",549);
+//                put("1100",1299);
+//                put("1101",1299);
+//                put("1102",1299);
+//                put("1110",1299);
+//                put("1111",1299);
+//                put("1112",1299);
+//                put("1120",1299);
+//                put("1121",1299);
+//                put("1122",1299);}}));
+
+//          items.add(new item(112, "Oreo Choco chips cake", cake_discription, null ,cake_weigth,
+//                null, null, R.drawable.c1112, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//                put("0000",899);
+//                put("0100",1499);}}));
 //
-//
-//
-//
-//
+//             items.add(new item(113, "Fruit and nut cake", cake_discription,cake_version,cake_weigth,
+//                null, null, R.drawable.c1113, "₹699.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//                    put("0000",699);
+//                    put("0100",1199);
+//                    put("1000",799);
+//                    put("1100",1499);}}));
+
+//             items.add(new item(114, "Butterscoth bees cake", cake_discription,cake_version,cake_weigth,
+//                null, null, R.drawable.c1114, "₹499.00 – ₹999.00", new HashMap<String,Integer>(){{
+//                put("0000",499);
+//                put("0100",899);
+//                put("1000",599);
+//                put("1100",999);}}));
+
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug Image overwrite bug
 
 
