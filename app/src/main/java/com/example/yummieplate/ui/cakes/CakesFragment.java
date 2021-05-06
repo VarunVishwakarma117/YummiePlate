@@ -47,6 +47,7 @@ public class CakesFragment extends Fragment {
             "Free delivery over 599 Rs";
     String cake_version = "YP Normal & Tasty-YP Healty & Tasty";
     String cake_weigth= "Half Kg-One Kg";
+    String cake_weigth1="Half Kg-One Kg-1.5Kg";
     String cake_quantity="2-6";
     String cake_quantity1="3-5";
     String cake_quantity2="6-12";
@@ -229,51 +230,197 @@ public class CakesFragment extends Fragment {
 //                put("1121",1299);
 //                put("1122",1299);}}));
 
-//          items.add(new item(112, "Oreo Choco chips cake", cake_discription, null ,cake_weigth,
+//         items.add(new item(112, "Oreo Choco chips cake", cake_discription, null ,cake_weigth,
 //                null, null, R.drawable.c1112, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
 //                put("0000",899);
 //                put("0100",1499);}}));
 //
-//           items.add(new item(113, "Fruit and nut cake", cake_discription,cake_version,cake_weigth,
+//         items.add(new item(113, "Fruit and nut cake", cake_discription,cake_version,cake_weigth,
 //                null, null, R.drawable.c1113, "₹699.00 – ₹1,499.00", new HashMap<String,Integer>(){{
 //                    put("0000",699);
 //                    put("0100",1199);
 //                    put("1000",799);
 //                    put("1100",1499);}}));
 
-//             items.add(new item(114, "Butterscoth bees cake", cake_discription,cake_version,cake_weigth,
+//         items.add(new item(114, "Butterscoth bees cake", cake_discription,cake_version,cake_weigth,
 //                null, null, R.drawable.c1114, "₹499.00 – ₹999.00", new HashMap<String,Integer>(){{
 //                put("0000",499);
 //                put("0100",899);
 //                put("1000",599);
 //                put("1100",999);}}));
 
-//              items.add(new item(115, "Tuty fruity cupcakes", cake_discription,null,cake_quantity,
+//          tems.add(new item(115, "Tuty fruity cupcakes", cake_discription,null,cake_quantity,
 //               null, null, R.drawable.c1115, "₹120.00 – ₹250.00", new HashMap<String,Integer>(){{
 //                   put("0000",120);
 //                   put("0100",250);}}));
 
-//               items.add(new item(116, "Choco chips cupcake", cake_discription,null,cake_quantity1,
+//           items.add(new item(116, "Choco chips cupcake", cake_discription,null,cake_quantity1,
 //                   null, null, R.drawable.c1116, "₹180.00 – ₹249.00", new HashMap<String,Integer>(){{
 //                    put("0000",180);
 //                    put("0100",249);}}));
 
-//                items.add(new item(117, "Almond cream cupcake", cake_discription,null,cake_quantity1,
+//           items.add(new item(117, "Almond cream cupcake", cake_discription,null,cake_quantity1,
 //                     null, null, R.drawable.c1117, "₹180.00 – ₹250.00", new HashMap<String,Integer>(){{
 //                       put("0000",180);
 //                       put("0100",250);}}));
 
 
-//                 items.add(new item(118, "YP Coconut cupcake", cake_discription,null,cake_quantity1,
+//            items.add(new item(118, "YP Coconut cupcake", cake_discription,null,cake_quantity1,
 //                           null, null, R.drawable.c1118, "₹180.00 – ₹249.00", new HashMap<String,Integer>(){{
 //                             put("0000",180);
 //                             put("0100",249);}}));
 
-//                    items.add(new item(119, "YP Fresh Rainbow cupcake", cake_discription,null,cake_quantity2,
+//             items.add(new item(119, "YP Fresh Rainbow cupcake", cake_discription,null,cake_quantity2,
 //                              null, null, R.drawable.c1119, "₹300.00 – ₹549.00", new HashMap<String,Integer>(){{
 //                           put("0000",300);
 //                           put("0100",549);}}));
-//        all_itemRef.setValue(items);           // can be use to store new value or to debug Image overwrite bug
+
+//               items.add(new item(120, "Ferraro chocolate tomb cake", cake_discription,null,cake_weigth,
+//                null, null, R.drawable.c1120, "₹699.00 – ₹1,299.00", new HashMap<String,Integer>(){{
+//                    put("0000",699);
+//                    put("0100",1299);}}));
+
+//                 items.add(new item(121, "Fruit and nut cake", cake_discription,cake_version,cake_weigth,
+//                   null, null, R.drawable.c1121, "₹699.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//                       put("0000",699);
+//                       put("0100",1199);
+//                       put("1000",799);
+//                       put("1100",1499);}}));
+
+//                 items.add(new item(122, "Black cherry strawberry nuts cake", cake_discription,cake_version,cake_weigth,
+//                    null,"Round-Heart Shaped-Square", R.drawable.c1122, "₹599.00 – ₹1,449.00", new HashMap<String,Integer>(){{
+//                      put("0000",599);
+//                     put("0001",649);
+//                     put("0002",649);
+//                     put("0100",1149);
+//                     put("0101",1199);
+//                     put("0102",1199);
+//                     put("1000",799);
+//                     put("1001",849);
+//                     put("1002",849);
+//                     put("1100",1449);
+//                     put("1101",1449);
+//                     put("1102",1449);}}));
+
+//                 items.add(new item(123, "Kitkat delight cake", cake_discription,null,cake_weigth,
+//                   null,null, R.drawable.c1123, "₹999.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//                    put("0000",999);
+//                    put("0100",1499);}}));
+
+//                 items.add(new item(124, "Oreo Choco chips cake", cake_discription,null,cake_weigth,
+//                null,null, R.drawable.c1124, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//                    put("0000",899);
+//                    put("0100",1499);}}));
+
+//                 items.add(new item(125, "Macrons butterscotch cake", cake_discription,null,cake_weigth,
+//                null,null, R.drawable.c1125, "₹899.00 – ₹1,599.00", new HashMap<String,Integer>(){{
+//                    put("0000",899);
+//                    put("0100",1599);}}));
+
+//                 items.add(new item(126, "Grey beige designer cake – All flavours", cake_discription,cake_version,cake_weigth,
+//                         "ButterScotch-Chocolate-Red Velvet-Vanilla-Tutty Fruity",null, R.drawable.c1126,
+//                         "₹549.00 – ₹1,199.00", new HashMap<String,Integer>(){{
+//                             put("0000",549);
+//                             put("0010",549);
+//                             put("0020",549);
+//                             put("0030",549);
+//                             put("0040",549);
+//                             put("0100",999);
+//                             put("0110",999);
+//                             put("0120",999);
+//                             put("0130",999);
+//                             put("0140",999);
+//                             put("1000",699);
+//                             put("1010",699);
+//                             put("1020",699);
+//                             put("1030",699);
+//                             put("1040",699);
+//                             put("1100",1199);
+//                             put("1110",1199);
+//                             put("1120",1199);
+//                             put("1130",1199);
+//                             put("1140",1199);}}));
+
+//                 items.add(new item(127, "Strawberry kiwi cake", cake_discription,cake_version,cake_weigth,null,null, R.drawable.c1127,
+//                    "₹499.00 – ₹1,199.00", new HashMap<String,Integer>(){{
+//                         put("0000",499);
+//                         put("0100",999);
+//                         put("1000",599);
+//                         put("1100",1199);}}));
+
+//                 items.add(new item(128, "Chocolate red velvet cake", cake_discription,cake_version,cake_weigth,null,null, R.drawable.c1128,
+//                     "₹599.00 – ₹1,199.00", new HashMap<String,Integer>(){{
+//                         put("0000",799);
+//                         put("0100",1199);
+//                         put("1000",599);
+//                         put("1100",999);}}));
+
+//                  items.add(new item(129, "Chocolate Garden cake – Yummie plate", cake_discription,cake_version,cake_weigth,
+//                          "Black Forest-Chocolate Truffle-Dark Chocolate",null, R.drawable.c1129,
+//                     "₹550.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//                         put("0000",900);
+//                         put("0010",950);
+//                         put("0020",950);
+//                         put("0100",1499);
+//                         put("0110",1499);
+//                         put("0120",1499);
+//                         put("1000",550);
+//                         put("1010",600);
+//                         put("1020",600);
+//                         put("0010",950);
+//                         put("1100",1099);
+//                         put("1110",1099);
+//                         put("1120",1099);}}));
+
+ //                 items.add(new item(130, "Smiley grass Cake – All flavour", cake_discription,cake_version,cake_weigth1,
+ //                     "Red Velvet-ButterScotch-Chocolate-vanilla-Mix fruit-Any Other",null, R.drawable.c1130,
+ //                  "₹500.00 – ₹2,299.00", new HashMap<String,Integer>(){{
+ //                      put("0000",);
+
+ //                 }}));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  all_itemRef.setValue(items);     // can be use to store new value or to debug Image overwrite bug
 
         return root;
     }
