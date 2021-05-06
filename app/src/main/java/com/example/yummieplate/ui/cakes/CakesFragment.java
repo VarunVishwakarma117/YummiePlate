@@ -26,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CakesFragment extends Fragment {
 
@@ -185,6 +186,12 @@ public class CakesFragment extends Fragment {
 //                null,null, R.drawable.c1008,"₹749.00 – ₹1,249.00", new HashMap<String,Integer>() {
 //            { put("0000",749);
 //              put("0010",1249);}}));
+        items.add(new item(111, "Chocolate glaze cake – Three flavours", cake_discription, null , "500gm-1Kg",
+                null, null, R.drawable.s1111, "₹549.00 – ₹1,399.00", new HashMap<String,Integer>(){{
+            put("0000",450);
+            put("0100",900);
+            put("0200",1550);}}));
+
 
 
 
