@@ -378,48 +378,6 @@ public class CakesFragment extends Fragment {
  //                      put("0000",);
 
  //                 }}));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //  all_itemRef.setValue(items);     // can be use to store new value or to debug Image overwrite bug
 
         return root;
