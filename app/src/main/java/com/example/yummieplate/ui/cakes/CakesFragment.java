@@ -230,8 +230,8 @@ public class CakesFragment extends Fragment {
 //                put("1121",1299);
 //                put("1122",1299);}}));
 
-//         items.add(new item(112, "Oreo Choco chips cake", cake_discription, null ,cake_weigth,
-//                null, null, R.drawable.c1112, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//         items.add(new item(101, "Oreo Choco chips cake", cake_discription, null ,cake_weigth,
+//                null, null, R.drawable.c1001, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
 //                put("0000",899);
 //                put("0100",1499);}}));
 //
