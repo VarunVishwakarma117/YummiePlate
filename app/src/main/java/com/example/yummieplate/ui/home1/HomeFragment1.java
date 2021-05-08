@@ -1,18 +1,12 @@
 package com.example.yummieplate.ui.home1;
 
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -20,23 +14,11 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.yummieplate.BillingDetailsActivity;
-import com.example.yummieplate.LiveTrackingFeatueActivity;
-import com.example.yummieplate.MainActivity;
 import com.example.yummieplate.MainActivity2;
-import com.example.yummieplate.PackedItemsActivity;
+import com.example.yummieplate.PlantsActivity;
 import com.example.yummieplate.R;
-import com.example.yummieplate.ListAdapter;
-import com.example.yummieplate.Splash_Screen2;
 import com.example.yummieplate.ViewPagerAdapter;
-import com.example.yummieplate.item;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -109,7 +91,7 @@ public class HomeFragment1 extends Fragment {
             //startActivity(new Intent(getContext(), LiveTrackingFeatueActivity.class));
             startActivity(new Intent(getContext(), MainActivity2.class).putExtra("category", 5));
         });
-        category6.setOnClickListener(view -> startActivity(new Intent(getContext(), PackedItemsActivity.class)));
+        category6.setOnClickListener(view -> startActivity(new Intent(getContext(), PlantsActivity.class)));
 
         return root;
     }

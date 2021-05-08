@@ -17,11 +17,11 @@
             android:id="@+id/action_navigation_cake_to_navigation_sweets"
             app:destination="@id/navigation_sweets" />
         <action
-            android:id="@+id/action_navigation_cake_to_navigation_flowers_for_gifting"
-            app:destination="@id/navigation_flowers_for_gifting" />
+            android:id="@+id/action_navigation_cake_to_navigation_cupcake"
+            app:destination="@id/navigation_cupcake" />
         <action
-            android:id="@+id/action_navigation_cake_to_navigation_flowers_n_boquet"
-            app:destination="@id/navigation_flowers_n_boquet" />
+            android:id="@+id/action_navigation_cake_to_navigation_tea_n_cookies"
+            app:destination="@id/navigation_tea_n_cookies" />
     </fragment>
 
     <fragment
@@ -36,14 +36,14 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_sweets" />
     <fragment
-        android:id="@+id/navigation_flowers_for_gifting"
-        android:name="com.example.yummieplate.ui.fragment_plant_for_gifting.PlantForGiftingFragment"
+        android:id="@+id/navigation_cupcake"
+        android:name="com.example.yummieplate.ui.fragment_cupcake.CupCakesFragment"
         android:label="Plant For Gifting"
-        tools:layout="@layout/fragment_plant_for_gifting" />
+        tools:layout="@layout/fragment_cupcake" />
 
     <fragment
-        android:id="@+id/navigation_flowers_n_boquet"
-        android:name="com.example.yummieplate.ui.cookies.CookiesFragment"
+        android:id="@+id/navigation_tea_n_cookies"
+        android:name="com.example.yummieplate.ui.tea_n_cookies.Tea_n_CookiesFragment"
         android:label="Flower &amp; Boquet"
         tools:layout="@layout/fragment_flower_n_boquet" />
 

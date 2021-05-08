@@ -39,7 +39,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PackedItemsActivity"></activity>
+        <activity android:name=".PlantsActivity"></activity>
         <activity android:name=".TrackOrder" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
