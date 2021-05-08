@@ -109,6 +109,21 @@ public class SweetsFragment extends Fragment {
 //                   put("0100",900);
 //                   put("0200",1550);}}));
 
+//        items.add(new item(304, "YP Freshly made Gulab Jamun", cake_discription, null ,"Pack of 3-Pack of 5-Pack of 10",
+//            null, null, R.drawable.s3004, "₹60.00 – ₹180.00", new HashMap<String,Integer>(){{
+//                   put("0000",60);
+//                   put("0100",95);
+//                   put("0200",180);}}));
+
+//        items.add(new item(305, "YP Freshly made Rashgulla", cake_discription, null ,"Pack of 3-Pack of 5",
+//            null, null, R.drawable.s3005, "₹75.00 – ₹120.00", new HashMap<String,Integer>(){{
+//                   put("0000",75);
+//                   put("0100",120);}}));
+
+
+
+
+
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
 

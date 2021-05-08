@@ -81,16 +81,7 @@ public class PlantForGiftingFragment extends Fragment {
         }
 
 
-//        items.add(new item(201, "Baked Kid’s pasta", cake_discription, null , "Chotu Packet-Badu Packet",
-//                null, null, R.drawable.p2001, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
-//                    put("0000",99);
-//                    put("0100",199);}}));
-//
-//        items.add(new item(201, "Baked Macaroni pasta", cake_discription, null , "Half Plate-Full Plate",
-//                null, null, R.drawable.p2002, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
-//            put("0000",199);
-////            put("0100",299);}}));
-//
+
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
         return root;

@@ -187,8 +187,8 @@ public class CakesFragment extends Fragment {
 //
 //
 //        items.add(new item(108,"Beige butter cream Decorative cake", cake_discription, null, cake_weigth,
-//                null,null, R.drawable.c1008,"₹749.00 – ₹1,249.00", new HashMap<String,Integer>() {
-//            { put("0000",749);
+//                null,null, R.drawable.c1008,"₹749.00 – ₹1,249.00", new HashMap<String,Integer>() {{
+//               put("0000",749);
 //              put("0100",1249);}}));
 
 //          items.add(new item(111, "Chocolate glaze cake – Three flavours", cake_discription,cake_version,cake_weigth,
@@ -274,6 +274,13 @@ public class CakesFragment extends Fragment {
 //                              null, null, R.drawable.c1119, "₹300.00 – ₹549.00", new HashMap<String,Integer>(){{
 //                           put("0000",300);
 //                           put("0100",549);}}));
+//
+
+//             items.add(new item(130, "YP Premium Almond cookies", cake_discription,null,"Healthy-Normal",
+//                              null, null, R.drawable.c1130, "₹149.00 – ₹199.00", new HashMap<String,Integer>(){{
+//                           put("0000",199);
+//                           put("0100",149);}}));
+//
 
 //               items.add(new item(120, "Ferraro chocolate tomb cake", cake_discription,null,cake_weigth,
 //                null, null, R.drawable.c1120, "₹699.00 – ₹1,299.00", new HashMap<String,Integer>(){{
@@ -359,12 +366,6 @@ public class CakesFragment extends Fragment {
 //                         put("1100",1099);
 //                         put("1110",1099);
 //                         put("1120",1099);}}));
-
- //                 items.add(new item(130, "Smiley grass Cake – All flavour", cake_discription,cake_version,cake_weigth1,
- //                     "Red Velvet-ButterScotch-Chocolate-vanilla-Mix fruit-Any Other",null, R.drawable.c1130,
- //                  "₹500.00 – ₹2,299.00", new HashMap<String,Integer>(){{
- //                      put("0000",);}}));
-
 
 //  all_itemRef.setValue(items);     // can be use to store new value or to debug Image overwrite bug
 

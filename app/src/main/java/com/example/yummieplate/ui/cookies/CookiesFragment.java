@@ -31,9 +31,25 @@ public class CookiesFragment extends Fragment {
     ProgressDialog progressDialog;
     DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items").child("cookies");
 
-    String cake_discription = "Most tasty cookies In India/n"+
-    "Delivery to all India/n"+
-    "Best Quality product by yummie plate/n";
+    String cake_discription = "Most tasty cookies In India\n"+
+    "Delivery to all India\n"+
+    "Best Quality product by yummie plate\n";
+
+    String cake_discription1 = "Freshly made on order\n"+
+"2 hour delivery in Hyderabad\n"+
+    "Best Quality and taste guarnteed\n"+
+    "Made with love by yummie plate\n";
+
+    String cake_discription2 = "Freshly made on order\n"+
+"10% Cashback on each order\n"+
+"2 hour delivery in Hyderabad\n"+
+    "Best Quality and taste guarnteed\n"+
+    "Made with love by yummie plate\n";
+
+    String cake_discription3 = "Freshly made on order\n"+
+    "Delivery available in all India\n"+
+    "Customisable quantity\n"+
+    "Best taste in city by Yummie plate\n";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -100,6 +116,43 @@ public class CookiesFragment extends Fragment {
 //                       put("1000",149);}}));
 //
 
+//        items.add(new item(603, "YP Cheese Samosa", cake_discription1,"Fried-Baked","Pack of 3-Pack Of 5-Pack of 10",
+//                null, null, R.drawable.ck6003, "₹90.00 – ₹320.00", new HashMap<String,Integer>(){{
+//                       put("0000",90);
+//                       put("0100",140);
+//                       put("0200",250);
+//                       put("1000",100);
+//                       put("1100",190);
+//                       put("1200",320)}}));
+//
+
+//        items.add(new item(604, "YP Fresh Aloo Samosa", cake_discription2,"YP Fried-YP Baked","Pack of 3-Pack Of 5-Pack of 10",
+//                null, null, R.drawable.ck6004, "₹60.00 – ₹250.00", new HashMap<String,Integer>(){{
+//                       put("0000",60);
+//                       put("0100",90);
+//                       put("0200",170);
+//                       put("1000",99);
+//                       put("1100",150);
+//                       put("1200",250)}}));
+//
+
+//        items.add(new item(605, "YP Choclate muffins", cake_discription3,null,"Pack of 6-Pack Of 12",
+//                null, null, R.drawable.ck6005, "₹6.00 – ₹30.00", new HashMap<String,Integer>(){{
+//                       put("0000",30);
+//                       put("0100",6)}}));
+//
+
+//        items.add(new item(606, "Yp Special muffins", cake_discription3,null,"Pack of 6-Pack Of 12",
+//                null, null, R.drawable.ck6006, "₹50.00 – ₹99.00", new HashMap<String,Integer>(){{
+//                       put("0000",50);
+//                       put("0100",99)}}));
+//
+
+//       items.add(new item(607, "YP Star Vanilla muffins", cake_discription3,null,"Pack of 6-Pack Of 12",
+//                null, null, R.drawable.ck6007, "₹50.00 – ₹99.00", new HashMap<String,Integer>(){{
+//                       put("0000",50);
+//                       put("0100",99)}}));
+//
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
         return root;
