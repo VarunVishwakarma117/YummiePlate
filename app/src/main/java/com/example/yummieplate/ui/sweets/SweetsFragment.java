@@ -39,6 +39,22 @@ public class SweetsFragment extends Fragment {
             "Quality and taste in best quality\n" +
             "Next day delivery in Hyderabad\n" +
             "5-7 working days delivery in all India";
+    String cake_discription1="Freshly made on order\n"+
+            "Delivery within two hours\n"+
+            "Customisable quantity\n"+
+            "Best taste in city by Yummie plate\n";
+
+    String cake_discription2 = "Freshly made on order\n"+
+            "10% Cashback on each order\n"+
+            "2 hour delivery in Hyderabad\n"+
+            "Best Quality and taste guarnteed\n"+
+            "Made with love by yummie plate\n";
+
+    String cake_discription4="Freshly made on order\n"+
+            "Delivery within two hours\n"+
+            "Customisable sweetness and size\n"+
+            "Filled with dry fruit and nuts\n"+
+            "Best taste in city by Yummie plate\n";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -102,30 +118,63 @@ public class SweetsFragment extends Fragment {
 //                null, null, R.drawable.s3002, "₹560.00 – ₹999.00", new HashMap<String,Integer>(){{
 //            put("0000",560);
 //            put("0100",999);}}));
-
+//
 //        items.add(new item(303, "Dry fruit healthy sweets", cake_discription, null , "250gm-500gm-1Kg",
 //            null, null, R.drawable.s3003, "₹450.00 – ₹1,550.00", new HashMap<String,Integer>(){{
 //                   put("0000",450);
 //                   put("0100",900);
 //                   put("0200",1550);}}));
-
+//
 //        items.add(new item(304, "YP Freshly made Gulab Jamun", cake_discription, null ,"Pack of 3-Pack of 5-Pack of 10",
 //            null, null, R.drawable.s3004, "₹60.00 – ₹180.00", new HashMap<String,Integer>(){{
 //                   put("0000",60);
 //                   put("0100",95);
 //                   put("0200",180);}}));
-
+//
 //        items.add(new item(305, "YP Freshly made Rashgulla", cake_discription, null ,"Pack of 3-Pack of 5",
 //            null, null, R.drawable.s3005, "₹75.00 – ₹120.00", new HashMap<String,Integer>(){{
 //                   put("0000",75);
 //                   put("0100",120);}}));
-
-
-
-
-
+//
+//        items.add(new item(603, "YP Cheese Samosa", cake_discription1,"Fried-Baked","Pack of 3-Pack Of 5-Pack of 10",
+//                null, null, R.drawable.ck6003, "₹90.00 – ₹320.00", new HashMap<String,Integer>(){{
+//                       put("0000",90);
+//                       put("0100",140);
+//                       put("0200",250);
+//                       put("1000",100);
+//                       put("1100",190);
+//                       put("1200",320);}}));
+//
+//
+//        items.add(new item(604, "YP Fresh Aloo Samosa", cake_discription2,"YP Fried-YP Baked","Pack of 3-Pack Of 5-Pack of 10",
+//                null, null, R.drawable.ck6004, "₹60.00 – ₹250.00", new HashMap<String,Integer>(){{
+//                       put("0000",60);
+//                       put("0100",90);
+//                       put("0200",170);
+//                       put("1000",99);
+//                       put("1100",150);
+//                       put("1200",250);}}));
+//
+//
+//       items.add(new item(608, "YP Fresh Cheese kachori", cake_discription4,null,"Pack of 3-Pack Of 5",
+//                null, null, R.drawable.ck6008, "₹90.00 – ₹160.00", new HashMap<String,Integer>(){{
+//                       put("0000",90);
+//                       put("0100",160);}}));
+//
+//
+//       items.add(new item(609, "Yp Fresh Kachori", cake_discription4,null,"Pack of 2-Pack Of 5",
+//                null, null, R.drawable.ck6009, "₹50.00 – ₹130.00", new HashMap<String,Integer>(){{
+//                       put("0000",50);
+//                       put("0100",130);}}));
+//
+//        items.add(new item(214, "Yp fresh Corn masala", cake_discription1,null,"100grams-250grams",
+//                null, null, R.drawable.p2014, "₹99.00 – ₹169.00", new HashMap<String,Integer>(){{
+//            put("0000",99);
+//            put("0100",169);}}));
+//
+//
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
-
+//
 
         return root;
     }

@@ -119,96 +119,102 @@ public class OpenItemActivity extends AppCompatActivity {
                     hmPrice = item.getItem_Price();
                 }
                 progressDialog.dismiss();
-                if(item.getVersion()!=null){
-                    versionArray = item.getVersion().split("-");
-                    ArrayAdapter<String> vad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, versionArray);
-                    vspinner_openitem.setAdapter(vad);
-                    vspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            mapKey.replace(0,1, String.valueOf(adapterView.getSelectedItemPosition()));
-                            Log.v("final string", String.valueOf(mapKey));
-                            if(hmPrice.containsKey(String.valueOf(mapKey))){
-                                price = hmPrice.get(String.valueOf(mapKey));
-                                current_price.setText("₹" + String.valueOf(price));
+                try {
+                    if (item.getVersion() != null) {
+                        versionArray = item.getVersion().split("-");
+                        ArrayAdapter<String> vad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, versionArray);
+                        vspinner_openitem.setAdapter(vad);
+                        vspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                mapKey.replace(0, 1, String.valueOf(adapterView.getSelectedItemPosition()));
+                                Log.v("final string", String.valueOf(mapKey));
+                                if (hmPrice.containsKey(String.valueOf(mapKey))) {
+                                    price = hmPrice.get(String.valueOf(mapKey));
+                                    current_price.setText("₹" + String.valueOf(price));
+                                }
                             }
-                        }
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-                        }
-                    });
-                }else{
-                    ll_vr.setVisibility(View.GONE);
-                }
 
-                if (item.getWeight_in_pounds_or_qunatity() != null){
-                    weightArray = item.getWeight_in_pounds_or_qunatity().split("-");
-                    ArrayAdapter<String> siad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, weightArray);
-                    wspinner_openitem.setAdapter(siad);
-                    wspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            mapKey.replace(1,2, String.valueOf(adapterView.getSelectedItemPosition()));
-                            Log.v("final string", String.valueOf(mapKey));
-                            current_price.setText(String.valueOf(mapKey));
-                            if(hmPrice.containsKey(String.valueOf(mapKey))){
-                                price = hmPrice.get(String.valueOf(mapKey));
-                                current_price.setText("₹" + String.valueOf(price));
+                            @Override
+                            public void onNothingSelected(AdapterView<?> adapterView) {
                             }
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-                        }
-                    });
-                }else{
-                    ll_si.setVisibility(View.GONE);
-                }
-
-                if(item.getFlavour() != null){
-                    flavorArray = item.getFlavour().split("-");
-                    ArrayAdapter<String> flad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, flavorArray);
-                    fspinner_openitem.setAdapter(flad);
-                    fspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            mapKey.replace(2,3, String.valueOf(adapterView.getSelectedItemPosition()));
-                            Log.v("final string", String.valueOf(mapKey));
-                            if(hmPrice.containsKey(String.valueOf(mapKey))){
-                                price = hmPrice.get(String.valueOf(mapKey));
-                                current_price.setText("₹" + String.valueOf(price));
+                        });
+                    } else {
+                        ll_vr.setVisibility(View.GONE);
+                    }
+                }catch (Exception e){}
+                try{
+                    if (item.getWeight_in_pounds_or_qunatity() != null){
+                        weightArray = item.getWeight_in_pounds_or_qunatity().split("-");
+                        ArrayAdapter<String> siad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, weightArray);
+                        wspinner_openitem.setAdapter(siad);
+                        wspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                mapKey.replace(1,2, String.valueOf(adapterView.getSelectedItemPosition()));
+                                Log.v("final string", String.valueOf(mapKey));
+                                current_price.setText(String.valueOf(mapKey));
+                                if(hmPrice.containsKey(String.valueOf(mapKey))){
+                                    price = hmPrice.get(String.valueOf(mapKey));
+                                    current_price.setText("₹" + String.valueOf(price));
+                                }
                             }
-                        }
 
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-                        }
-                    });
-                }else{
-                    ll_fv.setVisibility(View.GONE);
-                }
-
-                if (item.getShape() != null){
-                    shapeArray = item.getShape().split("-");
-                    ArrayAdapter<String> shad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, shapeArray);
-                    shspinner_openitem.setAdapter(shad);
-                    shspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                            mapKey.replace(3,4, String.valueOf(adapterView.getSelectedItemPosition()));
-                            Log.v("final string", String.valueOf(mapKey));
-                            if(hmPrice.containsKey(String.valueOf(mapKey))){
-                                price = hmPrice.get(String.valueOf(mapKey));
-                                current_price.setText("₹" + String.valueOf(price));
+                            @Override
+                            public void onNothingSelected(AdapterView<?> adapterView) {
                             }
-                        }
-                        @Override
-                        public void onNothingSelected(AdapterView<?> adapterView) {
-                        }
-                    });
-                }else{
-                    ll_sh.setVisibility(View.GONE);
-                }
+                        });
+                    }else{
+                        ll_si.setVisibility(View.GONE);
+                    }
+                }catch (Exception e){}
+                try{
+                    if(item.getFlavour() != null){
+                        flavorArray = item.getFlavour().split("-");
+                        ArrayAdapter<String> flad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, flavorArray);
+                        fspinner_openitem.setAdapter(flad);
+                        fspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                mapKey.replace(2,3, String.valueOf(adapterView.getSelectedItemPosition()));
+                                Log.v("final string", String.valueOf(mapKey));
+                                if(hmPrice.containsKey(String.valueOf(mapKey))){
+                                    price = hmPrice.get(String.valueOf(mapKey));
+                                    current_price.setText("₹" + String.valueOf(price));
+                                }
+                            }
+
+                            @Override
+                            public void onNothingSelected(AdapterView<?> adapterView) {
+                            }
+                        });
+                    }else{
+                        ll_fv.setVisibility(View.GONE);
+                    }
+                }catch (Exception e){}
+                try{
+                    if (item.getShape() != null){
+                        shapeArray = item.getShape().split("-");
+                        ArrayAdapter<String> shad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, shapeArray);
+                        shspinner_openitem.setAdapter(shad);
+                        shspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                            @Override
+                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                mapKey.replace(3,4, String.valueOf(adapterView.getSelectedItemPosition()));
+                                Log.v("final string", String.valueOf(mapKey));
+                                if(hmPrice.containsKey(String.valueOf(mapKey))){
+                                    price = hmPrice.get(String.valueOf(mapKey));
+                                    current_price.setText("₹" + String.valueOf(price));
+                                }
+                            }
+                            @Override
+                            public void onNothingSelected(AdapterView<?> adapterView) {
+                            }
+                        });
+                    }else{
+                        ll_sh.setVisibility(View.GONE);
+                    }
+                }catch (Exception e){}
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

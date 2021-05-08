@@ -1,16 +1,11 @@
 package com.example.yummieplate;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.yummieplate.ui.pizza.PizzaFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -26,7 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_cake, R.id.navigation_pizza, R.id.navigation_sweets, R.id.navigation_flowers_for_gifting, R.id.navigation_flowers_n_boquet)
+                R.id.navigation_cake, R.id.navigation_pizza, R.id.navigation_sweets, R.id.navigation_cupcake, R.id.navigation_tea_n_cookies)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
@@ -42,10 +37,10 @@ public class MainActivity2 extends AppCompatActivity {
             navController.navigate(R.id.action_navigation_cake_to_navigation_sweets);
         }
         else if(category == 4){
-            navController.navigate(R.id.action_navigation_cake_to_navigation_flowers_for_gifting);
+            navController.navigate(R.id.action_navigation_cake_to_navigation_cupcake);
         }
         else if(category == 5){
-            navController.navigate(R.id.action_navigation_cake_to_navigation_flowers_n_boquet);
+            navController.navigate(R.id.action_navigation_cake_to_navigation_tea_n_cookies);
         }
     }
 

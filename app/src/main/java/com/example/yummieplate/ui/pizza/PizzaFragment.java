@@ -96,98 +96,93 @@ public class PizzaFragment extends Fragment {
 //                null, null, R.drawable.p2001, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
 //                    put("0000",99);
 //                    put("0100",199);}}));
-
+//
 //        items.add(new item(202, "Baked Macaroni pasta", cake_discription, null , "Half Plate-Full Plate",
 //                null, null, R.drawable.p2002, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
 //            put("0000",199);
 //           put("0100",299);}}));
-
+//
 //          items.add(new item(203, "Fusilli Primavera Creamy Pasta", cake_discription, null , "Half Plate-Full Plate",
 //                null, null, R.drawable.p2003, "₹199.00 – ₹299.00", new HashMap<String,Integer>(){{
 //                  put("0000",199);
 //                 put("0100",299);}}));
-
+//
 //        items.add(new item(204, "Whole wheat fusilli With pestor pasta", cake_discription, null , "Half Plate-Full Plate",
 //                null, null, R.drawable.p2004, "₹199.00 – ₹299.00", new HashMap<String,Integer>(){{
 //                put("0000",199);
 //                 put("0100",299);}}));
-
+//
 //        items.add(new item(205, "Spicy Penne Arrabbiata Pasta", cake_discription,cake_version, "Half Plate-Full Plate",
 //                null, null, R.drawable.p2005, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
 //                  put("0000",149);
 //                  put("0100",199);
 //                  put("1000",99);
 //                  put("1100",149);}}));
-
+//
 //        items.add(new item(206, "Farfalle Creamy mushroom pasta", cake_discription,cake_version, "Half Plate-Full Plate",
 //                null, null, R.drawable.p2006, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
 //                 put("0000",149);
 //                 put("0100",199);
 //                 put("1000",99);
 //                 put("1100",149);}}));
-
+//
 //        items.add(new item(207, "YP Fresh tomato pasta", cake_discription,cake_version, "Half Plate-Full Plate",
 //                null, null, R.drawable.p2007, "₹89.00 – ₹199.00", new HashMap<String,Integer>(){{
 //                  put("0000",149);
 //                  put("0100",199);
 //                  put("1000",89);
 //                  put("1100",129);}}));
-
-
+//
+//
 //         items.add(new item(208, "YP Fresh mix veg pasta", cake_discription,cake_version, "Half Plate-Full Plate",
 //                null, null, R.drawable.p2008, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
 //                  put("0000",149);
 //                  put("0100",199);
 //                  put("1000",99);
 //                  put("1100",149);}}));
-
-
+//
+//
 //        items.add(new item(209, "YP White sauce pasta", cake_discription,cake_version, "Half Plate-Full Plate",
 //                null, null, R.drawable.p2009, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
 //                      put("0000",149);
 //                      put("0100",199);
 //                      put("1000",99);
 //                      put("1100",129);}}));
-
-
+//
+//
 //        items.add(new item(210, "YP Red sauce pasta", cake_discription,cake_version, "Half Plate-Full Plate",
 //                null, null, R.drawable.p2010, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
 //                   put("0000",149);
 //                   put("0100",199);
 //                   put("1000",99);
 //                   put("1100",149);}}));
-
-
+//
+//
 //        items.add(new item(211, "YP Fresh Cheese pasta", cake_discription,cake_version, "Half Plate-Full Plate",
 //                null, null, R.drawable.p2011, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
 //                   put("0000",139);
 //                   put("0100",199);
 //                   put("1000",99);
 //                   put("1100",139);}}));
-
+//
 //          items.add(new item(212, "YP Fresh Healthy Cheese pizza", cake_discription,null,pizza_Size,
 //                null, null, R.drawable.p2012, "₹99.00 – ₹299.00", new HashMap<String,Integer>(){{
 //                    put("0000",99);
 //                    put("0100",199);
 //                    put("0200",299);}}));
-
+//
 //          items.add(new item(213, "YP Fresh Healthy tomato pizza", cake_discription,null,pizza_Size,
 //                null, null, R.drawable.p2013, "₹99.00 – ₹299.00", new HashMap<String,Integer>(){{
 //                       put("0000",99);
 //                       put("0100",149);
 //                       put("0200",299);}}));
-
-//          items.add(new item(214, "Yp fresh Corn masala", cake_discription1,null,"100grams-250grams",
-//                null, null, R.drawable.p2014, "₹99.00 – ₹169.00", new HashMap<String,Integer>(){{
-//                       put("0000",99);
-//                       put("0100",169);}}));
-
-
+//
+//
 //         items.add(new item(215, "YP Veg Healthy Burger", cake_discription1,null,"Small-Large",
 //                null, null, R.drawable.p2015, "₹99.00 – ₹149.00", new HashMap<String,Integer>(){{
 //                       put("0000",99);
 //                       put("0100",149);}}));
-
+//
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
         return root;
