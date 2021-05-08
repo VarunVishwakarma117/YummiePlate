@@ -66,7 +66,13 @@ public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMa
         trackingLocation();
     }
 
+
     private void trackingLocation() {
+        int height = 100;
+        int width = 100;
+        BitmapDrawable bitmapdraw = (BitmapDrawable)getResources().getDrawable(R.drawable.ic_user);
+        Bitmap b=bitmapdraw.getBitmap();
+        Bitmap smallUserMarker = Bitmap.createScaledBitmap(b, width, height, false);
         userLocation.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -78,16 +84,18 @@ public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMa
                 //Log.v("userLat", String.valueOf(userLati));
                 //Log.v("userLong", String.valueOf(userLong));
                 userLatLng = new LatLng(userLati, userLong);
-                int height = 100;
-                int width = 100;
-                BitmapDrawable bitmapdraw = (BitmapDrawable)getResources().getDrawable(R.drawable.ic_user);
-                Bitmap b=bitmapdraw.getBitmap();
-                Bitmap smallUserMarker = Bitmap.createScaledBitmap(b, width, height, false);
+
                 mMap.addMarker(new MarkerOptions().position(userLatLng).title("User Location").icon(BitmapDescriptorFactory.fromBitmap(smallUserMarker)));
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) { }
         });
+
+        int height2 = 75;
+        int width2 = 100;
+        BitmapDrawable bitmapdraw2 = (BitmapDrawable)getResources().getDrawable(R.drawable.ic_dboy);
+        Bitmap b2=bitmapdraw2.getBitmap();
+        Bitmap smallDboyMarker = Bitmap.createScaledBitmap(b2, width2, height2, false);
         String accepted_by = getIntent().getExtras().getString("accepted_by");
         Log.v("accepted_by_Live", accepted_by);
         dBoyLocation.child(accepted_by).child("dBoyLocation").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -98,11 +106,6 @@ public class LiveTrackingFeatueActivity extends FragmentActivity implements OnMa
                     dboyLong = Double.parseDouble(snapshot.child("Longitude").getValue(String.class));
                     Log.v("Dboy Lati & long", dboyLati + " " + dboyLong);
                     dBoyLatLng = new LatLng(dboyLati, dboyLong);
-                    int height = 75;
-                    int width = 100;
-                    BitmapDrawable bitmapdraw = (BitmapDrawable)getResources().getDrawable(R.drawable.ic_dboy);
-                    Bitmap b=bitmapdraw.getBitmap();
-                    Bitmap smallDboyMarker = Bitmap.createScaledBitmap(b, width, height, false);
                     dBoyMarker = mMap.addMarker(new MarkerOptions().position(dBoyLatLng).title("Delivery Boy Location").icon(BitmapDescriptorFactory.fromBitmap(smallDboyMarker)));
                     CameraPosition dBoyCamp = new CameraPosition.Builder().target(dBoyLatLng).zoom(14).bearing(0).tilt(45).build();
                     mMap.animateCamera(CameraUpdateFactory.newCameraPosition(dBoyCamp));

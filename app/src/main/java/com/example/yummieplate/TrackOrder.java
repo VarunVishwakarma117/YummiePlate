@@ -20,20 +20,21 @@ public class TrackOrder extends AppCompatActivity {
 
     DatabaseReference order_details_ref = FirebaseDatabase.getInstance().getReference("admin").child("order_history");
     String accepted_by;
-    TextView status, track_now;
+    TextView tv_status, track_now , status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_order);
 
+        tv_status = findViewById(R.id.tv_status);
         status = findViewById(R.id.status);
         track_now = findViewById(R.id.track_now);
         track_now.setVisibility(View.GONE);
 
         String my_order = getIntent().getExtras().getString("order");
         Log.v("my_order", my_order);
-        Log.v("III", "Run");
+        Log.v("I", "Run");
         Query accepted_by_query = order_details_ref.orderByChild("order_date_time").equalTo(my_order);
         accepted_by_query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -42,20 +43,15 @@ public class TrackOrder extends AppCompatActivity {
                     accepted_by = dss.getValue(order_details.class).getAcceptedBy();
                     Log.v("accepted_by", accepted_by);
                 }
+                status.setText(accepted_by);
                 if(!accepted_by.equals("Order haven't dispatched yet ")){
                     track_now.setVisibility(View.VISIBLE);
-                    track_now.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            startActivity(new Intent(TrackOrder.this, LiveTrackingFeatueActivity.class).putExtra("accepted_by", accepted_by));
-                        }
-                    });
+                    track_now.setOnClickListener(view -> startActivity(new Intent(TrackOrder.this, LiveTrackingFeatueActivity.class).putExtra("accepted_by", accepted_by)));
                 }
+                //else if(!accepted_by.equals(""))
             }
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
+            public void onCancelled(@NonNull DatabaseError error){}
         });
 
     }
