@@ -6,14 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".TrackOrder"
     android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_abstract3"
+        android:scaleType="fitXY"
+        android:alpha="0.8"/>
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Status :"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:translationY="-100dp"
+        android:layout_margin="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"/>
     <TextView
         android:id="@+id/status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Order Status :"
-        android:layout_margin="15dp"
+        tools:text="Ready to track"
+        android:layout_below="@id/tv_status"
+        android:gravity="center"
+        android:textSize="18sp"
         android:textColor="@android:color/black"
-        android:textSize="20sp"/>
+        android:translationY="-75dp"/>
+
     <TextView
         android:id="@+id/track_now"
         android:layout_width="match_parent"
@@ -24,6 +45,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:padding="10dp"
+        android:textSize="16sp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="15dp"
         android:elevation="5dp"

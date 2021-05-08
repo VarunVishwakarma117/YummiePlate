@@ -95,7 +95,7 @@ public class OpenItemActivity extends AppCompatActivity {
         back_button_openActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OpenItemActivity.this, MainActivity.class));
+                startActivity(new Intent(OpenItemActivity.this, MainActivity2.class));
                 finish();
             }
         });
@@ -117,10 +117,8 @@ public class OpenItemActivity extends AppCompatActivity {
                     pricerange_openitem.setText(item.getItem_PriceRange());
                     description_openitem.setText(item.getDescription());
                     hmPrice = item.getItem_Price();
-                    Log.v("version list",item.getVersion());
                 }
                 progressDialog.dismiss();
-                Log.e("**********************************", item.getVersion());
                 if(item.getVersion()!=null){
                     versionArray = item.getVersion().split("-");
                     ArrayAdapter<String> vad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, versionArray);

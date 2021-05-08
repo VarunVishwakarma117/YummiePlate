@@ -98,7 +98,12 @@ public class CakesFragment extends Fragment {
             Toast.makeText(getContext(), "Check Your Internet Connection", Toast.LENGTH_SHORT).show();
         }
 
-//
+
+//        items.add(new item(101, "Oreo Choco chips cake", cake_discription, null ,cake_weigth,
+//                null, null, R.drawable.c1001, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//                put("0000",899);
+//                put("0100",1499);}}));
+////
 //        items.add(new item(102, "Multicolor star cake", cake_discription, cake_version , cake_weigth,
 //                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.c1002, "₹599 - ₹1349", new HashMap<String,Integer>(){
 //            {put("0000",599);
@@ -117,6 +122,24 @@ public class CakesFragment extends Fragment {
 //             put("1110",1249);
 //             put("1120",1299);
 //             put("1130",1349);}}));
+////
+//        items.add(new item(103, "Pink rosette cake – All Flavour : Order Tastiest cake online", cake_discription,cake_version, cake_weigth,"Butter Scotch-Red Velvet-Vanilla-Chocolate mix",null, R.drawable.c1003, "₹499.00 – ₹1,499.00", new HashMap<String,Integer>(){{
+//          put("0000",549);
+//            put("0100",599);
+//            put("0200",499);
+//            put("0300",549);
+//            put("0010",999);
+//            put("0110",1099);
+//            put("0210",899);
+//            put("0310",999);
+//            put("1000",799);
+//            put("1100",799);
+//            put("1200",699);
+//            put("1300",799);
+//            put("1010",1299);
+//            put("1110",1299);
+//            put("1210",1199);
+//            put("1310",1499);}}));
 ////
 //        items.add(new item(106, "Carrot cream Delicious cake", cake_discription, null , cake_weigth,
 //                null, null, R.drawable.c1006, "₹549.00 – ₹949.00", new HashMap<String,Integer>(){{
@@ -150,23 +173,7 @@ public class CakesFragment extends Fragment {
 //            put("1111",1299);
 //            put("1112",1299);}}));
 
-//        items.add(new item(103, "Pink rosette cake – All Flavour : Order Tastiest cake online", cake_discription,cake_version, cake_weigth,"Butter Scotch-Red Velvet-Vanilla-Chocolate mix",null, R.drawable.c1003, "₹499.00 – ₹1,499.00", new HashMap<String,Integer>(){{
-//          put("0000",549);
-//            put("0100",599);
-//            put("0200",499);
-//            put("0300",549);
-//            put("0010",999);
-//            put("0110",1099);
-//            put("0210",899);
-//            put("0310",999);
-//            put("1000",799);
-//            put("1100",799);
-//            put("1200",699);
-//            put("1300",799);
-//            put("1010",1299);
-//            put("1110",1299);
-//            put("1210",1199);
-//            put("1310",1499);}}));
+
 ////
 //        items.add(new item(110, "Strawberry butterscoth cake", cake_discription,cake_version, cake_weigth,null,"Round-Heart Shaped", R.drawable.c1010, "₹549.00 – ₹1,299.00", new HashMap<String,Integer>(){{
 //            put("0000",549);
@@ -229,11 +236,6 @@ public class CakesFragment extends Fragment {
 //                put("1120",1299);
 //                put("1121",1299);
 //                put("1122",1299);}}));
-
-//         items.add(new item(101, "Oreo Choco chips cake", cake_discription, null ,cake_weigth,
-//                null, null, R.drawable.c1001, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
-//                put("0000",899);
-//                put("0100",1499);}}));
 //
 //         items.add(new item(113, "Fruit and nut cake", cake_discription,cake_version,cake_weigth,
 //                null, null, R.drawable.c1113, "₹699.00 – ₹1,499.00", new HashMap<String,Integer>(){{
