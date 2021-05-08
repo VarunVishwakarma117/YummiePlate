@@ -45,6 +45,11 @@ public class CakesFragment extends Fragment {
             "Same day delivery available in Kukatpally(Hyderabad)and 10 km around it\n" +
             "Cashback of Flat 50 rs on order above 500 Rs in YP wallet\n" +
             "Free delivery over 599 Rs";
+    String cake_discription6="Bestest cake in city using finest quality ingridients\n"+
+    "made with love\n"+
+    "Delivery by your fav character\n"+
+    "Veg cake\n";
+
     String cake_version = "YP Normal & Tasty-YP Healty & Tasty";
     String cake_weigth= "Half Kg-One Kg";
     String cake_weigth1="Half Kg-One Kg-1.5Kg";
@@ -366,6 +371,48 @@ public class CakesFragment extends Fragment {
 //                         put("1100",1099);
 //                         put("1110",1099);
 //                         put("1120",1099);}}));
+
+//                  items.add(new item(135, "Smiley grass Cake – All flavour", cake_discription6,"Healthy Version-Yummie Plate Version",cake_weigth1,
+//                          "Red Velvet-ButterScotch-Chocolate-Vanilla-Mix Fruit-Any Other",null, R.drawable.c1135,
+//                     "₹500.00 – ₹2,299.00", new HashMap<String,Integer>(){{
+//                            put("0000",900);
+//                             put("0010",850);
+//                             put("0020",900);
+//                             put("0030",800);
+//                             put("0040",950);
+//                             put("0050",1499);
+//                             put("0110",1400);
+//                             put("0120",1499);
+//                             put("0130",1399);
+//                             put("0140",1549);
+//                             put("0150",1500);
+//                             put("0200",2199);
+//                             put("0210",2100);
+//                             put("0220",2199);
+//                             put("0230",1999);
+//                             put("0240",2299);
+//                             put("0250",2199);
+//                             put("1000",600);
+//                             put("1010",550);
+//                             put("1020",550);
+//                             put("1030",500);
+//                             put("1040",549);
+//                             put("1050",599);
+//                             put("1100",1099);
+//                             put("1110",1099);
+//                             put("1120",1049);
+//                             put("1130",999);
+//                             put("1140",999);
+//                             put("1150",1099);
+//                             put("1200",1599);
+//                             put("1210",1599);
+//                             put("1220",1549);
+//                             put("1230",1499);
+//                             put("1240",1599);
+//                             put("1250",1699);}}));
+
+
+
 
 //  all_itemRef.setValue(items);     // can be use to store new value or to debug Image overwrite bug
 
