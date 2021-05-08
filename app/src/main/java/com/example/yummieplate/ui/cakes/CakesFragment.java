@@ -103,7 +103,7 @@ public class CakesFragment extends Fragment {
 //                null, null, R.drawable.c1001, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
 //                put("0000",899);
 //                put("0100",1499);}}));
-////
+
 //        items.add(new item(102, "Multicolor star cake", cake_discription, cake_version , cake_weigth,
 //                "Vanilla-Butterscotch-Chocolate-Red Velvet", null, R.drawable.c1002, "₹599 - ₹1349", new HashMap<String,Integer>(){
 //            {put("0000",599);
@@ -140,14 +140,21 @@ public class CakesFragment extends Fragment {
 //            put("1110",1299);
 //            put("1210",1199);
 //            put("1310",1499);}}));
-////
+//
 //        items.add(new item(106, "Carrot cream Delicious cake", cake_discription, null , cake_weigth,
 //                null, null, R.drawable.c1006, "₹549.00 – ₹949.00", new HashMap<String,Integer>(){{
 //                    put("0000",549);
 //                    put("0100",949);}}));
-////
+
+//        items.add(new item(104,"Chocolate butterscotch cake", cake_discription, cake_version, cake_weigth,
+//               null,null, R.drawable.c1004, "₹599.00 – ₹1,299.00", new HashMap<String,Integer>(){{
+//            put("0000",599);
+//            put("0100",1049);
+//            put("1000",799);
+//            put("1100",1299);}}));
+//
 //        items.add(new item(105,"Chocolate butterscotch cake", cake_discription, cake_version, cake_weigth,
-//                "Chocolate-Dark chocolate","Round-HeartShaped-Square", R.drawable.c1005, "₹599.00 – ₹1,299.00", new HashMap<String,Integer>(){{
+//               "Chocolate-Dark chocolate","Round-HeartShaped-Square", R.drawable.c1005, "₹599.00 – ₹1,299.00", new HashMap<String,Integer>(){{
 //            put("0000",599);
 //            put("0001",649);
 //            put("0002",599);
@@ -174,7 +181,7 @@ public class CakesFragment extends Fragment {
 //            put("1112",1299);}}));
 
 
-////
+
 //        items.add(new item(110, "Strawberry butterscoth cake", cake_discription,cake_version, cake_weigth,null,"Round-Heart Shaped", R.drawable.c1010, "₹549.00 – ₹1,299.00", new HashMap<String,Integer>(){{
 //            put("0000",549);
 //            put("0001",599);
@@ -190,8 +197,6 @@ public class CakesFragment extends Fragment {
 //            put("0100",999);
 //            put("1000",599);
 //            put("1100",1199);}}));
-//
-//
 //
 //        items.add(new item(108,"Beige butter cream Decorative cake", cake_discription, null, cake_weigth,
 //                null,null, R.drawable.c1008,"₹749.00 – ₹1,249.00", new HashMap<String,Integer>() {{
@@ -337,13 +342,6 @@ public class CakesFragment extends Fragment {
 //                             put("1120",1199);
 //                             put("1130",1199);
 //                             put("1140",1199);}}));
-
-//                 items.add(new item(127, "Strawberry kiwi cake", cake_discription,cake_version,cake_weigth,null,null, R.drawable.c1127,
-//                    "₹499.00 – ₹1,199.00", new HashMap<String,Integer>(){{
-//                         put("0000",499);
-//                         put("0100",999);
-//                         put("1000",599);
-//                         put("1100",1199);}}));
 
 //                 items.add(new item(128, "Chocolate red velvet cake", cake_discription,cake_version,cake_weigth,null,null, R.drawable.c1128,
 //                     "₹599.00 – ₹1,199.00", new HashMap<String,Integer>(){{
