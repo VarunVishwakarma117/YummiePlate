@@ -280,13 +280,6 @@ public class CakesFragment extends Fragment {
 //                    put("0000",699);
 //                    put("0100",1299);}}));
 
-//                 items.add(new item(121, "Fruit and nut cake", cake_discription,cake_version,cake_weigth,
-//                   null, null, R.drawable.c1121, "₹699.00 – ₹1,499.00", new HashMap<String,Integer>(){{
-//                       put("0000",699);
-//                       put("0100",1199);
-//                       put("1000",799);
-//                       put("1100",1499);}}));
-
 //                 items.add(new item(122, "Black cherry strawberry nuts cake", cake_discription,cake_version,cake_weigth,
 //                    null,"Round-Heart Shaped-Square", R.drawable.c1122, "₹599.00 – ₹1,449.00", new HashMap<String,Integer>(){{
 //                      put("0000",599);
@@ -305,11 +298,6 @@ public class CakesFragment extends Fragment {
 //                 items.add(new item(123, "Kitkat delight cake", cake_discription,null,cake_weigth,
 //                   null,null, R.drawable.c1123, "₹999.00 – ₹1,499.00", new HashMap<String,Integer>(){{
 //                    put("0000",999);
-//                    put("0100",1499);}}));
-
-//                 items.add(new item(124, "Oreo Choco chips cake", cake_discription,null,cake_weigth,
-//                null,null, R.drawable.c1124, "₹899.00 – ₹1,499.00", new HashMap<String,Integer>(){{
-//                    put("0000",899);
 //                    put("0100",1499);}}));
 
 //                 items.add(new item(125, "Macrons butterscotch cake", cake_discription,null,cake_weigth,
@@ -375,9 +363,9 @@ public class CakesFragment extends Fragment {
  //                 items.add(new item(130, "Smiley grass Cake – All flavour", cake_discription,cake_version,cake_weigth1,
  //                     "Red Velvet-ButterScotch-Chocolate-vanilla-Mix fruit-Any Other",null, R.drawable.c1130,
  //                  "₹500.00 – ₹2,299.00", new HashMap<String,Integer>(){{
- //                      put("0000",);
+ //                      put("0000",);}}));
 
- //                 }}));
+
 //  all_itemRef.setValue(items);     // can be use to store new value or to debug Image overwrite bug
 
         return root;
