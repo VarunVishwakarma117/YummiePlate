@@ -51,6 +51,17 @@ public class CookiesFragment extends Fragment {
     "Customisable quantity\n"+
     "Best taste in city by Yummie plate\n";
 
+    String cake_discription4="Freshly made on order\n"+
+    "Delivery within two hours\n"+
+    "Customisable sweetness and size\n"+
+    "Filled with dry fruit and nuts\n"+
+    "Best taste in city by Yummie plate\n";
+
+    String cake_discription5="Freshly made on order\n"+
+    "Delivery within two hours\n"+
+    "Customisable quantity\n"+
+    "Best taste in city by Yummie plate\n";
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_flower_n_boquet, container, false);
@@ -153,6 +164,33 @@ public class CookiesFragment extends Fragment {
 //                       put("0000",50);
 //                       put("0100",99)}}));
 //
+
+
+//       items.add(new item(608, "YP Fresh Cheese kachori", cake_discription4,null,"Pack of 3-Pack Of 5",
+//                null, null, R.drawable.ck6008, "₹90.00 – ₹160.00", new HashMap<String,Integer>(){{
+//                       put("0000",90);
+//                       put("0100",160)}}));
+
+
+//       items.add(new item(609, "Yp Fresh Kachori", cake_discription4,null,"Pack of 2-Pack Of 5",
+//                null, null, R.drawable.ck6009, "₹50.00 – ₹130.00", new HashMap<String,Integer>(){{
+//                       put("0000",50);
+//                       put("0100",130)}}));
+//
+
+
+//       items.add(new item(610, "Yp Special Choco lava", cake_discription5,null,"Pack of 1-Pack Of 2",
+//                null, null, R.drawable.ck6010, "₹55.00 – ₹100.00", new HashMap<String,Integer>(){{
+//                       put("0000",55);
+//                       put("0100",100)}}));
+//
+
+//       items.add(new item(611,"YP Special Chocolate brownies", cake_discription5,null,"Pack of 3-Pack Of 6",
+//                null, null, R.drawable.ck6011, "₹55.00 – ₹100.00", new HashMap<String,Integer>(){{
+//                       put("0000",55);
+//                       put("0100",100)}}));
+//
+
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
         return root;

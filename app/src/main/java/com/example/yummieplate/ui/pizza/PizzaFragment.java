@@ -41,6 +41,11 @@ public class PizzaFragment extends Fragment {
     String cake_version="YP Tasty-YP Healthy & Tasty";
     String pizza_Size="Small-Medium-Large";
 
+    String cake_discription1="Freshly made on order\n"+
+    "Delivery within two hours\n"+
+    "Customisable quantity\n"+
+    "Best taste in city by Yummie plate\n";
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         pizzaViewModel = new ViewModelProvider(this).get(PizzaViewModel.class);
@@ -171,6 +176,17 @@ public class PizzaFragment extends Fragment {
 //                       put("0000",99);
 //                       put("0100",149);
 //                       put("0200",299);}}));
+
+//          items.add(new item(214, "Yp fresh Corn masala", cake_discription1,null,"100grams-250grams",
+//                null, null, R.drawable.p2014, "₹99.00 – ₹169.00", new HashMap<String,Integer>(){{
+//                       put("0000",99);
+//                       put("0100",169);}}));
+
+
+//         items.add(new item(215, "YP Veg Healthy Burger", cake_discription1,null,"Small-Large",
+//                null, null, R.drawable.p2015, "₹99.00 – ₹149.00", new HashMap<String,Integer>(){{
+//                       put("0000",99);
+//                       put("0100",149);}}));
 
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
