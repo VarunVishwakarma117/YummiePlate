@@ -1,4 +1,4 @@
-package com.example.yummieplate.ui.fragment_flower_n_boquet;
+package com.example.yummieplate.ui.cookies;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -14,12 +14,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.yummieplate.ListAdapter;
 import com.example.yummieplate.R;
 import com.example.yummieplate.item;
-import com.example.yummieplate.ui.pizza.PizzaViewModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,17 +25,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
-public class FlowerNBoquetFragment extends Fragment {
+public class CookiesFragment extends Fragment {
 
     ProgressDialog progressDialog;
-    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items").child("bouquet");
+    DatabaseReference all_itemRef = FirebaseDatabase.getInstance().getReference("admin").child("all_items").child("cookies");
 
-    String cake_discription = "Freshly made on order\n" +
-            "Delivery within two hours\n" +
-            "Customisable quantity\n" +
-            "Best taste in city by Yummie plate";
+    String cake_discription = "Most tasty cookies In India/n"+
+    "Delivery to all India/n"+
+    "Best Quality product by yummie plate/n";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -84,16 +80,26 @@ public class FlowerNBoquetFragment extends Fragment {
         }
 
 
-//        items.add(new item(201, "Baked Kid’s pasta", cake_discription, null , "Chotu Packet-Badu Packet",
-//                null, null, R.drawable.p2001, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
-//                    put("0000",99);
-//                    put("0100",199);}}));
+//        items.add(new item(600, "YP Premium mix cookies", cake_discription,cake_version, "Small Packet-Big Packet",
+//                null, null, R.drawable.ck6000, "₹79.00 – ₹199.00", new HashMap<String,Integer>(){{
+//                     put("0000",99);
+//                     put("0100",199);
+//                     put("1000",79);
+//                     put("1100",149);}}));
+
+
+//        items.add(new item(601, "YP Samosa Shape butter cookies", cake_discription,"Healthy-Normal",null,
+//                null, null, R.drawable.ck6001, "₹129.00 – ₹199.00", new HashMap<String,Integer>(){{
+//                       put("0000",199);
+//                       put("1000",129);}}));
 //
-//        items.add(new item(201, "Baked Macaroni pasta", cake_discription, null , "Half Plate-Full Plate",
-//                null, null, R.drawable.p2002, "₹99.00 – ₹199.00", new HashMap<String,Integer>(){{
-//            put("0000",199);
-////            put("0100",299);}}));
+
+//        items.add(new item(602, "YP Premium Almond cookies", cake_discription,"Healthy-Normal",null,
+//                null, null, R.drawable.ck6002, "₹149.00 – ₹199.00", new HashMap<String,Integer>(){{
+//                       put("0000",199);
+//                       put("1000",149);}}));
 //
+
 //        all_itemRef.setValue(items);           // can be use to store new value or to debug gImage overwrite bug
 
         return root;

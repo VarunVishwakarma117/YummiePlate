@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/navigation_flowers_n_boquet"
-        android:name="com.example.yummieplate.ui.fragment_flower_n_boquet.FlowerNBoquetFragment"
+        android:name="com.example.yummieplate.ui.cookies.CookiesFragment"
         android:label="Flower &amp; Boquet"
         tools:layout="@layout/fragment_flower_n_boquet" />
 
