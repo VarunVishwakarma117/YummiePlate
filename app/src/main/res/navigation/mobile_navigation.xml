@@ -38,13 +38,13 @@
     <fragment
         android:id="@+id/navigation_cupcake"
         android:name="com.example.yummieplate.ui.fragment_cupcake.CupCakesFragment"
-        android:label="Plant For Gifting"
+        android:label="Cupcakes and Muffins"
         tools:layout="@layout/fragment_cupcake" />
 
     <fragment
         android:id="@+id/navigation_tea_n_cookies"
         android:name="com.example.yummieplate.ui.tea_n_cookies.Tea_n_CookiesFragment"
-        android:label="Flower &amp; Boquet"
+        android:label="Tea and cookies"
         tools:layout="@layout/fragment_flower_n_boquet" />
 
 </navigation>

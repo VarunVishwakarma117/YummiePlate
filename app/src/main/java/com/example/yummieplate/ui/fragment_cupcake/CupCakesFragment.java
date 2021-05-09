@@ -95,56 +95,56 @@ public class CupCakesFragment extends Fragment {
         }
 
 //          items.add(new item(115, "Tuty fruity cupcakes", cake_discription,null,cake_quantity,
-//               null, null, R.drawable.ck1115, "₹120.00 – ₹250.00", new HashMap<String,Integer>(){{
+//               null, null, R.drawable.ck1115, "₹120 - ₹250", new HashMap<String,Integer>(){{
 //                   put("0000",120);
 //                   put("0100",250);}}));
 //
 //           items.add(new item(116, "Choco chips cupcake", cake_discription,null,cake_quantity1,
-//                   null, null, R.drawable.ck1116, "₹180.00 – ₹249.00", new HashMap<String,Integer>(){{
+//                   null, null, R.drawable.ck1116, "₹180 - ₹249", new HashMap<String,Integer>(){{
 //                    put("0000",180);
 //                    put("0100",249);}}));
 //
 //           items.add(new item(117, "Almond cream cupcake", cake_discription,null,cake_quantity1,
-//                     null, null, R.drawable.ck1117, "₹180.00 – ₹250.00", new HashMap<String,Integer>(){{
+//                     null, null, R.drawable.ck1117, "₹180 - ₹250", new HashMap<String,Integer>(){{
 //                       put("0000",180);
 //                       put("0100",250);}}));
 //
 //
 //            items.add(new item(118, "YP Coconut cupcake", cake_discription,null,cake_quantity1,
-//                           null, null, R.drawable.ck1118, "₹180.00 – ₹249.00", new HashMap<String,Integer>(){{
+//                           null, null, R.drawable.ck1118, "₹180 - ₹249", new HashMap<String,Integer>(){{
 //                             put("0000",180);
 //                             put("0100",249);}}));
 //
 //             items.add(new item(119, "YP Fresh Rainbow cupcake", cake_discription,null,cake_quantity2,
-//                              null, null, R.drawable.ck1119, "₹300.00 – ₹549.00", new HashMap<String,Integer>(){{
+//                              null, null, R.drawable.ck1119, "₹300 - ₹549", new HashMap<String,Integer>(){{
 //                           put("0000",300);
 //                           put("0100",549);}}));
 //
 //        items.add(new item(605, "YP Choclate muffins", cake_discription3,null,"Pack of 6-Pack Of 12",
-//                null, null, R.drawable.ck6005, "₹6.00 – ₹30.00", new HashMap<String,Integer>(){{
+//                null, null, R.drawable.ck6005, "₹6 - ₹30", new HashMap<String,Integer>(){{
 //                       put("0000",30);
 //                       put("0100",6);}}));
 //
 //
 //        items.add(new item(606, "Yp Special muffins", cake_discription3,null,"Pack of 6-Pack Of 12",
-//                null, null, R.drawable.ck6006, "₹50.00 – ₹99.00", new HashMap<String,Integer>(){{
+//                null, null, R.drawable.ck6006, "₹50 - ₹99", new HashMap<String,Integer>(){{
 //                       put("0000",50);
 //                       put("0100",99);}}));
 //
 //
 //       items.add(new item(607, "YP Star Vanilla muffins", cake_discription3,null,"Pack of 6-Pack Of 12",
-//                null, null, R.drawable.ck6007, "₹50.00 – ₹99.00", new HashMap<String,Integer>(){{
+//                null, null, R.drawable.ck6007, "₹50 - ₹99", new HashMap<String,Integer>(){{
 //                       put("0000",50);
 //                       put("0100",99);}}));
 //
 //       items.add(new item(610, "Yp Special Choco lava", cake_discription5,null,"Pack of 1-Pack Of 2",
-//                null, null, R.drawable.ck6010, "₹55.00 – ₹100.00", new HashMap<String,Integer>(){{
+//                null, null, R.drawable.ck6010, "₹55 - ₹100", new HashMap<String,Integer>(){{
 //                       put("0000",55);
 //                       put("0100",100);}}));
 //
 //
 //       items.add(new item(611,"YP Special Chocolate brownies", cake_discription5,null,"Pack of 3-Pack Of 6",
-//                null, null, R.drawable.ck6011, "₹55.00 – ₹100.00", new HashMap<String,Integer>(){{
+//                null, null, R.drawable.ck6011, "₹55 - ₹100", new HashMap<String,Integer>(){{
 //                       put("0000",55);
 //                       put("0100",100);}}));
 //

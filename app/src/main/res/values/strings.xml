@@ -17,9 +17,9 @@
     <string name="phone_number">Phone Number</string>
     <string name="email">Email</string>
     <string name="title_activity_main2">Menu</string>
-    <string name="title_home">Cakes &amp; Bakery</string>
-    <string name="title_dashboard">Party Order</string>
-    <string name="title_notifications">Sweets &amp; Deserts </string>
+    <string name="title_home">Cakes and Bakery</string>
+    <string name="title_dashboard">Pizza and Pasta</string>
+    <string name="title_notifications">Sweets and Snacks </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="flower_for_gifting">Flower For Gifting</string>
     <string name="title_activity_live_tracking_featue">Map</string>

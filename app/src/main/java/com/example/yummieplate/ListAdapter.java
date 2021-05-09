@@ -100,7 +100,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
                 NetworkInfo networkInfo = manager.getActiveNetworkInfo();
                 if (networkInfo != null) {
                     String[] shapeArray =  currentitem.getShape()!=null?currentitem.getShape().split("-"):null;
-                    String[] sItemPrice = currentitem.getItem_PriceRange().split("-");
+                    String[] sItemPrice = currentitem.getItem_PriceRange().split("[-]");
                     Log.v("a", sItemPrice[0]);
                     int x = Integer.parseInt(sItemPrice[0].trim().substring(1, sItemPrice[0].trim().length()));
                     item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),null, currentitem.getVersion()!=null?"YP Normal & Tasty":null,

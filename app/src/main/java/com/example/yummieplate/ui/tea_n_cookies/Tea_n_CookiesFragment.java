@@ -86,32 +86,32 @@ public class Tea_n_CookiesFragment extends Fragment {
         }
 
 //                items.add(new item(500, "YP Mitti Pot tea", cake_discription,null,cake_weigth,
-//                            null,null, R.drawable.t5000,"₹50.00 – ₹95.00", new HashMap<String,Integer>(){{
+//                            null,null, R.drawable.t5000,"₹50 - ₹95", new HashMap<String,Integer>(){{
 //                           put("0000",50);
 //                           put("0100",95);}}));
 //
 //               items.add(new item(501, "YP Mix herb tea", cake_discription,null,cake_weigth,
-//                            null,null, R.drawable.t5001,"₹50.00 – ₹95.00", new HashMap<String,Integer>(){{
+//                            null,null, R.drawable.t5001,"₹50 - ₹95", new HashMap<String,Integer>(){{
 //                             put("0000",50);
 //                             put("0100",95);}}));
 //
 //               items.add(new item(502, "YP Fresh Ginger tea", cake_discription,null,cake_weigth,
-//                            null,null, R.drawable.t5002,"₹50.00 – ₹95.00", new HashMap<String,Integer>(){{
+//                            null,null, R.drawable.t5002,"₹50 - ₹95", new HashMap<String,Integer>(){{
 //                             put("0000",50);
 //                             put("0100",95);}}));
 //
 //              items.add(new item(503, "Yp Fresh Elachi tea", cake_discription,null,cake_weigth,
-//                            null,null, R.drawable.t5003,"₹60.00 – ₹110.00", new HashMap<String,Integer>(){{
+//                            null,null, R.drawable.t5003,"₹60 - ₹110", new HashMap<String,Integer>(){{
 //                             put("0000",60);
 //                             put("0100",110);}}));
 //
 //             items.add(new item(504, "YP Special ginger Tea", cake_discription,null,"Half Cream-Full Cream",
-//                            null,null, R.drawable.t5004,"₹30.00 – ₹60.00", new HashMap<String,Integer>(){{
+//                            null,null, R.drawable.t5004,"₹30 - ₹60", new HashMap<String,Integer>(){{
 //                             put("0000",30);
 //                             put("0100",60);}}));
 //
 //        items.add(new item(600, "YP Premium mix cookies", cookie_discription,"Healthy-Normal", "Small Packet-Big Packet",
-//                null, null, R.drawable.ck6000, "₹79.00 – ₹199.00", new HashMap<String,Integer>(){{
+//                null, null, R.drawable.ck6000, "₹79 - ₹199", new HashMap<String,Integer>(){{
 //                     put("0000",99);
 //                     put("0100",199);
 //                     put("1000",79);
@@ -119,13 +119,13 @@ public class Tea_n_CookiesFragment extends Fragment {
 //
 //
 //        items.add(new item(601, "YP Samosa Shape butter cookies", cookie_discription,"Healthy-Normal",null,
-//                null, null, R.drawable.ck6001, "₹129.00 – ₹199.00", new HashMap<String,Integer>(){{
+//                null, null, R.drawable.ck6001, "₹129 - ₹199", new HashMap<String,Integer>(){{
 //                       put("0000",199);
 //                       put("1000",129);}}));
 //
 //
 //        items.add(new item(602, "YP Premium Almond cookies", cookie_discription,"Healthy-Normal",null,
-//                null, null, R.drawable.ck6002, "₹149.00 – ₹199.00", new HashMap<String,Integer>(){{
+//                null, null, R.drawable.ck6002, "₹149 - ₹199", new HashMap<String,Integer>(){{
 //                       put("0000",199);
 //                       put("1000",149);}}));
 //
