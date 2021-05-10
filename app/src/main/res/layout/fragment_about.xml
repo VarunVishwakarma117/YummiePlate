@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,199 +17,189 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_marginTop="60dp"
-                android:layout_gravity="center"
-                android:src="@drawable/logo"
-                android:layout_width="150dp"
-                android:layout_height="150dp"/>
-
+                android:src="@drawable/banner_yp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:ignore="ContentDescription" />
             <TextView
-                android:textSize="35sp"
-                android:textStyle="bold"
-                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:gravity="end"
                 android:layout_gravity="center"
-                android:text="Yummie Plate"
-                android:layout_marginTop="20dp"
+                android:text="V1.0.0"
+                android:translationY="-50dp"
+                android:layout_marginEnd="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
             <TextView
-                android:textSize="30sp"
-                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Contact Us"
+                android:translationY="-35dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/yp_email"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_blue_light"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="cs@yummieplate.com"
-                android:layout_marginTop="20dp"
+                android:translationY="-25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-
             <TextView
-                android:textSize="30sp"
-                android:textStyle="bold"
+                android:id="@+id/yp_phone"
+                android:textSize="20sp"
+                android:translationY="-20dp"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="799-510-3192"
-                android:layout_marginTop="20dp"
+                android:textColor="@android:color/holo_blue_light"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <TextView
-                android:textSize="30sp"
+                android:textSize="23sp"
+                android:textColor="@android:color/black"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:layout_gravity="center"
-                android:text="V-1.0.0"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="20dp"
-                android:textSize="35sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
                 android:text="App Developer Team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginStart="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:translationY="-10dp"
+                android:textColor="@android:color/black"
+                android:text="UI / Frontend Developer -"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginStart="40dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:text="Ankur Thakur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/ankur_email"
+                android:layout_marginStart="40dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="ankurthakur7754@gmail.com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Github : "
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/ankur_github"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="https://github.com/Ankurthakur00"
+                    android:textColor="@android:color/holo_blue_light"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginStart="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="Backend Developers -"
                 android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="25sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="UI/Frontend Developer"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="40dp"
                 android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Ankur"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Email: ankurthakur7754@gmail.com"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Contact: +91 63948 12186"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="25sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Backend Developer"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Abhishek Gupta"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Email: abhishek.gupta.890113"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Contact: +91 99584 84437"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
+                android:textColor="@android:color/black"
                 android:text="Varun Vishwakarma"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/varun_email"
+                android:layout_marginStart="40dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="varun.vishwakarma117@gmail.com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Github : "
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/varun_github"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="https://github.com/VarunVishwakarma117"
+                    android:textColor="@android:color/holo_blue_light"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginStart="40dp"
+                android:textSize="20sp"
                 android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
+                android:text="Abhishek Gupta"
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Email: varun.vishwakarma117@gmail.com"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
+                android:id="@+id/abhishek_email"
+                android:layout_marginStart="40dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="abhishek.gupta.890113@gmail.com"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:textColor="#C9000000"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:text="Contact: +91 90602 66578"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Github : "
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"/>
+                <TextView
+                    android:id="@+id/abhishek_github"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="https://github.com/abhi311098"
+                    android:textColor="@android:color/holo_blue_light"/>
+            </LinearLayout>
         </LinearLayout>
-
     </RelativeLayout>
-
 </ScrollView>
