@@ -138,7 +138,7 @@ public class BillingDetailsActivity extends AppCompatActivity {
                     for(DataSnapshot dss : snapshot.getChildren()){
                         item i = dss.getValue(item.class);
                         item_cart_copy2.add(i);
-                        total += i.getSitem_Price();
+                        total += i.getItem_cart_price();
                         billing_price.setText("₹" + String.valueOf(total));
                         billing_amount_final.setText("₹" + String.valueOf(total));
                         progressDialog.dismiss();

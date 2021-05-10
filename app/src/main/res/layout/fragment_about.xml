@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:fillViewport="true">
 
     <RelativeLayout
@@ -81,15 +82,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="30dp"
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
-                android:text="Ankur Thakur"
+                android:text="1. Ankur Thakur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
                 android:id="@+id/ankur_email"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="50dp"
                 android:textSize="18sp"
                 android:textColor="@android:color/holo_blue_light"
                 android:text="ankurthakur7754@gmail.com"
@@ -98,7 +99,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginEnd="20dp"
                 android:orientation="vertical">
                 <TextView
@@ -127,17 +128,17 @@
                 android:layout_height="wrap_content"/>
 
             <TextView
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="30dp"
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
-                android:text="Varun Vishwakarma"
+                android:text="1. Varun Vishwakarma"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/varun_email"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="50dp"
                 android:textSize="18sp"
                 android:textColor="@android:color/holo_blue_light"
                 android:text="varun.vishwakarma117@gmail.com"
@@ -146,7 +147,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginEnd="20dp"
                 android:orientation="vertical">
                 <TextView
@@ -164,17 +165,17 @@
                     android:textColor="@android:color/holo_blue_light"/>
             </LinearLayout>
             <TextView
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="30dp"
                 android:textSize="20sp"
                 android:layout_marginTop="20dp"
-                android:text="Abhishek Gupta"
+                android:text="2. Abhishek Gupta"
                 android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/abhishek_email"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="50dp"
                 android:textSize="18sp"
                 android:textColor="@android:color/holo_blue_light"
                 android:text="abhishek.gupta.890113@gmail.com"
@@ -183,7 +184,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginEnd="20dp"
                 android:orientation="vertical">
                 <TextView
@@ -197,6 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
+                    android:layout_marginBottom="30dp"
                     android:text="https://github.com/abhi311098"
                     android:textColor="@android:color/holo_blue_light"/>
             </LinearLayout>

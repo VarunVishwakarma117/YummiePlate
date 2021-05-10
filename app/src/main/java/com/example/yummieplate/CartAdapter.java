@@ -53,6 +53,22 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
         }
         final com.example.yummieplate.item currentitem = getItem(position);
 
+        Query myCartRef2 = database.getReference("users").child(user.getUid()).child("user_cart").orderByChild("item_id").equalTo(currentitem.getItem_id());
+        myCartRef2.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                int new_price = currentitem.getSitem_Price();
+                Log.v("new price", String.valueOf(new_price));
+                for(DataSnapshot dss : snapshot.getChildren()){
+                    dss.child("item_cart_price").getRef().setValue(new_price);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getContext(), ""+error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
         final TextView price;
         TextView removeItem;
         TextView move_to_wishList;
@@ -111,7 +127,7 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.v("item ", "added to wishlist failed");
+                        Log.v("item ", "adding to wishlist failed");
                     }
                 });
 
@@ -135,26 +151,6 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
             }
         });
 
-        /*final Spinner spino = listItemView.findViewById(R.id.spinner);
-
-        ArrayAdapter ad = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, quantity);
-
-        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        spino.setAdapter(ad);
-
-        spino.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                quant = Integer.parseInt((String) adapterView.getSelectedItem());
-
-
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-            }
-        });*/
-
         final int[] quant = {currentitem.getItem_quant()};
         final TextView qunatity = listItemView.findViewById(R.id.quantity);
         qunatity.setText(String.valueOf(quant[0]));
@@ -165,35 +161,18 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
         add_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final int[] amount = {0};
                 if (quant[0]<7){
                     qunatity.setText(String.valueOf(++quant[0]));
                     Query myCartRef2 = database.getReference("users").child(user.getUid()).child("user_cart").orderByChild("item_id").equalTo(currentitem.getItem_id());
                     myCartRef2.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            for (final DataSnapshot dataSnapshot: snapshot.getChildren()) {
-                                database.getReference("Admin").child("all_items").orderByChild("item_id").equalTo(currentitem.getItem_id()).addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        if(snapshot.exists()){
-                                            for(DataSnapshot dss : snapshot.getChildren()){
-                                                item i = dss.getValue(item.class);
-                                                Log.v("Tag", String.valueOf(i.getItem_Price()));
-                                                amount[0] = i.getSitem_Price()*quant[1];
-                                                dataSnapshot.getRef().child("item_Price").setValue(amount[0]);
-                                                dataSnapshot.getRef().child("item_quant").setValue(quant[0]);
-                                                price.setText(String.valueOf(amount[0]));
-                                            }
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
-
-                                    }
-                                });
+                            int new_price = currentitem.getSitem_Price()*quant[0];
+                            Log.v("new price", String.valueOf(new_price));
+                            for(DataSnapshot dss : snapshot.getChildren()){
+                                dss.child("item_cart_price").getRef().setValue(new_price);
                             }
+                            price.setText(String.valueOf(new_price));
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
@@ -213,27 +192,12 @@ public class CartAdapter extends ArrayAdapter<item> implements AdapterView.OnIte
                     myCartRef2.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            for (final DataSnapshot dataSnapshot: snapshot.getChildren()) {
-                                database.getReference("Admin").child("all_items").orderByChild("item_id").equalTo(currentitem.getItem_id()).addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        if(snapshot.exists()){
-                                            for(DataSnapshot dss : snapshot.getChildren()){
-                                                item i = dss.getValue(item.class);
-                                                amount[0] = i.getSitem_Price()*quant[0];
-                                                dataSnapshot.getRef().child("item_Price").setValue(amount[0]);
-                                                dataSnapshot.getRef().child("item_quant").setValue(quant[0]);
-                                                price.setText(String.valueOf(amount[0]));
-                                            }
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
-
-                                    }
-                                });
+                            int new_price = currentitem.getSitem_Price()*quant[0];
+                            Log.v("new price", String.valueOf(new_price));
+                            for(DataSnapshot dss : snapshot.getChildren()){
+                                dss.child("item_cart_price").getRef().setValue(new_price);
                             }
+                            price.setText(String.valueOf(new_price));
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {

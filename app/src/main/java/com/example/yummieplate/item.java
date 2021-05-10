@@ -15,6 +15,7 @@ public class item {
     private String item_PriceRange;
     private int sitem_Price;
     private int item_quant;
+    private int item_cart_price;
 
     public item(){}
     public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, String item_PriceRange, HashMap<String,Integer> item_Price){
@@ -42,7 +43,20 @@ public class item {
         this.item_quant = item_quant;
         this.item_PriceRange = item_PriceRange;
     }
-
+    public item(int item_id, String item_local_name, String description, String version, String weight_in_pounds_or_qunatity, String flavour, String shape, int item_image, int sitem_Price, int item_quant, String item_PriceRange, int item_cart_price){
+        this.item_id = item_id;
+        this.item_local_name = item_local_name;
+        this.description = description;
+        this.version = version;
+        this.flavour = flavour;
+        this.shape = shape;
+        this.item_image = item_image;
+        this.weight_in_pounds_or_qunatity = weight_in_pounds_or_qunatity;
+        this.sitem_Price = sitem_Price;
+        this.item_quant = item_quant;
+        this.item_PriceRange = item_PriceRange;
+        this.item_cart_price = item_cart_price;
+    }
 
     public int getItem_id() {
         return item_id;
@@ -92,5 +106,5 @@ public class item {
         return item_quant;
     }
 
-
+    public int getItem_cart_price() { return item_cart_price; }
 }

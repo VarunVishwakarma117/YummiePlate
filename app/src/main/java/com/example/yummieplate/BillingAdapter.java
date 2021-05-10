@@ -53,7 +53,7 @@ public class BillingAdapter extends ArrayAdapter<item> implements AdapterView.On
         numberTextView.setText(s);
 
         price = listItemView.findViewById(R.id.tv_price_range);
-        price.setText("₹" + currentitem.getSitem_Price());
+        price.setText("₹" + currentitem.getItem_cart_price());
 
         return listItemView;
     }
