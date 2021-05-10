@@ -39,6 +39,11 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PlantNBoquetOpenItemActivity"></activity>
+        <activity android:name=".TeaNCookieOpenItemActivity" />
+        <activity android:name=".CupcakeOpenItemActivity" />
+        <activity android:name=".SweetOpenItemActivity" />
+        <activity android:name=".PizzaOpenItemActivity" />
         <activity android:name=".TrackOrder" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -64,7 +69,7 @@
             android:label="Plant and Bouquet">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity2"

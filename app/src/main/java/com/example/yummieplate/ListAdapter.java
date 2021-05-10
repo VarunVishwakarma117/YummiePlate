@@ -46,6 +46,7 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
     Vibrator Vibrator;
     boolean callByWishlist;
     LinearLayout not_in_wishlist;
+    int cate;
 
     public ListAdapter(Activity activity){
         super(activity, 0);
@@ -55,6 +56,12 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         super(context, 0, al);
         this.callByWishlist = callByWishlist;
         Vibrator = (Vibrator)getContext().getSystemService(MainActivity.VIBRATOR_SERVICE);
+    }
+    public ListAdapter(Activity context, ArrayList<com.example.yummieplate.item> al, boolean callByWishlist, int cate) {
+        super(context, 0, al);
+        this.callByWishlist = callByWishlist;
+        Vibrator = (Vibrator)getContext().getSystemService(MainActivity.VIBRATOR_SERVICE);
+        this.cate = cate;
     }
 
     @NonNull
@@ -86,9 +93,63 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
         item_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), OpenItemActivity.class);
-                intent.putExtra("list_id", currentitem.getItem_id());
-                getContext().startActivity(intent);
+                if(cate == 1){
+                    Intent i = new Intent(getContext(), OpenItemActivity.class);
+                    Log.v("list adapter id", String.valueOf(currentitem.getItem_id()));
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+                else if(cate == 2){
+                    Intent i = new Intent(getContext(), PizzaOpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+                else if(cate == 3){
+                    Intent i = new Intent(getContext(), SweetOpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+                else if(cate == 4){
+                    Intent i = new Intent(getContext(), CupcakeOpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+                else if(cate == 5){
+                    Intent i = new Intent(getContext(), TeaNCookieOpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+            }
+        });
+        RelativeLayout open = listItemView.findViewById(R.id.open);
+        open.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(cate == 1){
+                    Intent i = new Intent(getContext(), OpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+                else if(cate == 2){
+                    Intent i = new Intent(getContext(), PizzaOpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+                else if(cate == 3){
+                    Intent i = new Intent(getContext(), SweetOpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+                else if(cate == 4){
+                    Intent i = new Intent(getContext(), CupcakeOpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
+                else if(cate == 5){
+                    Intent i = new Intent(getContext(), TeaNCookieOpenItemActivity.class);
+                    i.putExtra("itemId",currentitem.getItem_id());
+                    getContext().startActivity(i);
+                }
             }
         });
 
@@ -101,7 +162,6 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
                 if (networkInfo != null) {
                     String[] shapeArray =  currentitem.getShape()!=null?currentitem.getShape().split("-"):null;
                     String[] sItemPrice = currentitem.getItem_PriceRange().split("[-]");
-                    Log.v("a", sItemPrice[0]);
                     int x = Integer.parseInt(sItemPrice[0].trim().substring(1, sItemPrice[0].trim().length()));
                     item o = new item(currentitem.getItem_id(),currentitem.getItem_local_name(),null, currentitem.getVersion()!=null?"YP Normal & Tasty":null,
                             "Half Kg", currentitem.getFlavour(), currentitem.getShape()!=null?shapeArray[0]:null, currentitem.getItem_image(),
@@ -124,16 +184,6 @@ public class ListAdapter extends ArrayAdapter<com.example.yummieplate.item> {
                 else {
                     Toast.makeText(getContext(), "Check Your Internet Connection", Toast.LENGTH_SHORT).show();
                 }
-            }
-        });
-
-        RelativeLayout open = listItemView.findViewById(R.id.open);
-        open.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getContext(), OpenItemActivity.class);
-                i.putExtra("itemId",currentitem.getItem_id());
-                getContext().startActivity(i);
             }
         });
 

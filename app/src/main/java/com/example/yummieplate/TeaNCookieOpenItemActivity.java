@@ -29,7 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
-public class OpenItemActivity extends AppCompatActivity {
+public class TeaNCookieOpenItemActivity extends AppCompatActivity {
     ImageView iv_openitem;
     TextView name_openitem;
     TextView pricerange_openitem;
@@ -53,7 +53,7 @@ public class OpenItemActivity extends AppCompatActivity {
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private FirebaseUser user = mAuth.getCurrentUser();
     DatabaseReference myCartRef = FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("user_cart");
-    DatabaseReference allItemsRef = FirebaseDatabase.getInstance().getReference().child("admin").child("all_items").child("cakes");
+    DatabaseReference allItemsRef = FirebaseDatabase.getInstance().getReference().child("admin").child("all_items").child("tea_n_cookies");
 
     StringBuffer mapKey = new StringBuffer(4);
 
@@ -71,7 +71,7 @@ public class OpenItemActivity extends AppCompatActivity {
 
         mapKey.append("0000");
 
-        progressDialog = new ProgressDialog(OpenItemActivity.this);
+        progressDialog = new ProgressDialog(TeaNCookieOpenItemActivity.this);
         progressDialog.setCancelable(false);
         progressDialog.show();
         progressDialog.setContentView(R.layout.progress_dialog_view);
@@ -96,7 +96,7 @@ public class OpenItemActivity extends AppCompatActivity {
         back_button_openActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OpenItemActivity.this, MainActivity2.class));
+                startActivity(new Intent(TeaNCookieOpenItemActivity.this, MainActivity2.class));
                 finish();
             }
         });
@@ -120,7 +120,7 @@ public class OpenItemActivity extends AppCompatActivity {
                 try {
                     if (item.getVersion() != null) {
                         versionArray = item.getVersion().split("-");
-                        ArrayAdapter<String> vad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, versionArray);
+                        ArrayAdapter<String> vad = new ArrayAdapter<>(TeaNCookieOpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, versionArray);
                         vspinner_openitem.setAdapter(vad);
                         vspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                             @Override
@@ -144,7 +144,7 @@ public class OpenItemActivity extends AppCompatActivity {
                 try{
                     if (item.getWeight_in_pounds_or_qunatity() != null){
                         weightArray = item.getWeight_in_pounds_or_qunatity().split("-");
-                        ArrayAdapter<String> siad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, weightArray);
+                        ArrayAdapter<String> siad = new ArrayAdapter<>(TeaNCookieOpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, weightArray);
                         wspinner_openitem.setAdapter(siad);
                         wspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                             @Override
@@ -169,7 +169,7 @@ public class OpenItemActivity extends AppCompatActivity {
                 try{
                     if(item.getFlavour() != null){
                         flavorArray = item.getFlavour().split("-");
-                        ArrayAdapter<String> flad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, flavorArray);
+                        ArrayAdapter<String> flad = new ArrayAdapter<>(TeaNCookieOpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, flavorArray);
                         fspinner_openitem.setAdapter(flad);
                         fspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                             @Override
@@ -193,7 +193,7 @@ public class OpenItemActivity extends AppCompatActivity {
                 try{
                     if (item.getShape() != null){
                         shapeArray = item.getShape().split("-");
-                        ArrayAdapter<String> shad = new ArrayAdapter<>(OpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, shapeArray);
+                        ArrayAdapter<String> shad = new ArrayAdapter<>(TeaNCookieOpenItemActivity.this, android.R.layout.simple_spinner_dropdown_item, shapeArray);
                         shspinner_openitem.setAdapter(shad);
                         shspinner_openitem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                             @Override
@@ -225,7 +225,7 @@ public class OpenItemActivity extends AppCompatActivity {
                         item.getWeight_in_pounds_or_qunatity()!=null?weightArray[Integer.parseInt(mapKey.substring(1,2))]:null, item.getFlavour()!=null?flavorArray[Integer.parseInt(mapKey.substring(2,3))]:null, item.getShape()!=null?shapeArray[Integer.parseInt(mapKey.substring(3,4))]:null, item.getItem_image(),
                         price, 1, item.getItem_PriceRange());
                 myCartRef.push().setValue(o);
-                Toast.makeText(OpenItemActivity.this, "Item Sucessfully Added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TeaNCookieOpenItemActivity.this, "Item Sucessfully Added", Toast.LENGTH_SHORT).show();
             }
         });
     }

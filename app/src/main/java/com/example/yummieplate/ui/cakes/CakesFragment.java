@@ -84,7 +84,7 @@ public class CakesFragment extends Fragment {
                             Log.v("range",i.getItem_PriceRange());
                         }
                         progressDialog.dismiss();
-                        ListAdapter itemsAdapter = new ListAdapter(getActivity(), items, false);
+                        ListAdapter itemsAdapter = new ListAdapter(getActivity(), items, false, 1);
                         ListView listView = root.findViewById(R.id.list);
                         listView.setAdapter(itemsAdapter);
                     }
