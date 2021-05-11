@@ -55,6 +55,7 @@ public class Splash_Screen2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Splash_Screen2.this, TrackOrder.class).putExtra("order", my_order));
+                finish();
             }
         });
 
