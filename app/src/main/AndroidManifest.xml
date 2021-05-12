@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.yummieplate">
+    package="com.vishwakarma.yummieplate">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -39,12 +39,12 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PlantNBoquetOpenItemActivity"></activity>
-        <activity android:name=".TeaNCookieOpenItemActivity" />
-        <activity android:name=".CupcakeOpenItemActivity" />
-        <activity android:name=".SweetOpenItemActivity" />
-        <activity android:name=".PizzaOpenItemActivity" />
-        <activity android:name=".TrackOrder" />
+        <activity android:name="com.vishwakarma.yummieplate.PlantNBoquetOpenItemActivity"></activity>
+        <activity android:name="com.vishwakarma.yummieplate.TeaNCookieOpenItemActivity" />
+        <activity android:name="com.vishwakarma.yummieplate.CupcakeOpenItemActivity" />
+        <activity android:name="com.vishwakarma.yummieplate.SweetOpenItemActivity" />
+        <activity android:name="com.vishwakarma.yummieplate.PizzaOpenItemActivity" />
+        <activity android:name="com.vishwakarma.yummieplate.TrackOrder" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -58,78 +58,78 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".LiveTrackingFeatueActivity"
+            android:name="com.vishwakarma.yummieplate.LiveTrackingFeatueActivity"
             android:label="@string/title_activity_live_tracking_featue">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.vishwakarma.yummieplate.MainActivity" />
         </activity>
         <activity
-            android:name=".PlantsActivity"
+            android:name="com.vishwakarma.yummieplate.PlantsActivity"
             android:label="Plant and Bouquet">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.vishwakarma.yummieplate.MainActivity" />
         </activity>
         <activity
-            android:name=".MainActivity2"
+            android:name="com.vishwakarma.yummieplate.MainActivity2"
             android:label="@string/title_activity_main2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.vishwakarma.yummieplate.MainActivity" />
         </activity>
         <activity
-            android:name=".OpenItemActivity"
+            android:name="com.vishwakarma.yummieplate.OpenItemActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity2" />
+                android:value="com.vishwakarma.yummieplate.MainActivity2" />
         </activity>
         <activity
-            android:name=".WishlistActivity"
+            android:name="com.vishwakarma.yummieplate.WishlistActivity"
             android:label="WishList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.vishwakarma.yummieplate.MainActivity" />
         </activity>
-        <activity android:name=".Splash_Screen2" />
+        <activity android:name="com.vishwakarma.yummieplate.Splash_Screen2" />
         <activity
-            android:name=".BillingDetailsActivity"
+            android:name="com.vishwakarma.yummieplate.BillingDetailsActivity"
             android:label="Billing">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".CartActivity" />
+                android:value="com.vishwakarma.yummieplate.CartActivity" />
         </activity>
         <activity
-            android:name=".CartActivity"
+            android:name="com.vishwakarma.yummieplate.CartActivity"
             android:label="Cart">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.vishwakarma.yummieplate.MainActivity" />
         </activity>
         <activity
-            android:name=".ResetPassword"
+            android:name="com.vishwakarma.yummieplate.ResetPassword"
             android:label="Reset Password" />
-        <activity android:name=".ForgetPassword">
+        <activity android:name="com.vishwakarma.yummieplate.ForgetPassword">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginPage" />
+                android:value="com.vishwakarma.yummieplate.LoginPage" />
         </activity>
         <activity
-            android:name=".LoginPage"
+            android:name="com.vishwakarma.yummieplate.LoginPage"
             android:label="Login Page" />
         <activity
-            android:name=".RegistrationPage"
+            android:name="com.vishwakarma.yummieplate.RegistrationPage"
             android:label="Registration Page">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginPage" />
+                android:value="com.vishwakarma.yummieplate.LoginPage" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.vishwakarma.yummieplate.MainActivity"
             android:hardwareAccelerated="false" />
         <activity
-            android:name=".Splash_Screen1"
+            android:name="com.vishwakarma.yummieplate.Splash_Screen1"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

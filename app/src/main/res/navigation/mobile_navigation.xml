@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_cake"
-        android:name="com.example.yummieplate.ui.cakes.CakesFragment"
+        android:name="com.vishwakarma.yummieplate.ui.cakes.CakesFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_cakes" >
         <action
@@ -26,24 +26,24 @@
 
     <fragment
         android:id="@+id/navigation_pizza"
-        android:name="com.example.yummieplate.ui.pizza.PizzaFragment"
+        android:name="com.vishwakarma.yummieplate.ui.pizza.PizzaFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_pizzas" />
 
     <fragment
         android:id="@+id/navigation_sweets"
-        android:name="com.example.yummieplate.ui.sweets.SweetsFragment"
+        android:name="com.vishwakarma.yummieplate.ui.sweets.SweetsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_sweets" />
     <fragment
         android:id="@+id/navigation_cupcake"
-        android:name="com.example.yummieplate.ui.fragment_cupcake.CupCakesFragment"
+        android:name="com.vishwakarma.yummieplate.ui.fragment_cupcake.CupCakesFragment"
         android:label="Cupcakes and Muffins"
         tools:layout="@layout/fragment_cupcake" />
 
     <fragment
         android:id="@+id/navigation_tea_n_cookies"
-        android:name="com.example.yummieplate.ui.tea_n_cookies.Tea_n_CookiesFragment"
+        android:name="com.vishwakarma.yummieplate.ui.tea_n_cookies.Tea_n_CookiesFragment"
         android:label="Tea and cookies"
         tools:layout="@layout/fragment_flower_n_boquet" />
 

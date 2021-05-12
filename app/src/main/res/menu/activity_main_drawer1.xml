@@ -18,7 +18,7 @@
             android:title="@string/profile"/>
         <item
             android:id="@+id/nav_About"
-            android:icon="@drawable/ic_round_book_24"
+            android:icon="@drawable/ic_outline_info_24"
             android:title="@string/menu_about" />
     </group>
 </menu>

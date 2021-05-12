@@ -144,7 +144,6 @@
             android:layout_below="@id/tv_itemIds"
             tools:text="101-102-103"
             android:textColor="@android:color/black"
-            android:gravity="center"
             android:textAppearance="?android:textAppearanceMedium"/>
         <TextView
             android:id="@+id/tv_delivery_address"

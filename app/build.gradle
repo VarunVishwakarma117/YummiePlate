@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.yummieplate"
+        applicationId "com.vishwakarma.yummieplate"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

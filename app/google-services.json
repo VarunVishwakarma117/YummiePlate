@@ -1,23 +1,61 @@
 {
   "project_info": {
     "project_number": "630575505485",
+    "firebase_url": "https://yummie-plate-ad8e6-default-rtdb.firebaseio.com",
     "project_id": "yummie-plate-ad8e6",
     "storage_bucket": "yummie-plate-ad8e6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:630575505485:android:0280277ecc7e27a7107c04",
+        "mobilesdk_app_id": "1:630575505485:android:f38a1fc77a3eca41107c04",
         "android_client_info": {
-          "package_name": "com.example.yummieplate"
+          "package_name": "com.varun.yummieplateadmin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "630575505485-dlpfrorbon9k0sb75nd0v6afgsfr8b7o.apps.googleusercontent.com",
+          "client_id": "630575505485-dpbpnp8rcnutest7l391qllhmaeeh8o9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.yummieplate",
+            "package_name": "com.varun.yummieplateadmin",
+            "certificate_hash": "95c05f36bdf29e0b8ed2de25451b2b5b8b241318"
+          }
+        },
+        {
+          "client_id": "630575505485-ke3g35v6085kd73acriaeksnl12q9b4s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS02pqGQH45e-_sivHHrX9x47wYnOoCLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630575505485-ke3g35v6085kd73acriaeksnl12q9b4s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630575505485:android:9a5c294e30b07f26107c04",
+        "android_client_info": {
+          "package_name": "com.vishwakarma.yummieplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630575505485-8g1mo7jhj7dg9pstf7gushbjsp56t7qk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vishwakarma.yummieplate",
             "certificate_hash": "95c05f36bdf29e0b8ed2de25451b2b5b8b241318"
           }
         },

@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
+            app:hintTextColor="@android:color/white"
             android:focusableInTouchMode="true"
             android:background="@drawable/bg_login_page_button1"
             android:textColorHint="#ffffff">
@@ -35,6 +36,9 @@
                 android:backgroundTint="@android:color/transparent"
                 android:textCursorDrawable="@drawable/cursor_color"
                 android:paddingStart="30dp"
+                android:background="@android:color/white"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
                 android:paddingEnd="10dp"
                 android:hint="Enter Your Email" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -45,11 +49,10 @@
             android:layout_marginTop="15dp"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="#ffffff"
-            android:padding="5dp"
+            app:hintTextColor="@android:color/white"
             android:background="@drawable/bg_login_page_button1"
             android:textColorHint="#ffffff"
             android:textColor="#ffffff">
-
             <EditText
                 android:id="@+id/loginpasswordteacher"
                 android:layout_width="match_parent"
@@ -57,24 +60,16 @@
                 android:drawablePadding="10dp"
                 android:textColor="#ffffff"
                 android:hint="Enter Your Password"
+                android:background="@android:color/white"
+                android:paddingTop="6dp"
+                android:paddingBottom="12dp"
                 android:textCursorDrawable="@drawable/cursor_color"
                 android:backgroundTint="@android:color/transparent"
                 android:paddingStart="30dp"
                 android:paddingEnd="20dp"
                 android:inputType="textPassword" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
-<!--        <TextView-->
-<!--            android:id="@+id/skiplogin"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textSize="18sp"-->
-<!--            android:gravity="center"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:text="Skip Login"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:textColor="#ffffff"/>-->
         <TextView
             android:id="@+id/forgetpassword"
             android:focusable="false"
